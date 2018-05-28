@@ -17,7 +17,7 @@ def replace_string(**kwargs):
         #Getting a list of the full paths of files
         for fname in filename:
             path = os.path.join(dirpath, fname) #Joining dirpath and filenames
-            strg = open(path, encoding='utf-8').read() #Opening the files for reading only
+            strg = open(path).read() #Opening the files for reading only
             if re.search(pattern, strg):#If we find the pattern ....
                 #print path, strg
                 #shutil.copy2(path, backup) #we will create a backup of it
