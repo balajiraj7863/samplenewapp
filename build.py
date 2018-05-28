@@ -7,9 +7,11 @@ def replace_string(**kwargs):
     path_name=kwargs['pathVar']
     drc = path_name
     backup = path_name+'/tmp'
-    pattern = re.compile('PYTHON')
+    pattern = re.compile('hi')
     oldstr = 'hi'
     newstr = 'Python'
+
+    print (path_name)
     
     for dirpath, dirname, filename in os.walk(drc):
         #Getting a list of the full paths of files
