@@ -38,8 +38,10 @@ if __name__=="__main__":
     parser = argparse.ArgumentParser(description='Replace string from source')
     #parser.add_argument('--version',help="Release Version you are going to deploy")
     parser.add_argument('--pathVar',help="path to start change",required=True)
+    parser.add_argument('--zipPathVar',help="path to start change",required=True)
     vars=parser.parse_args()
 
     pathValue=vars.pathVar.strip()
+    zipPathValue=vars.zipPathVar.strip()
 
-    replace_string(pathVar=pathValue)
+    replace_string(pathVar=pathValue, zipPathVar=zipPathValue)
