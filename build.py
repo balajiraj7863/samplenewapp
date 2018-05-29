@@ -13,7 +13,7 @@ def replace_string(**kwargs):
     oldstr=kwargs['oldappName']
     #version_name=kwargs['newVersion']
     drc = path_name
-    backup = path_name+'/tmp'
+    #backup = path_name+'/tmp'
     pattern = re.compile(oldstr)
 
     #print ("path-> name "+path_name)
@@ -32,7 +32,7 @@ def replace_string(**kwargs):
             strg = open(path)
             strg = strg.read() #Opening the files for reading only
             if re.search(pattern, strg):#If we find the pattern ....
-                shutil.copy2(path, backup) #we will create a backup of it
+                #shutil.copy2(path, backup) #we will create a backup of it
                 strg = strg.replace(oldstr, newapp_name) #We will create the replacement condistion
                 f = open(path, 'w') #We open the files with the WRITE option
                 f.write(strg) # We are writing the the changes to the files
