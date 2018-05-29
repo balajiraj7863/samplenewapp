@@ -24,7 +24,8 @@ def replace_string(**kwargs):
             path = os.path.join(dirpath, fname) #Joining dirpath and filenames
             print (path)
             strg = open(path, encoding='cp437').read() #Opening the files for reading only
-            print (pattern+" "+strg)
+            print (pattern)
+            print ("strg "+strg)
             if re.search(pattern, strg):#If we find the pattern ....
                 #print path, strg
                 #shutil.copy2(path, backup) #we will create a backup of it
