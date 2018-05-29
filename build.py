@@ -2,14 +2,16 @@ import re
 import argparse
 import sys, os
 import shutil
+from zipfile import ZipFile
+from shutil import make_archive
 
 def replace_string(**kwargs):
     path_name=kwargs['pathVar']
     drc = path_name
     #backup = path_name+'/tmp'
-    pattern = re.compile('hi')
-    oldstr = 'hi'
-    newstr = 'Python'
+    pattern = re.compile('hello')
+    oldstr = 'hello'
+    newstr = 'groovy'
 
     print (path_name)
 
@@ -26,6 +28,9 @@ def replace_string(**kwargs):
                 f = open(path, 'w') #We open the files with the WRITE option
                 f.write(strg) # We are writing the the changes to the files
                 f.close() #Closing the files
+
+    shutil.make_archive("name","zip", path_name)
+
 
 if __name__=="__main__":
     parser = argparse.ArgumentParser(description='Replace string from source')
