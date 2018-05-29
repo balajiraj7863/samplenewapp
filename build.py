@@ -30,7 +30,7 @@ def replace_string(**kwargs):
                 f.write(strg) # We are writing the the changes to the files
                 f.close() #Closing the files
     # archiev the files
-    shutil.make_archive("name","zip", zip_path) ## archiev the files zip
+    shutil.make_archive("name","zip", zip_path+'/codeNew') ## archiev the files zip
     # archiev the files final
 
 
