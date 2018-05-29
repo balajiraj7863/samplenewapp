@@ -23,13 +23,13 @@ def replace_string(**kwargs):
         for fname in filename:
             path = os.path.join(dirpath, fname) #Joining dirpath and filenames
             print ("path-> "+path)
-            strg = open(path, encoding='cp437').read() #Opening the files for reading only
+            strg = open(path).read().decode('utf16') #Opening the files for reading only
             if re.search(pattern, strg):#If we find the pattern ....
                 #print path, strg
                 #shutil.copy2(path, backup) #we will create a backup of it
                 strg = strg.replace(oldstr, newapp_name) #We will create the replacement condistion
                 f = open(path, 'w') #We open the files with the WRITE option
-                f.write(strg) # We are writing the the changes to the files
+                f.write(strgs.encode('utf16')) # We are writing the the changes to the files
                 f.close() #Closing the files
     # archiev the files
     shutil.make_archive(newapp_name,"zip", zip_path) ## archiev the files zip
