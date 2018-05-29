@@ -27,6 +27,7 @@ def replace_string(**kwargs):
             if re.search(pattern, strg):#If we find the pattern ....
                 #print path, strg
                 #shutil.copy2(path, backup) #we will create a backup of it
+                print (str)
                 strg = strg.replace(oldstr, newapp_name) #We will create the replacement condistion
                 f = open(path, 'w') #We open the files with the WRITE option
                 f.write(strg) # We are writing the the changes to the files
