@@ -13,7 +13,7 @@ def replace_string(**kwargs):
     oldstr = 'hello'
     newstr = 'groovy'
 
-    print (path_name)
+    print ("pathkgkjsgkjshfdkghkfdshghfds "+path_name)
 
     for dirpath, dirname, filename in os.walk(drc):
         #Getting a list of the full paths of files
