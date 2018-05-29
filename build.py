@@ -28,8 +28,9 @@ def replace_string(**kwargs):
                 f = open(path, 'w') #We open the files with the WRITE option
                 f.write(strg) # We are writing the the changes to the files
                 f.close() #Closing the files
-
-    shutil.make_archive("name","zip", path_name)
+    # archiev the files
+    shutil.make_archive("name","zip", path_name) ## archiev the files zip
+    # archiev the files final
 
 
 if __name__=="__main__":
