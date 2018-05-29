@@ -7,6 +7,7 @@ from shutil import make_archive
 
 def replace_string(**kwargs):
     path_name=kwargs['pathVar']
+    zip_path=kwargs['zipPathVar']
     drc = path_name
     #backup = path_name+'/tmp'
     pattern = re.compile('hello')
@@ -29,7 +30,7 @@ def replace_string(**kwargs):
                 f.write(strg) # We are writing the the changes to the files
                 f.close() #Closing the files
     # archiev the files
-    shutil.make_archive("name","zip", path_name+'/codeNew') ## archiev the files zip
+    shutil.make_archive("name","zip", zip_path) ## archiev the files zip
     # archiev the files final
 
 
