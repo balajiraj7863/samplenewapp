@@ -22,7 +22,7 @@ def replace_string(**kwargs):
         #Getting a list of the full paths of files
         for fname in filename:
             path = os.path.join(dirpath, fname) #Joining dirpath and filenames
-            print (path)
+            print ("path-> "+path)
             strg = open(path, encoding='cp437').read() #Opening the files for reading only
             if re.search(pattern, strg):#If we find the pattern ....
                 #print path, strg
