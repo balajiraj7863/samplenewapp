@@ -8,13 +8,14 @@ from shutil import make_archive
 def replace_string(**kwargs):
     path_name=kwargs['pathVar']
     zip_path=kwargs['zipPathVar']
+    newstr=kwargs['newString']
+    #version_name=kwargs['newVersion']
     drc = path_name
     #backup = path_name+'/tmp'
-    pattern = re.compile('hello')
-    oldstr = 'hello'
-    newstr = 'groovy'
+    pattern = re.compile('groovy')
+    oldstr = 'SplunkUI-PRODv1'
 
-    print ("pathkgkjsgkjshfdkghkfdshghfds "+path_name)
+    print ("path-> name "+path_name)
 
     for dirpath, dirname, filename in os.walk(drc):
         #Getting a list of the full paths of files
@@ -39,9 +40,12 @@ if __name__=="__main__":
     #parser.add_argument('--version',help="Release Version you are going to deploy")
     parser.add_argument('--pathVar',help="path to start change",required=True)
     parser.add_argument('--zipPathVar',help="path to start change",required=True)
+    parser.add_argument('--newString',help="path to start change",required=True)
+
     vars=parser.parse_args()
 
     pathValue=vars.pathVar.strip()
     zipPathValue=vars.zipPathVar.strip()
+    newString=vars.newString.strip()
 
-    replace_string(pathVar=pathValue, zipPathVar=zipPathValue)
+    replace_string(pathVar=pathValue, zipPathVar=zipPathValue, newstr=newString)

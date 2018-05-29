@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="CWC Global Dashboard">
+    <meta name="author" content="Prodapt Solutions">
+    <!-- Brand Image and Title -->
+    <link rel="icon" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/images/cwc-logo.png">
+    <title>CWC Global Dashboard</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/bootstrap.min.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/ie10-viewport-bug-workaround.css">
+    <!-- 3rd Party CSS -->
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/animate.css?v=1.1">
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/flag-icon/css/flag-icon.css" />
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/monitoringSVGStyle.css">
+	<script src="{{SPLUNKWEB_URL_PREFIX}}/static/js/i18n.js"></script>
+    <meta name="referrer" content="never" />
+    <meta name="referrer" content="no-referrer" />
+    <style>
+        @media screen and (min-width: 768px) {
+            .modal-dialog {
+                width: 700px;
+                /* New width for default modal */
+            }
+            .modal-sm {
+                width: 350px;
+                /* New width for small modal */
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .modal-lg {
+                width: 1130px;
+                /* New width for large modal */
+            }
+        }
+    </style>
+    <script>
+        (function () {
+            window._splunk_metrics_events = [];
+            window._splunk_metrics_events.active = true;
+
+            function onLoadSwa() {
+                new SWA({
+                    "version": "3",
+                    "userID": "7c3458653964f8051b3b2256476a3bb90999bdab160de5e1ba17904821a0aa71",
+                    "deploymentID": "dab9c562-6acf-5147-8b4e-8106aae017a8",
+                    "url": "https://e1345286.api.splkmobile.com/1.0/e1345286",
+                    "instanceGUID": "A4790072-9B5E-41F7-A57A-4DA82FFA19FF",
+                    "visibility": "anonymous,support"
+                });
+            };
+            document.addEventListener("DOMContentLoaded", function (event) {
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = '/en-US/static/app/splunk_instrumentation/build/pages/swa.js';
+                s.addEventListener('load', onLoadSwa);
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            });
+        }());
+    </script>
+</head>
+
+<body>
+    <!-- custom changes for splunk js starts here-->
+
+
+    <div id="preloader">
+        <div id="status">
+            <div id="loader"></div>
+            <div id="loading">Please wait...</div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/images/cwc.png">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="monitoring-dashboard">Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="monitoring-prepaid-dashboard">Prepaid</a>
+                    </li>
+                    <li>
+                        <a href="monitoring-postpaid-dashboard">Postpaid</a>
+                    </li>
+                    <li>
+                        <a href="monitoring-fixed-dashboard">Fixed</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown notifications-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="visible-xs">Notifications</span>
+                            <i class="fa fa-bell-o hidden-xs"></i>
+                            <span class="label label-warning">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 4 Notifications</li>
+                            <li>
+                                <!-- Inner menu contains the notifications -->
+                                <ul class="menu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-ticket text-red"></i> 10 new tickets has been raised.
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-exclamation-triangle text-orange"></i> 4 critical Health Check Status failure.
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-cart text-green2"></i> 10 new order received.
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-sitemap text-red"></i> 2 site availability is down.
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- End Notifications -->
+                            </li>
+                            <li class="footer">
+                                <a href="#">View all</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="background-color: #e0e0e0; border-right: 1px solid #d2cfcf;">
+							<a id="ctryNameHolder" aria-haspopup="true" aria-expanded="true">
+							</a>
+						</li>
+						<li style="background-color: #e0e0e0;">
+							<a id="userNameHolder" aria-haspopup="true" aria-expanded="true">
+								<i class="fa fa-user"></i>&nbsp;
+								<span id="userId"></span>
+							</a>
+						</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Monitoring View
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu profile-menu">
+							<li>
+								<a href="business-dashboard"> <!--// redirect -->
+									<i class="fa fa-server" aria-hidden="true"></i>Switch to Business</a>
+							</li>
+							<li>
+								<a href="operation-dashboard"> <!--// redirect -->
+									<i class="fa fa-tachometer" aria-hidden="true"></i>Switch to Operations</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="../../account/logout" onclick="return clearSessionVariables();">
+									<i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
+							</li>
+						</ul>
+					</li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div id="wrapper" class="container-fluid">
+      <div class="main-content">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active">
+						<a href="#prepaid-monitor" aria-controls="prepaid-monitor" role="tab" data-toggle="tab" id="homeId">Home</a>
+					</li>
+					<li role="presentation">
+						<a href="#system-monitor" aria-controls="system-monitor" role="tab" data-toggle="tab" id="siteMonitorId">Site Monitoring</a>
+					</li>
+					<li role="presentation">
+						<a href="#interface-monitor" aria-controls="interface-monitor" role="tab" data-toggle="tab" id="interfaceMonitorId">System/Interface Monitoring</a>
+					</li>
+				</ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active card-tab" id="prepaid-monitor">
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-4 p-sm-0">
+                                <div class="card card-stats animated zoomIn">
+                                    <div class="chart theme-green">
+                                        <div class="chart-title">
+                                            <h5>
+                                                Incidents
+                                                <span id="openIncHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                                </span>
+                                            </h5>
+                                        </div>
+                                        <div class="chart-container">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div id="incidentPriorityChart" class="widget-container">
+                                                        <div id="monitorPreloader" class="chartPreloader">
+                                                            <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4 p-sm-0">
+                                <div class="card card-stats animated zoomIn">
+                                    <div class="chart theme-green">
+                                        <div class="chart-title">
+                                            <h5>
+                                                Alarm Summary
+                                                <span id="alarmHelp" class="pull-right" data-toggle="tooltip" data-placement="left" data-container="body">
+                                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                                </span>
+                                            </h5>
+                                        </div>
+                                        <div class="chart-container">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="widget-container">
+                                                        <ul class="alarmStatus" type="none">
+                                                            <li>
+                                                                <button id="criticalBtn" type="button" class="btn btn-danger btn-circle btn-xl">
+                                                                    <span id="criticalCount">0</span>
+                                                                </button>
+                                                                <h4>Critical</h4>
+                                                            </li>
+                                                            <li>
+                                                                <button id="majorBtn" type="button" class="btn btn-warning btn-circle btn-xl">
+                                                                    <span id="majorCount">0</span>
+                                                                </button>
+                                                                <h4>Major</h4>
+                                                            </li>
+                                                            <li>
+                                                                <button id="minorBtn" type="button" class="btn btn-success btn-circle btn-xl">
+                                                                    <span id="minorCount">0</span>
+                                                                </button>
+                                                                <h4>Minor</h4>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-xs-12 col-sm-4">
+                                <div class="card card-stats">
+                                    <div class="chart theme-green">
+                                        <div class="chart-title">
+                                            <h5>
+                                                Site Availability
+                                                <span id="siteAvailabilityHelp" class="pull-right" data-toggle="tooltip" data-placement="left" data-container="body">
+                                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                                </span>
+                                            </h5>
+                                        </div>
+                                        <div class="chart-container">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="widget-container">
+                                                        <table class="table table-condensed table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <td>
+                                                                        <b>Country</b>
+                                                                    </td>
+                                                                    <td>
+                                                                        <b>Site</b>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <b>Status</b>
+                                                                    </td>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <b>Bahamas</b>
+                                                                    </td>
+                                                                    <td>New Providence</td>
+                                                                    <td class="text-center">
+                                                                        <div class="table-icon">
+                                                                            <i id="site_providence" class="fa  fa-spinner" aria-hidden="true"></i>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+																	<td><b>Bahamas</b></td>
+                                                                    <td>Grand Bahama</td>
+                                                                    <td class="text-center">
+                                                                        <div class="table-icon">
+                                                                            <i id="site_bahamas" class="fa  fa-spinner" aria-hidden="true"></i>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>Bahamas</b></td>
+                                                                    <td>Curacao</td>
+                                                                    <td class="text-center">
+                                                                        <div class="table-icon">
+                                                                            <i id="site_curacao" class="fa  fa-spinner" aria-hidden="true"></i>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                  
+
+                    <div class="row">
+
+                        <div class="col-xs-12 col-sm-6 p-sm-0">
+                            <div class="card card-stats animated zoomIn">
+                                <div class="chart theme-green">
+                                    <div class="chart-title">
+                                        <h5>
+                                            Maintenance Window
+                                            <span id="mainWindowHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                            </span>
+                                        </h5>
+                                    </div>
+                                    <div class="chart-container">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="server-table table-view" id="maintenanceWindowDiv">
+                                                    <div id="monitorPreloader" class="chartPreloader">
+                                                        <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="card card-stats animated zoomIn">
+                                <div class="chart theme-green">
+                                    <div class="chart-title">
+                                        <h5>
+                                            Last 5 Issues
+                                            <span id="topIncHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                            </span>
+                                        </h5>
+                                    </div>
+                                    <div class="chart-container">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="table-resposive server-table table-view" id="topIncidentsDiv">
+                                                    <div id="monitorPreloader" class="chartPreloader">
+                                                        <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div role="tabpanel" class="tab-pane card-tab" id="system-monitor">
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-8">
+                                <div class="chart-title">
+                                    <h5>Monitoring
+                                        <div class="pull-right">
+                                            <div class="input-group input-group-sm pull-left">
+													<input list="servers" type="text" class="form-control" id="server-selected" placeholder="Search" value="All" />
+													<datalist id="servers">
+														<option data-value="" value="All" selected>
+														<option data-value="25.0343, -77.3963" value="BAHAMAS">
+															<option data-value="12.0989103, -68.8585774" value="CURACAO">
+																<option data-value="25.0480, -77.3554" value="NEWPROVIDENCE">
+													</datalist>
+                                            </div>
+                                            <button type="button" class="btn btn-success btn-sm locate-in-map" title="Locate in Map" id="server_search">Search</button>
+                                        </div>
+                                    </h5>
+                                </div>
+                                <div id="monitoringMap"></div>
+                            </div>
+
+                            <!-- Jamaica -->
+                            <div class="col-sm-6 col-lg-4 site-table animated zoomIn" style="font-size: 12px">
+									<div class="card card-stats animated zoomIn">
+										<div class="chart theme-green">
+											<div class="chart-title">
+												<h5 id="site-name">
+													<span id="siteName"></span> Site Status
+													<span id="siteStatusHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+														<i class="fa fa-info-circle" aria-hidden="true"></i>
+													</span>
+												</h5>
+											</div>
+											<div class="chart-container">
+												<div class="table-responsive mon-site-table">
+													<table class="table table-condensed table-hover ">
+														<div class="modal-title" id="modalSiteLabel"></div>
+														<thead id="site_details_table_header">
+															<tr></tr>
+														</thead>
+														<tbody id="site_details_table_values">
+															<tr></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+
+						<div role="tabpanel" class="tab-pane card-tab" id="interface-monitor">
+							<div class="row">
+								<div class="col-xs-12 col-sm-12">
+									<div class="svg-container">
+										<span id="interfaceMonitorHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+											<i class="fa fa-info-circle" aria-hidden="true"></i>
+										</span>
+										<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" preserveAspectRatio="none meet"
+										    style="display: block;margin: auto;" viewBox="-0.263694 -0.247922 2600.52 1200.49">
+											<defs id="svgEditorDefs">
+												<pattern id="hatch-black-45" width="10" height="10" x="0" y="0" patternTransform="rotate(45) scale(0.4)" patternUnits="userSpaceOnUse" viewBox="0 0 10 10">
+													<line x1="0" x2="10" y1="5" y2="5" style="stroke:black;stroke-width:1px;"/>
+												</pattern>
+												<linearGradient id="lgrd2-fire" x1="0%" x2="100%" y1="0%" y2="0%" gradientUnits="objectBoundingBox" spreadMethod="pad">
+													<stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1"/>
+													<stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1"/>
+												</linearGradient>
+												<pattern id="hatch-black-dash-45" width="24" height="10" x="0" y="0" patternTransform="rotate(45) scale(0.4)" patternUnits="userSpaceOnUse" viewBox="0 0 24 10">
+													<line x1="0" x2="24" y1="5" y2="5" style="stroke:black;stroke-width:1px;stroke-dasharray:4,4;"/>
+												</pattern>
+											</defs>
+											<rect id="svgEditorBackground" width="1820.5999755859375" height="1066.5" x="0.9000000357627869" y="1" style="fill:none; stroke: none;"/>
+											<g transform="matrix(0.898577 0 0 0.898577 98.8382 30.3053)">
+												<g id="occ_group" transform="matrix(1 0 0 1 -2.70472 -570.707)">
+													<rect id="e1_rect" width="197.127" height="456.42" x="-22.8598367365757" y="420.06495666503906" fill="#edf3f3" stroke="#a3a3a3" stroke-dasharray="6 6" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(3.68882 0 0 1.39431 4 -5.325)"/>
+													<g id="e41_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 -143.351 148.762)">
+														<rect id="e42_rect" width="85.83" height="35.33" x="692.78" y="998.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e43_rect" width="85.83" height="35.33" x="692.78" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e44_rect" width="85.83" height="35.33" x="692.78" y="963.33" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+													</g>
+													<g id="e45_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip">
+														<rect id="e45_rect" width="86" height="36.33" x="549" y="1000.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -268.804)"/>
+														<rect id="e54_rect" width="86" height="36.33" x="549" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -268.804)"/>
+														<rect id="e66_rect" width="86" height="36.33" x="549" y="964.33" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -268.804)"/>
+													</g>
+													<g id="e17_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 -75.7336 411.123)">
+														<rect id="e17_rect" width="85.83" height="35.33" x="692.7800383671836" y="998.6702030265093" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e18_rect" width="85.83" height="35.33" x="692.78" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e19_rect" width="85.83" height="35.33" x="692.7800383671836" y="963.3298709952593" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+													</g>
+													<g id="e19_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 156.876 416.533)">
+														<rect id="e20_rect" width="85.83" height="35.33" x="692.78" y="998.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e21_rect" width="85.83" height="35.33" x="692.78" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e22_rect" width="85.83" height="35.33" x="692.78" y="963.33" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+													</g>
+													<g id="e22_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 384.073 419.238)">
+														<rect id="e23_rect" width="85.83" height="35.33" x="692.78" y="998.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e24_rect" width="85.83" height="35.33" x="692.78" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e25_rect" width="85.83" height="35.33" x="692.78" y="963.33" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+													</g>
+												</g>
+											</g>
+											<g id="legend_group" transform="matrix(1.44319 0 0 1.44319 236.652 99.6288)">
+												<rect width="319.861" height="353.397" x="420" y="407" fill="#ffffff" stroke="#000000" pointer-events="none" rx="0" ry="0" transform="matrix(1.0356 0 0 0.906587 857.763 -181.328)"/>
+												<path fill="none" stroke="#2b2b2b" stroke-dasharray="6 6" stroke-miterlimit="10" stroke-width="2" d="M421.6057215777031,525.8018677417506L741.3419945339539,525.8018677390592" pointer-events="none" transform="matrix(1.0356 0 0 1.0356 857.763 -204.845)"/>
+												<path fill="none" stroke="#2b2b2b" stroke-dasharray="6 6" stroke-miterlimit="10" stroke-width="2" d="M420.8074638971261,588.9055365925085L744.5520904708255,587.3044053305257" pointer-events="none" transform="matrix(1.0356 0 0 1.0356 857.763 -204.845)"/>
+												<path fill="none" stroke="#2b2b2b" stroke-dasharray="6 6" stroke-miterlimit="10" stroke-width="2" d="M420.9667814960745,688.9445585422948L744.1324336301126,688.8213057281862" pointer-events="none" transform="matrix(1.0356 0 0 1.0356 857.763 -204.845)"/>
+												<rect width="86" height="47.67" x="376.478" y="479.287" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(0.519697 0.000439539 -0.000439539 0.519697 1154.61 39.8702)"/>
+												<rect width="86" height="47.67" x="376.478" y="383.957" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(0.519697 0.000439539 -0.000439539 0.519697 1154.61 39.8702)"/>
+												<rect width="86" height="47.67" x="376.478" y="431.627" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(0.519697 0.000439539 -0.000439539 0.519697 1154.61 39.8702)"/>
+												<path fill="none" stroke="#828282" stroke-miterlimit="10" stroke-width="5" d="M465.0363186331854,557.4016880113668L517.58684945537743,557.531739352351" pointer-events="none" transform="matrix(1.0356 0 0 1.0356 857.763 -204.845)"/>
+												<text id="e5_texte" x="1402.55" y="238.41" dx="" dy="" style="font-size:15px;font-style:normal;" transform="matrix(1.07816 0 0 1.07816 -113.299 -29.7752)">
+													<tspan x="1402.55" y="" dy=""> </tspan> <tspan/>
+										 <tspan x="1375.39" y="" dy="">Server Node</tspan> <tspan x="1402.55" y="" dy="1.9em">- Node Name</tspan> <tspan x="1402.55" y="" dy="1.5em"/>
+										 <tspan x="1402.55" y="" dy="1.5em"/>
+										 <tspan x="1402.55" y="" dy="1.5em">- Windows / Linux</tspan> <tspan x="1402.55" y="" dy="1.5em"/>
+										 <tspan x="1402.55" y="" dy="1.5em">- Availability</tspan>
+												</text>
+												<text id="e2_texte" x="1014.27" y="156.823" dx="" dy="" style="font-size:15px;font-style:normal;" transform="matrix(1.07816 0 0 1.07816 310.754 -65.4827)">
+													<tspan id="e4_tspan" x="1014.27" y="" dy="1.25em"/>
+										 <tspan id="e5_tspan" x="1014.27" y="" dy="1.25em"/>
+										 <tspan id="e7_tspan" x="1014.27" y="" dy="1.25em"/>
+										
+												</text>
+												<text id="e72_texte" x="854.286" y="414.506" dx="" dy="" style="fill:black;font-family:Arial;font-size:17px;" transform="matrix(0.660898 0.0009487 -0.0009487 0.660898 792.214 -18.2004)">
+													DATA1
+												</text>
+												<text id="e73_texte" x="920.661" y="435.939" class="prepaidNodeServer" transform="matrix(0.724239 0.000612532 -0.000612532 0.724239 698.035 -37.2875)">
+													
+												</text>
+												<text id="legend_icon" x="918.411" y="468.783" class="prepaidNodeAvail" dx="" dy="" label="" status="NotFound" transform="matrix(0.724239 0.000612532 -0.000612532 0.724239 698.035 -37.2875)">
+													
+												</text>
+												<rect id="fail" width="23.7656797076223" height="15.8437864717482" x="1333.76318359375" y="438.3854439115603" style="fill: red; stroke-width: 1px;"/>
+												<rect id="alarm" width="23.7657" height="15.8438" x="1030.451171875" y="508.9495308256228" rx="0" ry="0" style="fill:#FFBF00; stroke-width: 1px;" transform="matrix(1 0 0 1 436.728 -35.7075)"/>
+												<rect id="pass" width="23.7656797076223" height="15.8437864717482" x="1330.9716796875" y="473.24182818890404" style="fill:#28e928; stroke-width: 1px;"/>
+												<rect id="unknown" width="23.7657" height="15.8438" x="1033.4503173828125" y="474.09305499554466" rx="0" ry="0" style="fill:#868585; stroke-width: 1px;" transform="matrix(1 0 0 1 436.728 -35.7075)"/>
+												<text id="e3_texte" x="930.597" y="492.313" dx="" dy="" style="font-family:Arial;font-size:16px;font-style:normal;" transform="matrix(1 0 0 1 428.806 -42.045)">
+													- Critical Alerts
+												</text>
+												<text id="e4_texte" x="930.597" y="525.585" dx="" dy="" style="font-family:Arial;font-size:16px;font-style:normal;" transform="matrix(1 0 0 1 428.806 -42.045)">
+													- Available
+												</text>
+												<text id="e7_texte" x="1070.68" y="492.313" dx="" dy="" style="font-family:Arial;font-size:16px;font-style:normal;" transform="matrix(1 0 0 1 428.806 -42.045)">
+													- Unknown
+												</text>
+												<text id="e10_texte" x="1070.68" y="525.585" dx="" dy="" style="font-family:Arial;font-size:16px;font-style:normal;" transform="matrix(1 0 0 1 428.806 -42.045)">
+													- Warning Alerts
+												</text>
+											</g>
+											<text id="e6_texte" x="1655.06" y="380.291" style="fill:black;font-family:Arial;font-size:16px;font-weight:normal;" transform="matrix(1.44319 0 0 1.44319 -127.942 94.8318)">
+												- <tspan id="e6_tspan" x="1666.87" y="" dy="" style="font-weight:normal;">Interfaces</tspan>
+											</text>
+											<text id="sdp1a_text" x="79.2984" y="631.349" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 -2.4304 -512.824)">
+												SDP1a
+											</text>
+											<text id="sdp1a_os" x="103.29" y="667.179" class="prepaidNodeServer" transform="matrix(1 0 0 1 -2.4304 -512.824)">
+												
+											</text>
+											<text id="sdp1a_icon" x="103.29" y="695.545" class="prepaidNodeAvail" dx="" dy="" label="SDP1a" status="NotFound" transform="matrix(1 0 0 1 -2.4304 -512.824)">
+												
+											</text>
+											<text id="sdp1b_text" x="210.255" y="634.335" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 -131.242 -379.15)">
+												SDP1b
+											</text>
+											<text id="sdp1b_os" x="228.719" y="670.165" class="prepaidNodeServer" dx="" dy="" transform="matrix(1 0 0 1 -131.242 -379.15)">
+												
+											</text>
+											<text id="sdp1b_icon" x="228.197" y="698.531" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 1 -131.242 -379.15)">
+												
+											</text>
+											<text id="e30_texte" x="451.466" y="586.906" style="fill:rgb(49, 93, 8);font-family:Arial;font-size:20px;font-weight:bold;" transform="matrix(1 0 0 1 -2.4304 -512.824)">
+												NEW PROVIDENCE
+											</text>
+											<text id="occ1_text" x="215.116" y="634.335" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 -70.4825 -143.398)">
+												OCC1
+											</text>
+											<text id="occ1_os" x="228.719" y="670.165" class="prepaidNodeServer" transform="matrix(1 0 0 1 -70.4825 -143.398)">
+												
+											</text>
+											<text id="occ1_icon" x="228.197" y="700.531" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 1 -70.4825 -143.398)">
+												
+											</text>
+											<text id="ccn1_text" x="215.116" y="634.335" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 138.536 -138.536)">
+												CCN1
+											</text>
+											<text id="ccn1_os" x="228.719" y="670.165" class="prepaidNodeServer" transform="matrix(1 0 0 1 138.536 -138.536)">
+												
+											</text>
+											<text id="ccn1_icon" x="228.197" y="698.531" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 1 138.536 -138.536)">
+												
+											</text>
+											<text id="air1_text" x="215.116" y="634.335" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 349.985 -136.105)">
+												AIR1
+											</text>
+											<text id="air1_os" x="228.719" y="670.165" class="prepaidNodeServer" transform="matrix(1 0 0 1 342.693 -136.105)">
+												
+											</text>
+											<text id="air1_icon" x="228.197" y="698.531" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 1 342.693 -136.105)">
+												
+											</text>
+											<text id="np_switch" x="-965.892" y="267.412" class="prepaidNodeSwitch" transform="matrix(1 0 0 1 1528.73 -72.9146)">
+												
+											</text>
+											<g id="e14_g" transform="matrix(0.898577 0 0 0.884497 1457.8 32.4619)">
+												<g id="e14_group" transform="matrix(1 0 0 1 -2.70472 -570.707)">
+													<rect id="e14_rect" width="201.525" height="663.344" x="-22.8598" y="420.065" fill="#edf3f3" stroke="#a3a3a3" stroke-dasharray="6 6" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(3.68882 0 0 1.39431 4 -5.325)"/>
+													<g id="e15_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 385.754 159.451)">
+														<rect id="e15_rect" width="85.83" height="35.33" x="692.78" y="998.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e16_rect" width="85.83" height="35.33" x="692.78" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e26_rect" width="85.83" height="35.33" x="692.78" y="963.33" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+													</g>
+													<g id="e26_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 529.105 10.6891)">
+														<rect id="e27_rect" width="86" height="36.33" x="549" y="1000.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -268.804)"/>
+														<rect id="e28_rect" width="86" height="36.33" x="549" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -268.804)"/>
+														<rect id="e29_rect" width="86" height="36.33" x="549" y="964.33" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -268.804)"/>
+													</g>
+													<g id="e30_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 -58.1528 319.071)">
+														<rect id="e30_rect" width="85.83" height="35.33" x="692.78" y="998.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e31_rect" width="85.83" height="35.33" x="692.78" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e32_rect" width="85.83" height="35.33" x="692.78" y="963.33" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+													</g>
+													<g id="e32_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 441.304 308.584)">
+														<rect id="e33_rect" width="85.83" height="35.33" x="692.78" y="998.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e34_rect" width="85.83" height="35.33" x="692.78" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e35_rect" width="85.83" height="35.33" x="692.78" y="963.33" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+													</g>
+													<g id="e51_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 119.007 317.697)">
+														<rect id="e79_rect" width="85.83" height="35.33" x="692.78" y="998.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e80_rect" width="85.83" height="35.33" x="692.78" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e81_rect" width="85.83" height="35.33" x="692.78" y="963.33" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+													</g>
+													<g id="e53_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 64.9127 515.54)">
+														<rect id="e82_rect" width="85.83" height="35.33" x="692.78" y="998.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e83_rect" width="85.83" height="35.33" x="692.78" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e84_rect" width="85.83" height="35.33" x="692.78" y="963.33" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e2_rect" width="85.83" height="35.33" x="493.6980591174736" y="1115.1502685546875" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e3_rect" width="85.83" height="35.33" x="493.69805908518424" y="1150.4799804697673" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e4_rect" width="85.83" height="35.33" x="493.6980591174736" y="1185.8197021484375" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e5_rect" width="85.83" height="35.33" x="633.990875279583" y="1115.1502685546875" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e6_rect" width="85.83" height="35.33" x="633.9909362438545" y="1150.47998046875" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e7_rect" width="85.83" height="35.33" x="633.9909362438545" y="1185.8197021484375" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e8_rect" width="85.83" height="35.33" x="783.6364746088718" y="1115.1502685531664" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e9_rect" width="85.83" height="35.33" x="783.6364746088718" y="1150.4799804672289" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e10_rect" width="85.83" height="35.33" x="783.6364746088718" y="1185.8197021469164" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e11_rect" width="85.83" height="35.33" x="931.9459838836249" y="1113.7741699227165" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e12_rect" width="85.83" height="35.33" x="931.9459838836249" y="1149.103881836779" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e13_rect" width="85.83" height="35.33" x="931.9459838836249" y="1184.4436035164665" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+													</g>
+												</g>
+											</g>
+											<text id="ecms_app1_text" x="81.6705" y="633.75" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 0.984331 1831.97 -492.703)">
+												ECAP1
+											</text>
+											<text id="ecms_app1_os" x="103.29" y="667.179" class="prepaidNodeServer" transform="matrix(1 0 0 0.984331 1831.97 -492.703)">
+												
+											</text>
+											<text id="ecms_app1_icon" x="103.29" y="695.545" class="prepaidNodeAvail" dx="" dy="" label="SDP1a" status="NotFound" transform="matrix(1 0 0 0.984331 1831.97 -492.703)">
+												
+											</text>
+											<text id="ecms_app2_text" x="207.854" y="634.335" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 0.984331 1703.16 -361.123)">
+												ECAP2
+											</text>
+											<text id="ecms_app2_os" x="228.719" y="670.165" class="prepaidNodeServer" dx="" dy="" transform="matrix(1 0 0 0.984331 1703.16 -361.123)">
+												
+											</text>
+											<text id="ecms_app2_icon" x="228.197" y="698.531" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 0.984331 1703.16 -361.123)">
+												
+											</text>
+											<text id="e42_texte" x="1404.76" y="588.092" dx="" dy="" style="fill:rgb(49, 93, 8);font-family:Arial;font-size:20px;font-weight:bold;" transform="matrix(1 0 0 1 -2.4304 -512.824)">
+												CURACAO
+											</text>
+											<text id="crs_dm1_text" x="207.825" y="634.335" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 0.984331 1304.28 -219.939)">
+												CRDM1
+											</text>
+											<text id="crs_dm1_os" x="228.719" y="670.165" class="prepaidNodeServer" transform="matrix(1 0 0 0.984331 1304.28 -219.939)">
+												
+											</text>
+											<text id="crs_dm1_icon" x="228.197" y="698.531" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 0.984331 1304.28 -219.939)">
+												
+											</text>
+											<text id="ecms_db_text" x="212.715" y="636.736" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 0.984331 1753.08 -229.214)">
+												ECDB
+											</text>
+											<text id="ecms_db_os" x="228.719" y="670.165" class="prepaidNodeServer" transform="matrix(1 0 0 0.984331 1753.08 -229.214)">
+												
+											</text>
+											<text id="ecms_db_icon" x="228.197" y="698.531" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 0.984331 1753.08 -229.214)">
+												
+											</text>
+											<text id="cur_switch" x="-1450.93" y="202.802" class="prepaidNodeSwitch" transform="matrix(1 0 0 0.984331 2887.69 -6.93969)">
+												
+											</text>
+											<polyline id="e51_polyline" points="-1474.5 153.635" style="stroke:black;fill:none;stroke-width:1px;" transform="matrix(1 0 0 0.984331 2887.69 -6.93969)"/>
+											<g id="e15_g" transform="matrix(0.898577 0 0 0.898577 288.587 657.035)">
+												<g id="e16_group" transform="matrix(1 0 0 1 -2.70472 -570.707)">
+													<rect id="e39_rect" width="301.411" height="353.445" x="-19.927" y="398.725" fill="#edf3f3" stroke="#a3a3a3" stroke-dasharray="6 6" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(3.68882 0 0 1.39431 139.237 10.9035)"/>
+													<g id="e39_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 -8.11354 209.619)">
+														<rect id="e40_rect" width="85.83" height="35.33" x="692.78" y="998.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e41_rect" width="85.83" height="35.33" x="692.78" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e46_rect" width="85.83" height="35.33" x="692.78" y="963.33" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+													</g>
+													<g id="e46_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 135.237 60.8571)">
+														<rect id="e47_rect" width="86" height="36.33" x="549" y="1000.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -268.804)"/>
+														<rect id="e48_rect" width="86" height="36.33" x="549" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -268.804)"/>
+														<rect id="e49_rect" width="86" height="36.33" x="549" y="964.33" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -268.804)"/>
+													</g>
+													<g id="e50_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 339.594 260.507)">
+														<rect id="e50_rect" width="85.83" height="35.33" x="692.7800383671836" y="998.6702030265093" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e51_rect" width="85.83" height="35.33" x="692.78" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e52_rect" width="85.83" height="35.33" x="692.7800383671836" y="963.3298709952593" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+													</g>
+													<g id="e52_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 493.768 260.507)">
+														<rect id="e53_rect" width="85.83" height="35.33" x="692.78" y="998.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e55_rect" width="85.83" height="35.33" x="692.7801268252076" y="928.0001412235366" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e56_rect" width="85.83" height="35.33" x="692.7801268252076" y="963.3301583133804" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+													</g>
+													<g id="e56_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 194.893 260.508)">
+														<rect id="e57_rect" width="85.83" height="35.33" x="692.78" y="998.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e58_rect" width="85.83" height="35.33" x="692.78" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e59_rect" width="85.83" height="35.33" x="692.78" y="963.33" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+													</g>
+													<g id="e27_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 1073.45 -29.3005)">
+														<rect id="e60_rect" width="86" height="36.33" x="549" y="1000.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -268.804)"/>
+														<rect id="e61_rect" width="86" height="36.33" x="549" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -268.804)"/>
+														<rect id="e62_rect" width="86" height="36.33" x="549" y="964.33" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -268.804)"/>
+													</g>
+													<g id="e31_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 752.029 213.569)">
+														<rect id="e65_rect" width="85.83" height="35.33" x="692.78" y="998.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e67_rect" width="85.83" height="35.33" x="692.78" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e68_rect" width="85.83" height="35.33" x="692.78" y="963.33" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+													</g>
+													<g id="e28_group" class="nodes_shape" data-container="body" data-placement="left" data-toggle="tooltip" transform="matrix(1 0 0 1 928.346 114.656)">
+														<rect id="e63_rect" width="85.83" height="35.33" x="692.78" y="998.67" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e64_rect" width="85.83" height="35.33" x="692.78" y="928" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+														<rect id="e69_rect" width="85.83" height="35.33" x="692.78" y="963.33" fill="#759eba" stroke="#3333ff" stroke-width="2" pointer-events="none" rx="0" ry="0" transform="matrix(1 0 0 0.986419 -576.989 -265.488)"/>
+													</g>
+												</g>
+											</g>
+											<text id="sdp2a_text" x="79.2984" y="631.349" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 308.839 168.59)">
+												SDP2a
+											</text>
+											<text id="sdp2a_os" x="103.29" y="667.179" class="prepaidNodeServer" transform="matrix(1 0 0 1 308.839 168.59)">
+												
+											</text>
+											<text id="sdp2a_icon" x="103.29" y="695.545" class="prepaidNodeAvail" dx="" dy="" label="SDP1a" status="NotFound" transform="matrix(1 0 0 1 308.839 168.59)">
+												
+											</text>
+											<text id="sdp2b_text" x="210.255" y="634.335" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 180.029 302.264)">
+												SDP2b
+											</text>
+											<text id="sdp2b_os" x="228.719" y="670.165" class="prepaidNodeServer" dx="" dy="" transform="matrix(1 0 0 1 180.029 302.264)">
+												
+											</text>
+											<text id="sdp2b_icon" x="228.197" y="698.531" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 1 180.029 302.264)">
+												
+											</text>
+											<text id="e63_texte" x="52.878" y="560.691" style="fill:rgb(49, 93, 8);font-family:Arial;font-size:20px;font-weight:bold;" transform="matrix(1 0 0 1 308.839 128.488)">
+												GRAND BAHAMA
+											</text>
+											<text id="occ2_text" x="215.116" y="634.335" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 492.471 347.992)">
+												OCC2
+											</text>
+											<text id="occ2_os" x="228.719" y="670.165" class="prepaidNodeServer" transform="matrix(1 0 0 1 492.471 347.992)">
+												
+											</text>
+											<text id="occ2_icon" x="228.197" y="698.531" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 1 492.471 347.992)">
+												
+											</text>
+											<text id="ccn2_text" x="215.116" y="634.335" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 631.01 347.993)">
+												CCN2
+											</text>
+											<text id="ccn2_os" x="228.719" y="670.165" class="prepaidNodeServer" transform="matrix(1 0 0 1 631.01 347.993)">
+												
+											</text>
+											<text id="ccn2_icon" x="228.197" y="698.531" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 1 631.01 347.993)">
+												
+											</text>
+											<text id="air2_text" x="210.255" y="634.335" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 369.745 347.993)">
+												AIR2
+											</text>
+											<text id="air2_os" x="228.719" y="670.165" class="prepaidNodeServer" transform="matrix(1 0 0 1 362.455 347.993)">
+												
+											</text>
+											<text id="air2_icon" x="228.197" y="698.531" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 1 362.455 347.993)">
+												
+											</text>
+											<text id="bah_switch" x="-1068.63" y="108.0417" class="prepaidNodeSwitch" transform="matrix(1 0 0 1 1840 631.589)">
+												
+											</text>
+											<polyline id="e72_polyline" points="-1169.77 120.017" style="stroke:black;fill:none;stroke-width:1px;" transform="matrix(1 0 0 1 1840 631.589)"/>
+											<text id="ngvs1a_text" x="79.2984" y="633.779" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 1151.9 87.5773)">
+												NGVS1
+											</text>
+											<text id="ngvs1a_os" x="103.29" y="667.179" class="prepaidNodeServer" transform="matrix(1 0 0 1 1151.9 87.5773)">
+												
+											</text>
+											<text id="ngvs1a_icon" x="103.29" y="695.545" class="prepaidNodeAvail" dx="" dy="" label="SDP1a" status="NotFound" transform="matrix(1 0 0 1 1151.9 87.5773)">
+												
+											</text>
+											<text id="ngvs1c_text" x="200.533" y="634.335" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 870.374 305.816)">
+												NGVS3
+											</text>
+											<text id="ngvs1c_os" x="228.719" y="670.165" class="prepaidNodeServer" transform="matrix(1 0 0 1 863.084 305.816)">
+												
+											</text>
+											<text id="ngvs1c_icon" x="228.197" y="698.531" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 1 863.084 305.816)">
+												
+											</text>
+											<text id="ngvs1b_text" x="207.825" y="634.335" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 1021.51 216.935)">
+												NGVS2
+											</text>
+											<text id="ngvs1b_os" x="228.719" y="670.165" class="prepaidNodeServer" transform="matrix(1 0 0 1 1021.51 216.935)">
+												
+											</text>
+											<text id="ngvs1b_icon" x="228.197" y="698.531" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 1 1021.51 216.935)">
+												
+											</text>
+											<line id="sdp2a_interface" x1="459.6553649902344" x2="782.5873413085938" y1="820.9210869076346" y2="750.1381279232596" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound"/>
+											<line id="air2_interface" x1="606.6950073242188" x2="781.2180786132812" y1="960.6755317447091" y2="752.4205268618966" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound"/>
+											<line id="occ2_interface" x1="733.0760498046875" x2="781.22705078125" y1="959.4595390560721" y2="753.1745048763846" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound"/>
+											<line id="ngvs1a_interface" x1="783.5064140560721" x2="1225.2388969662284" y1="750.1380004882812" y2="773.531005859375" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound"/>
+											<line id="ccn2_interface" x1="783.9603881835938" x2="876.4703979492188" y1="753.3254951236154" y2="959.4595283267404" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound"/>
+											<line id="sdp2b_interface" x1="782.8913821689509" x2="460.8693789951228" y1="747.2547128782873" y2="942.4427011595373" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound"/>
+											<line id="ngvs1c_interface" x1="786.0878349545096" x2="1066.0432182552909" y1="750.89697265625" y2="964.3209838867188" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound"/>
+											<line id="ngvs1b_interface" x1="786.9998222591971" x2="1225.2393852474784" y1="750.7479858398438" y2="875.6099853515625" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound"/>
+											<line id="sdp1a_interface" x1="148.20106471" x2="555.29529866" y1="135.25167366" y2="209.38000936" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound"/>
+											<line id="sdp1b_interface" x1="150.63147804" x2="552.86488532" y1="277.43225196" y2="210.59522797" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound"/>
+											<line id="ccn1_interface" x1="380.306" x2="555.295" y1="473.082" y2="211.81" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound"/>
+											<line id="occ1_interface" x1="550.01" x2="175.726" y1="214.799" y2="472.427" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound"/>
+											<line id="air1_interface" x1="554.517" x2="584.902" y1="212.769" y2="476.469" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound"/>
+											<text id="crs_data2_text" x="207.825" y="636.765" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 1362.55 107.378)">
+												CRDT2
+											</text>
+											<text id="crs_data2_os" x="235.923" y="667.764" class="prepaidNodeServer" transform="matrix(1 0 0 1 1362.55 107.378)">
+												
+											</text>
+											<text id="crs_data2_icon" x="235.401" y="696.13" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 1 1362.55 107.378)">
+												
+											</text>
+											<text id="crs_data3_text" x="202.964" y="634.335" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 1501.09 107.379)">
+												CRDT3
+											</text>
+											<text id="crs_data3_os" x="228.719" y="667.764" class="prepaidNodeServer" transform="matrix(1 0 0 1 1501.09 107.379)">
+												
+											</text>
+											<text id="crs_data3_icon" x="228.197" y="696.13" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 1 1501.09 107.379)">
+												
+											</text>
+											<text id="crs_data1_text" x="205.394" y="634.335" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 1239.83 107.38)">
+												CRDT1
+											</text>
+											<text id="crs_data1_os" x="233.521" y="665.362" class="prepaidNodeServer" transform="matrix(1 0 0 1 1232.54 107.38)">
+												
+											</text>
+											<text id="crs_data1_icon" x="232.999" y="698.531" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 1 1232.54 107.38)">
+												
+											</text>
+											<line id="ecms_app1_interface" x1="1461.03" x2="1846.25" y1="146.413" y2="157.35" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound" transform="matrix(1 0 0 1 58.3303 0)"/>
+											<line id="ecms_app2_interface" x1="1459.81" x2="1847.46" y1="145.197" y2="293.454" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound" transform="matrix(1 0 0 1 58.3303 0)"/>
+											<line id="crs_dm1_interface" x1="1461.03" x2="1478.02" y1="146.413" y2="384.606" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound" transform="matrix(1 0 0 1 58.3303 0)"/>
+											<text id="crs_data4_text" x="202.964" y="634.335" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 1 1634.77 107.379)">
+												CRDT4
+											</text>
+											<text id="crs_data4_os" x="228.719" y="665.362" class="prepaidNodeServer" transform="matrix(1 0 0 1 1634.77 107.379)">
+												
+											</text>
+											<text id="crs_data4_icon" x="228.197" y="696.13" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 1 1634.77 107.379)">
+												
+											</text>
+											<rect id="crs_data_group" width="540.767" height="131.244" x="1354.09" y="702.977" rx="0" ry="0" style="stroke-width:2px; stroke:black; fill:none;stroke-dasharray:3px,3px;" transform="matrix(1 0 0 1 58.3303 0)"/>
+											<text id="crs_ds1_text" x="207.825" y="636.804" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 0.984331 1463.47 -221.154)">
+												CRDS1
+											</text>
+											<text id="crs_ds1_os" x="228.719" y="670.165" class="prepaidNodeServer" transform="matrix(1 0 0 0.984331 1463.47 -221.154)">
+												
+											</text>
+											<text id="crs_ds1_icon" x="228.197" y="698.531" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 0.984331 1463.47 -221.154)">
+												
+											</text>
+											<text id="crs_bi1_text" x="212.686" y="636.804" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:20px;font-weight:normal;" transform="matrix(1 0 0 0.984331 1414.86 -46.1626)">
+												CRBI1
+											</text>
+											<text id="crs_bi1_os" x="228.719" y="670.165" class="prepaidNodeServer" transform="matrix(1 0 0 0.984331 1414.86 -46.1626)">
+												
+											</text>
+											<text id="crs_bi1_icon" x="228.197" y="698.531" class="prepaidNodeAvail" dx="" dy="" label="SDP1b" status="NotFound" transform="matrix(1 0 0 0.984331 1414.86 -46.1626)">
+												
+											</text>
+											<line id="crs_dm1_bi1_interface" x1="1488.98" x2="1593.48" y1="476.342" y2="556.546" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound" transform="matrix(1 0 0 1 58.3303 0)"/>
+											<line id="crs_bi1_dt_interface" x1="1597.13" x2="1611.71" y1="648.903" y2="702.372" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound" transform="matrix(1 0 0 1 58.3303 0)"/>
+											<line id="crs_ds1_interface" x1="1459.83" x2="1644.54" y1="143.399" y2="381.582" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound" transform="matrix(1 0 0 1 58.3303 0)"/>
+											<line id="e1_ds1_bi1_interface" x1="1656.77" x2="1599.48" y1="476.342" y2="558.977" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound" transform="matrix(1 0 0 1 58.3303 0)"/>
+											<line id="np_cur_switch" x1="640.553" x2="1420.4" y1="149.988" y2="149.988" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound" style=""/>
+											<line id="cur_bah_switch" x1="1411.83" x2="840.552" y1="200.176" y2="685.82"  class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound" style=""/>
+											<line id="np_bah_switch" x1="638.97" x2="780.352" y1="200.176" y2="685.532" class="prepaid_interface_shape interfaceAvail" data-container="body" data-placement="left" data-toggle="tooltip" label="Details" status="NotFound" style=""/>
+										</svg>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Right Side Bar -->
+		<div class="right-sidebar icon-menu-side">
+			<div class="country-setting" data-toggle="tooltip" data-placement="left" title="Select country">
+				<div class="icon-right">
+					<i class="fa fa-globe fa-3x" aria-hidden="true"></i>
+				</div>
+			</div>
+			<div class="right-sidebar-container pull-right">
+				<div class="sidebar-content">
+					<div class="sidebar-item">
+						<h5>
+							Countries
+							<span class="pull-left m-l-r-10">
+								 <i class="fa fa-flag" aria-hidden="true"></i>
+							</span>
+						</h5>
+					</div>
+					<ul class="country-list" id="countryContainer">
+						<!-- Country List will be added from commmon-util.js -->
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" id="errorDiv">
+			<div class="col-xs-12 col-sm-12 p-sm-0">
+				<div class="card card-stats">
+					<div class="chart theme-green">
+						<div class="chart-title-grey">
+							<h5>
+								User Not Authorized!!!
+							</h5>
+						</div>
+						<div class="chart-container">
+							<div class="row">
+								<div class="col-xs-12 col-sm-12">
+									<div id="errorMsg" class="chart-area">
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	</div>
+
+    <footer id="admin-footer" class="clearfix">
+        <div class="pull-left">
+            <img src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/images/prodapt_logo.png" width="100">
+            <span class="hidden-xs">
+                    <b>Copyright &copy; </b>2018. All Rights Reserved.
+            </span>
+        </div>
+        <div class="pull-right refreshDateTime">
+            Last refreshed :
+            <span class="currentDateTime"></span>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="critical-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Critical Alarms</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive" id="criticalAlarmDiv"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="major-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Major Alarms</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive" id="majorAlarmDiv"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="minor-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Minor Alarms</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive" id="minorAlarmDiv"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+   <div class="modal fade" id="siteTableModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModal1Label"><span></span> Details</h4>
+				</div>
+				<div class="modal-body customModalBody">
+					<div class="table-responsive" id="sitemonitorContainer"></div>
+					<!-- <div id="noDataDisplay"></div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="node-modal" tabindex="-1" role="dialog" aria-labelledby="modalNodeLabel">
+		<div class="modal-dialog modal-sm modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<div class="modal-title" id="nodeModalLabel">Node - </div>
+				</div>
+				<div class="modal-body customModalBody">
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<div class="modal-title" id="modalNodeLabel">Node Details</div>
+							<thead id="node_details_table_header">
+								<tr></tr>
+							</thead>
+							<tbody id="node_details_table_values">
+								<tr></tr>
+							</tbody>
+						</table>
+						<!-- <table class="table table-striped">
+								<div class="modal-title" id="modalAlertsLabel">Alerts</div>
+								<thead id="node_alerts_table_header">
+									<tr></tr>
+								</thead>
+								<tbody id="node_alerts_table_values">
+									<tr></tr>
+								</tbody>
+							</table>
+							<table class="table table-striped">
+								<div class="modal-title" id="modalDiskLabel">Disk Usage</div>
+								<thead id="node_disk_table_header">
+									<tr></tr>
+								</thead>
+								<tbody id="node_disk_table_values">
+									<tr></tr>
+								</tbody>
+							</table>
+							<table class="table table-striped">
+								<div class="modal-title" id="modalCpuLabel">CPU Load</div>
+								<thead id="node_cpu_table_header">
+									<tr></tr>
+								</thead>
+								<tbody id="node_cpu_table_values">
+									<tr></tr>
+								</tbody>
+							</table>
+							<table class="table table-striped">
+								<div class="modal-title" id="modalDiskLabel">Process Details</div>
+								<thead id="node_process_table_header">
+									<tr></tr>
+								</thead>
+								<tbody id="node_process_table_values">
+									<tr></tr>
+								</tbody>
+							</table> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="incident-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">Incidents</h4>
+				</div>
+				<div class="modal-body" style="max-height: calc(100vh - 210px); overflow-y: auto;">
+					<div class="table-responsive" id="incDetailDiv"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="interface-modal" tabindex="-1" role="dialog" aria-labelledby="modalInterfaceLabel">
+		<div class="modal-dialog modal-sm modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<div class="modal-title" id="interfaceModalLabel">Interfaces - </div>
+				</div>
+				<div class="modal-body customModalBody">
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<div class="modal-title" id="modalInterfaceLabel">Interface Details</div>
+							<thead id="interface_details_table_header">
+								<tr></tr>
+							</thead>
+							<tbody id="interface_details_table_values">
+								<tr></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+        <!-- custom changes for splunk js ends here-->
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+       <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/jquery.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/bootstrap.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/d3.v3.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/d3-collection.v1.min.js"></script>
+    <!-- HighChart JS and 3rd Party JS Files -->
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/highcharts.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/highcharts-more.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/highcharts-3d.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/exporting.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/export-data.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/no-data-to-display.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/drilldown.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/waypoints.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/moment.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAp1lFRiYqrFRh6XYGNosN8skCY5mcCXD8&libraries=visualization"></script>
+    <!-- Splunk  JS Files -->
+    <script src="/en-US/config?autoload=1" crossorigin="use-credentials"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/js/i18n.js"></script>
+    <script src="/en-US/i18ncatalog?autoload=1"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/build/simplexml/index.js"></script>
+    <!-- Custom JS Files -->
+    <script type="text/javascript" src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/index.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/commonHelpText.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/Queries.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/common-util.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/chart-util.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/monitoring-prepaid-dashboard.js"></script>
+</body>
+
+</html>

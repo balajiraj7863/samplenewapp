@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="CWC Global Dashboard">
+    <meta name="author" content="Prodapt Solutions">
+    <!-- Brand Image and Title -->
+    <link rel="icon" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/images/cwc-logo.png">
+    <title>CWC Global Dashboard</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/bootstrap.min.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/ie10-viewport-bug-workaround.css">
+    <!-- 3rd Party CSS -->
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/animate.css?v=1.1">
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/flag-icon/css/flag-icon.css" />
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/style.css">
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/js/i18n.js"></script>
+    <meta name="referrer" content="never" />
+    <meta name="referrer" content="no-referrer" />
+    <script>
+        (function () {
+            window._splunk_metrics_events = [];
+            window._splunk_metrics_events.active = true;
+
+            function onLoadSwa() {
+                new SWA({
+                    "version": "3",
+                    "userID": "7c3458653964f8051b3b2256476a3bb90999bdab160de5e1ba17904821a0aa71",
+                    "deploymentID": "dab9c562-6acf-5147-8b4e-8106aae017a8",
+                    "url": "https://e1345286.api.splkmobile.com/1.0/e1345286",
+                    "instanceGUID": "A4790072-9B5E-41F7-A57A-4DA82FFA19FF",
+                    "visibility": "anonymous,support"
+                });
+            };
+
+            document.addEventListener("DOMContentLoaded", function (event) {
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = '/en-US/static/app/splunk_instrumentation/build/pages/swa.js';
+                s.addEventListener('load', onLoadSwa);
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            });
+        }());
+    </script>
+</head>
+
+<body>
+    <!-- custom changes for splunk js starts here-->
+    <div id="preloader">
+        <div id="status">
+            <div id="loader"></div>
+            <div id="loading">Please wait...</div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/images/cwc.png">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="operation-dashboard">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="operation-prepaid-dashboard">Prepaid</a>
+                    </li>
+                    <li>
+                        <a href="operation-postpaid-dashboard">Postpaid</a>
+                    </li>
+                    <li>
+                        <a href="operation-fixed-dashboard">Fixed</a>
+                    </li>
+                    <li>
+                        <a href="operation-orderflow">Order Flow</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown notifications-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="visible-xs">Notifications</span>
+                            <i class="fa fa-bell-o hidden-xs"></i>
+                            <span class="label label-warning">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 4 Notifications</li>
+                            <li>
+                                <!-- Inner menu contains the notifications -->
+                                <ul class="menu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-ticket text-red"></i>
+                                            <span id="incidentCount"></span> new tickets has been raised.
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-exclamation-triangle text-orange"></i>
+                                            <span id="HealthNotifyCount"></span> critical Health Check Status failure.
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-cart text-green2"></i>
+                                            <span id="orderNotifyCount"></span> new order received.
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-sitemap text-red"></i>
+                                            <span id="siteAvailableNotifyCount"></span> site availability is down.
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- End Notifications -->
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="background-color: #e0e0e0; border-right: 1px solid #d2cfcf;">
+                            <a id="ctryNameHolder" aria-haspopup="true" aria-expanded="true">
+                            </a>
+                        </li>
+                        <li style="background-color: #e0e0e0;">
+                            <a id="userNameHolder" aria-haspopup="true" aria-expanded="true">
+                                <i class="fa fa-user"></i>&nbsp;
+                                <span id="userId"></span>
+                            </a>
+                        </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Operations View
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu profile-menu">
+                            <li>
+                                <a href="business-dashboard"> <!--// redirect -->
+                                    <i class="fa fa-server" aria-hidden="true"></i>Switch to Business</a>
+                            </li>
+                            <li>
+                                <a href="monitoring-dashboard"> <!--// redirect -->
+                                    <i class="fa fa-tachometer" aria-hidden="true"></i>Switch to Monitoring</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="../../account/logout" onclick="return clearSessionVariables();">
+                                    <i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- Dashboard Contents starts from here -->
+    <div id="wrapper" class="container-fluid">
+        <div class="main-content">
+            <div class="row">
+
+                <div class="col-xs-12 custom-width20 p-sm-0">
+                    <div class="card card-stats animated zoomIn" data-toggle="tooltip" data-html="true" data-container="body" data-placement="bottom"
+                        id="topupBannerHelp">
+                        <div class="cyan box-shadow height-card">
+                            <a href="operation-prepaid-topup">
+                                <div class="card-header">
+                                    <div class="icon">
+                                        <i class="fa fa-signal fa-4x" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category-top">
+                                        <strong>Topup</strong>
+                                    </p>
+                                    <h3 class="card-title">
+                                        <span id="topupBanner_notation" class="banner-notation">-</span>
+                                        <span class="counter" id="topupOpsPreBanner"></span>
+                                        <span id="topupOpsPreBannerUnits"></span>
+                                    </h3>
+                                    <p class="category">
+                                        <strong>Previous day</strong>
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="fa fa-info-circle text-info" aria-hidden="true"></i>
+                                        <a href="operation-prepaid-topup">More Details</a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 custom-width20 p-sm-0">
+                    <div class="card card-stats animated zoomIn" data-toggle="tooltip" data-html="true" data-container="body" data-placement="bottom"
+                        id="incidentBannerHelp">
+                        <div class="teal box-shadow height-card">
+                            <a href="operation-prepaid-incident">
+                                <div class="card-header">
+                                    <div class="icon">
+                                        <i class="fa fa-ticket fa-4x" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category-top">
+                                        <strong>Incidents</strong>
+                                    </p>
+                                    <h3 class="card-title">
+                                        <span id="openIncidentBanner_notation" class="banner-notation">-</span>
+                                        <span class="counter" id="openIncOpsPreBanner"></span>
+                                        <span id="openIncOpsPreBannerUnits"></span>
+                                    </h3>
+                                    <p class="category">
+                                        <strong>Open Incidents</strong>
+                                    </p>
+                                </div>
+
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="fa fa-info-circle text-info" aria-hidden="true"></i>
+                                        <a href="operation-prepaid-incident">More Details
+                                            <span class="pull-right">
+                                                P1:
+                                                <span class="counter" id="ops_pre_incidentp1banner">-</span>
+                                                | P2:
+                                                <span class="counter" id="ops_pre_incidentp2banner">-</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 custom-width20 p-sm-0" data-toggle="tooltip" data-html="true" data-placement="bottom" id="subBannerHelp">
+					<div class="card card-stats">
+						<div class="purple box-shadow height-card">
+							<a href="operation-prepaid-subscriber">
+								<div class="card-header">
+									<div class="icon">
+										<i class="fa fa-users fa-4x" aria-hidden="true"></i>
+									</div>
+								</div>
+
+								<div class="card-content">
+									<p class="category-top">
+										<strong>Subscriber</strong>
+									</p>
+									<h3 class="card-title">
+										<span id="subbanner_notation" class="banner-notation">-</span>
+										<span id="subbanner" class="counter"></span>
+										<span id="bizPostpaidUnSubBannerUnits"></span>
+									</h3>
+									<p class="category">
+										<!-- <strong><span id="subbanner_date" ></span></strong> -->
+										<strong>Previous Day</strong>
+									</p>
+								</div>
+
+								<div class="card-footer">
+									<div class="stats">
+										<i class="fa fa-info-circle text-info" aria-hidden="true"></i>
+										<a href="operation-prepaid-subscriber">More Details</a>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+                </div>
+                
+                <div class="col-xs-12 col-sm-2 p-sm-0 phaseTwo">
+                    <div class="card card-stats animated zoomIn" data-toggle="tooltip" data-html="true" data-container="body" data-placement="bottom"
+                        id="orderBannerHelp">
+                        <div class="orange box-shadow height-card">
+                            <a href="#">
+                                <div class="card-header">
+                                    <div class="icon">
+                                        <i class="fa fa-shopping-cart fa-4x" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+
+                                <div class="card-content">
+                                    <p class="category-top">
+                                        <strong>Orders</strong>
+                                    </p>
+                                    <h3 class="card-title counter">
+                                        <span id="orderbanner_notation" class="banner-notation">-</span>
+                                        <span class="counter" id="orderOpsPreBanner"></span>
+                                        <span id="orderOpsPreBannerUnits"></span>
+                                    </h3>
+                                    <p class="category">
+                                        <strong>As of Today</strong>
+                                    </p>
+                                </div>
+
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="fa fa-info-circle text-info" aria-hidden="true"></i>
+                                        <a href="#">More Details</a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 custom-width20 p-sm-0">
+                    <div class="card card-stats animated zoomIn" data-toggle="tooltip" data-html="true" data-placement="bottom" id="trafficBannerHelp">
+                        <div class="orange box-shadow height-card">
+                                <a href="operation-prepaid-traffic">
+                                <div class="card-header">
+                                    <div class="icon">
+                                        <i class="fa fa-signal fa-4x" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+
+                                <div class="card-content">
+                                    <p class="category-top">
+                                            <strong>Realtime Traffic</strong>
+                                    </p>
+                                    <h3 class="card-title">
+                                        <div class="text-center">
+											<i class="fa" id="trafficVoice" aria-hidden="true"></i>
+											<small>Voice</small>
+										</div>
+										<div class="text-center">
+											<i class="fa" id="trafficSMS" aria-hidden="true"></i>
+											<small>SMS</small>
+										</div>
+										<div class="text-center">
+											<i class="fa" id="trafficData" aria-hidden="true"></i>
+											<small>Data</small>
+										</div>
+                                    </h3>
+                                </div>
+
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="fa fa-info-circle text-info" aria-hidden="true"></i>
+                                        <a href="operation-prepaid-traffic">More Details</a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 custom-width20">
+                    <div class="card card-stats animated zoomIn" data-toggle="tooltip" data-html="true" data-container="body" data-placement="bottom"
+                        id="mnpBannerHelp">
+                        <div class="blue box-shadow height-card">
+                            <a href="operation-prepaid-mnp">
+                                <div class="card-header">
+                                    <div class="icon">
+                                        <i class="fa fa-exchange fa-4x" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category-top">
+                                        <strong>MNP</strong>
+                                    </p>
+                                    <h3 class="card-title text-primary">
+                                        <span id="mnpBanner_notation" class="banner-notation">-</span>
+                                        <span class="counter" id="mnpOpsPreBanner"></span>
+                                        <span id="mnpOpsPreBannerUnits"></span>
+                                    </h3>
+                                    <p class="category">
+                                        <strong>Previous day</strong>
+                                    </p>
+                                </div>
+                                <div class="card-footer hidden-xs">
+                                    <div class="stats">
+                                        <i class="fa fa-info-circle text-info" aria-hidden="true"></i>
+                                        <a href="operation-prepaid-mnp">More Details</a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-2 phaseTwo">
+                    <div class="card card-stats animated zoomIn" data-toggle="tooltip" data-html="true" data-container="body" data-placement="bottom"
+                        id="voucherBannerHelp">
+                        <div class="red2 box-shadow height-card">
+                            <div class="card-header">
+                                <div class="icon">
+                                    <i class="fa fa-credit-card-alt fa-4x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p class="category-top">
+                                    <strong>Total Vouchers</strong>
+                                </p>
+                                <h3 class="card-title">
+                                    <span id="voucherBanner_notation" class="banner-notation">-</span>
+                                    <span class="counter" id="voucherPreBanner"></span>
+                                    <span id="voucherPreBannerUnits"></span>
+                                </h3>
+                                <p class="category">
+                                    <strong>Previous day</strong>
+                                </p>
+                            </div>
+                            <div class="card-footer hidden-xs">
+                                <div class="stats">
+                                    &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 p-sm-0">
+                    <div class="card card-stats">
+                        <div class="chart">
+                            <div class="chart-title">
+                                <h5>
+                                    Topup
+                                    <span id="topupHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    </span>
+                                </h5>
+                            </div>
+                            <div class="chart-container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div id="topupChart" class="chart-area">
+                                            <div id="topupChartPreloader" class="chartPreloader">
+                                                <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 p-sm-0 phaseTwo">
+                    <div class="card card-stats">
+                        <div class="chart">
+                            <div class="chart-title">
+                                <h5>
+                                    Auto Renewal
+                                    <span id="autoRenewalHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    </span>
+                                </h5>
+                            </div>
+                            <div class="chart-container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div id="autoRenewalChart" class="chart-area">
+                                            <div id="autoRenewalChartPreloader" class="chartPreloader">
+                                                <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="chart">
+                            <div class="chart-title">
+                                <h5>
+                                    Mobile Test Results
+                                    <span id="mobileResultsHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    </span>
+                                </h5>
+                            </div>
+                            <div class="chart-container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div id="mobileResultsChart" class="chart-area">
+                                            <div id="mobileResultsChartPreloader" class="chartPreloader">
+                                                <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 p-sm-0 phaseTwo">
+                    <div class="card card-stats">
+                        <div class="chart theme-green">
+                            <div class="chart-title">
+                                <h5>
+                                    Total Vouchers - Status
+                                    <span id="voucherHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    </span>
+                                </h5>
+                            </div>
+                            <div class="chart-container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div id="voucherStatusChart" class="chart-area">
+                                            <div id="voucherStatusChartPreloader" class="chartPreloader">
+                                                <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 p-sm-0">
+                    <div class="card card-stats">
+                        <div class="chart theme-green">
+                            <div class="chart-title">
+                                <h5>
+                                    Open Incident
+                                    <span id="incidentHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    </span>
+                                </h5>
+                            </div>
+                            <div class="chart-container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div id="incidentChart" class="chart-area">
+                                            <div id="incidentChartPreloader" class="chartPreloader">
+                                                <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="chart theme-green">
+                            <div class="chart-title">
+                                <h5>
+                                    MNP
+                                    <span id="mnpHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    </span>
+                                </h5>
+                            </div>
+                            <div class="chart-container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div id="mnpChart" class="chart-area">
+                                            <div id="mnpChartPreloader" class="chartPreloader">
+                                                <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Right Side Bar -->
+        <div class="right-sidebar icon-menu-side">
+            <div class="country-setting" data-toggle="tooltip" data-placement="left" title="Select country">
+                <div class="icon-right">
+                    <i class="fa fa-globe fa-3x" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="right-sidebar-container pull-right">
+                <div class="sidebar-content">
+                    <div class="sidebar-item">
+                        <h5>
+                            Countries
+                            <span class="pull-left m-l-r-10">
+                                <i class="fa fa-flag" aria-hidden="true"></i>
+                            </span>
+                        </h5>
+                    </div>
+                    <ul class="country-list" id="countryContainer">
+                        <!-- Country List will be added from commmon-util.js -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="errorDiv">
+            <div class="col-xs-12 col-sm-12 p-sm-0">
+                <div class="card card-stats">
+                    <div class="chart theme-green">
+                        <div class="chart-title-grey">
+                            <h5>
+                                User Not Authorized!!!
+                            </h5>
+                        </div>
+                        <div class="chart-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <div id="errorMsg" class="chart-area">
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="admin-footer" class="clearfix">
+        <div class="pull-left">
+            <img src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/images/prodapt_logo.png" width="100">
+            <span class="hidden-xs">
+                <b>Copyright &copy; </b>2018. All Rights Reserved.
+            </span>
+        </div>
+        <div class="pull-right refreshDateTime">
+            Last refreshed :
+            <span id="refreshId"></span>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/jquery.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/bootstrap.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/jquery.counterup.min.js"></script>
+    <!-- HighChart JS and 3rd Party JS Files -->
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/highcharts.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/highcharts-more.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/highcharts-3d.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/exporting.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/export-data.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/no-data-to-display.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/drilldown.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/waypoints.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/jquery.counterup.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/moment.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/bootstrap-datepicker.min.js"></script>
+    <!-- Splunk  JS Files -->
+    <script src="/en-US/config?autoload=1" crossorigin="use-credentials"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/js/i18n.js"></script>
+    <script src="/en-US/i18ncatalog?autoload=1"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/build/simplexml/index.js"></script>
+    <!-- Custom JS Files -->
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/index.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/QueriesOperations.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/commonHelpText.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/common-util.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/chart-util.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/chartConfig/operation-prepaid-dashboard-chartConfig.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/operation-prepaid-dashboard.js"></script>
+</body>
+
+</html>

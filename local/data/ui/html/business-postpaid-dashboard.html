@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="CWC Global Dashboard">
+    <meta name="author" content="Prodapt Solutions">
+    <!-- Brand Image -->
+    <link rel="icon" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/images/cwc-logo.png">
+    <title>CWC Global Dashboard</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/bootstrap.min.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/ie10-viewport-bug-workaround.css">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/animate.css">
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/flag-icon/css/flag-icon.css" />
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <!-- Own CSS Files -->
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/style.css">
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/js/i18n.js"></script>
+    <meta name="referrer" content="never" />
+    <meta name="referrer" content="no-referrer" />
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="status">
+            <div id="loader"></div>
+            <div id="loading">Please wait...</div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                        <img src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/images/cwc.png">
+                    </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+						<a href="business-dashboard">Home
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li>
+						<a href="business-prepaid-dashboard">Prepaid</a>
+					</li>
+					<li class="active">
+						<a href="business-postpaid-dashboard">Postpaid</a>
+					</li>
+					<li>
+						<a href="business-fixed-dashboard">Fixed</a>
+					</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown notifications-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-bell-o"></i>
+                                <span class="label label-warning">4</span>
+                            </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 4 Notifications</li>
+                            <li>
+                                <!-- Inner menu contains the notifications -->
+                                <ul class="menu">
+                                    <li>
+                                        <a href="#">
+                                                <i class="fa fa-ticket text-red"></i>
+                                                <span id="incidentCount"></span> new tickets has been raised.
+                                            </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                                <i class="fa fa-exclamation-triangle text-orange"></i>
+                                                <span id="HealthNotifyCount"></span> critical Health Check Status failure.
+                                            </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                                <i class="fa fa-shopping-cart text-green2"></i>
+                                                <span id="orderNotifyCount"></span> new order received.
+                                            </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                                <i class="fa fa-sitemap text-red"></i>
+                                                <span id="siteAvailableNotifyCount"></span> site availability is down.
+                                            </a>
+                                    </li>
+                                </ul>
+                                <!-- End Notifications -->
+                            </li>
+                            <li class="footer">
+                                <a href="#">View all</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="background-color: #e0e0e0; border-right: 1px solid #d2cfcf;">
+                            <a id="ctryNameHolder" aria-haspopup="true" aria-expanded="true">
+                            </a>
+                        </li>
+                        <li style="background-color: #e0e0e0;">
+                            <a id="userNameHolder" aria-haspopup="true" aria-expanded="true">
+                                <i class="fa fa-user"></i>&nbsp;
+                                <span id="userId"></span>
+                            </a>
+                        </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Business View
+                                <span class="caret"></span>
+                            </a>
+                        <ul class="dropdown-menu profile-menu">
+                            <li>
+                                <a href="operation-dashboard"> <!--// redirect -->
+                                    <i class="fa fa-server" aria-hidden="true"></i>Switch to Operations</a>
+                            </li>
+                            <li>
+                                <a href="monitoring-dashboard"> <!--// redirect -->
+                                    <i class="fa fa-tachometer" aria-hidden="true"></i>Switch to Monitoring</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="../../account/logout" onclick="return clearSessionVariables();">
+                                    <i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- Dashboard Contents starts from here -->
+    <div id="wrapper" class="container-fluid">
+        <div class="main-content">
+            <div class="row">
+
+                <div class="col-xs-12 custom-width20 col-md-2 p-sm-0">
+                    <div class="card card-stats" data-toggle="tooltip" data-html="true" data-placement="bottom" id="revBannerTooltip">
+                        <div class="green box-shadow height-card">
+                            <a href="business-postpaid-revenue">
+                                <div class="card-header">
+                                    <div class="icon">
+                                        <i class="fa fa-money fa-4x" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category-top">
+                                        <strong>Revenue</strong>
+                                    </p>
+                                    <h3 class="card-title">
+                                        <span id="rev_banner_notation" class="banner-notation">-</span>
+                                        <span id="rev_banner" class="counter"></span>
+                                        <span id="bizPostpaidBillRevBannerUnits"></span>
+                                    </h3>
+                                    <p class="category">
+                                        <strong>Previous bill cycle</strong>
+                                    </p>
+                                </div>
+
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="fa fa-info-circle text-info" aria-hidden="true"></i>
+                                        <a href="business-postpaid-revenue">More Details</a>
+                                        <!-- <i class="fa fa-refresh text-info pull-right" aria-hidden="true"></i> -->
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 custom-width20 col-md-2 p-sm-0">
+                    <div class="card card-stats" data-html="true" data-toggle="tooltip" data-placement="bottom" id="unbilledRevBannerTooltip">
+                        <div class="cyan box-shadow height-card">
+                            <a href="business-postpaid-unbilled-revenue">
+                                <div class="card-header">
+                                    <div class="icon">
+                                        <i class="fa fa-credit-card fa-4x" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category-top">
+                                        <strong>Unbilled Revenue</strong>
+                                    </p>
+                                    <h3 class="card-title">
+                                        <span id="unbilled_rev_banner_notation" class="banner-notation">-</span>
+                                        <span id="unbilled_rev_banner" class="counter"></span>
+                                        <span id="bizPostpaidUnRevBannerUnits"></span>
+                                    </h3>
+                                    <p class="category">
+                                        <strong>Previous day</strong>
+                                    </p>
+                                </div>
+
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="fa fa-info-circle text-info" aria-hidden="true"></i>
+                                        <a href="business-postpaid-unbilled-revenue">More Details</a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 custom-width20 col-md-2 p-sm-0">
+                    <div class="card card-stats" data-toggle="tooltip" data-html="true" data-placement="bottom" id="orderBannerTooltip">
+                        <div class="teal box-shadow height-card">
+                            <a href="business-postpaid-order">
+                                <div class="card-header">
+                                    <div class="icon">
+                                        <i class="fa fa-shopping-cart fa-4x" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+
+                                <div class="card-content">
+                                    <p class="category-top">
+                                        <strong>Order</strong>
+                                    </p>
+                                    <h3 class="card-title">
+                                        <span id="orderbanner_notation" class="banner-notation">-</span>
+                                        <span id="orderbanner" class="counter"></span>
+                                        <span id="bizPostpaidUnOrderBannerUnits"></span>
+                                    </h3>
+                                    <p class="category">
+                                        <strong>As of today</strong>
+                                    </p>
+                                </div>
+                                
+                                <div class="card-footer m-lr-5">
+                                        <div class="stats">
+                                            <i class="fa fa-info-circle text-info" aria-hidden="true"></i>
+                                            <a href="business-postpaid-order">More Details
+                                                <span class="pull-right">
+                                                    CU:
+                                                    <span class="counter" id="biz_post_orderCurrentBanner">-</span>
+                                                    | CO:
+                                                    <span class="counter" id="biz_post_orderCompletedBanner">-</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xs-12 custom-width20 col-md-2 p-sm-0">
+                    <div class="card card-stats" data-toggle="tooltip" data-html="true" data-placement="bottom" id="subBannerTooltip">
+                        <div class="purple box-shadow height-card">
+                                <div class="card-header">
+                                    <div class="icon">
+                                        <i class="fa fa-users fa-4x" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category-top">
+                                        <strong>Subscriber</strong>
+                                    </p>
+                                    <h3 class="card-title">
+                                        <span id="subbanner_notation" class="banner-notation">-</span>
+                                        <span id="subbanner" class="counter"></span>
+                                        <span id="bizPostpaidUnSubBannerUnits"></span>
+                                    </h3>
+                                    <p class="category">
+                                        <strong>In total</strong>
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <a href="#">&nbsp;</a>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 custom-width20 col-md-2">
+                    <div class="card card-stats" data-toggle="tooltip" data-html="true" data-placement="bottom" id="incBannerTooltip">
+                        <div class="blue2 box-shadow height-card">
+                            <div class="card-header">
+                                <div class="icon">
+                                    <i class="fa fa-ticket fa-4x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+
+                            <div class="card-content">
+                                <p class="category-top">
+                                    <strong>Incidents</strong>
+                                </p>
+                                <h3 class="card-title text-primary">
+                                    <span id="incidentbanner_notation" class="banner-notation">-</span>
+                                    <span class="counter" id="incidentbanner"></span>
+                                    <span id="bizPostpaidUnIncBannerUnits"></span>
+                                </h3>
+                                <p class="category">
+                                    <strong>Open Incidents</strong>
+                                </p>
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="stats">
+                                    <a href="#" style="cursor:default;">
+                                        <span class="pull-right">P1:
+                                            <span class="counter" id="incidentp1banner">-</span>
+                                            | P2:
+                                            <span class="counter" id="incidentp2banner">-</span>
+                                        </span>
+                                    </a>
+                                    <a href="#">&nbsp;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 p-sm-0">
+                    <div class="card card-stats">
+                        <div class="chart theme-green">
+                            <div class="chart-title">
+                                <h5>
+                                    Unbilled Revenue
+                                    <span id="unbillRevChartHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    </span>
+                                </h5>
+                            </div>
+                            <div class="chart-container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div id="revenueChart" class="chart-area">
+                                            <div id="revChartPreloader" class="chartPreloader">
+                                                <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 p-sm-0">
+                    <div class="card card-stats">
+                        <div class="chart theme-green">
+                            <div class="chart-title">
+                                <h5>
+                                    Subscriber
+                                    <span id="subChartHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    </span>
+                                </h5>
+                            </div>
+                            <div class="chart-container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div id="subscriberChart" class="chart-area">
+                                            <div id="subChartPreloader" class="chartPreloader">
+                                               <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="card card-stats">
+                        <div class="chart theme-green">
+                            <div class="chart-title">
+                                <h5>
+                                    Adjustments(Last Bill Cycle)
+                                    <span id="adjChartHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    </span>
+                                </h5>
+                            </div>
+                            <div class="chart-container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div id="adjustmentChart" class="chart-area">
+                                            <div id="adjChartPreloader" class="chartPreloader">
+                                               <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4 p-sm-0">
+                    <div class="card card-stats">
+                        <div class="chart theme-green">
+                            <div class="chart-title">
+                                <h5>
+                                    Payments
+                                    <span id="paymentChartHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    </span>
+                                </h5>
+                            </div>
+                            <div class="chart-container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div id="paymentChart" class="chart-area">
+                                            <div id="paymentChartPreloader" class="chartPreloader">
+                                                <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 p-sm-0">
+                    <div class="card card-stats">
+                        <div class="chart theme-green">
+                            <div class="chart-title">
+                                <h5>
+                                    Payments - Channel Wise View 
+                                    <span id="paymentChannelChartHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    </span> 
+                                </h5>
+                            </div>
+                            <div class="chart-container">
+                                <div class="row">
+                                 <div class="col-xs-12">
+                                        <div id="paymentChannelChart" class="chart-area">
+                                            <div id="paymentChannelChartPreloader" class="chartPreloader">
+                                                <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="card card-stats">
+                        <div class="chart theme-green">
+                            <div class="chart-title">
+                                <h5>
+                                    MNP
+                                    <span id="mnpChartHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    </span>
+                                </h5>
+                            </div>
+                            <div class="chart-container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div id="mnpChart" class="chart-area">
+                                            <div id="mnpChartPreloader" class="chartPreloader">
+                                                <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Right Side Bar -->
+        <div class="right-sidebar icon-menu-side">
+            <div class="country-setting" data-toggle="tooltip" data-placement="left" title="Select country">
+                <div class="icon-right">
+                    <i class="fa fa-globe fa-3x" aria-hidden="true"></i>
+                </div>
+            </div>        
+               <div class="right-sidebar-container pull-right">
+                <div class="sidebar-content">
+                    <div class="sidebar-item">
+                        <h5>
+                                Countries
+                                <span class="pull-left m-l-r-10">
+                                    <i class="fa fa-flag" aria-hidden="true"></i>
+                                </span>
+                            </h5>
+                    </div>
+                    <ul class="country-list" id="countryContainer">
+                          <!-- Country List will be added from commmon-util.js -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row" id="errorDiv">
+            <div class="col-xs-12 col-sm-12 p-sm-0">
+                    <div class="card card-stats">
+                        <div class="chart theme-green">
+                            <div class="chart-title-grey">
+                                <h5>
+                                    User Not Authorized!!!
+                                </h5>
+                            </div>
+                            <div class="chart-container">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12">
+                                        <div id="errorMsg" class="chart-area">
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <footer id="admin-footer" class="clearfix">
+        <div class="pull-left">
+            <img src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/images/prodapt_logo.png" width="100">
+            <span class="hidden-xs">
+                    <b>Copyright &copy; </b>2018. All Rights Reserved.
+                </span>
+        </div>
+        <div class="pull-right refreshDateTime">
+            Last refreshed :
+            <span id="refreshId"></span>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/jquery.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/bootstrap.min.js"></script>
+    <!-- HighChart JS and 3rd Party JS Files -->
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/highcharts.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/highcharts-more.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/highcharts-3d.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/exporting.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/export-data.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/no-data-to-display.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/drilldown.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/waypoints.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/moment.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/jquery.counterup.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/bootstrap-datepicker.min.js"></script>
+    <!-- Splunk  JS Files -->
+    <script src="/en-US/config?autoload=1" crossorigin="use-credentials"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/js/i18n.js"></script>
+    <script src="/en-US/i18ncatalog?autoload=1"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/build/simplexml/index.js"></script>
+    <!-- Custom JS Files -->
+    <script type="text/javascript" src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/index.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/commonHelpText.js"></script>
+	<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/Queries.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/common-util.js"></script>
+   
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/chart-util.js"></script>
+    <!-- Custom Page JS - Search Manager-->
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/business-postpaid-dashboard.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/chartConfig/business-postpaid-dashboard-chartConfig.js"></script>
+</body>
+
+</html>

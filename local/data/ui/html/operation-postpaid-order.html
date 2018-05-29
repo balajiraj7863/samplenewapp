@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="CWC Global Dashboard">
+  <meta name="author" content="Prodapt Solutions">
+  <!-- Brand Image -->
+  <link rel="icon" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/images/cwc-logo.png">
+  <title>CWC Global Dashboard</title>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/bootstrap.min.css">
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/ie10-viewport-bug-workaround.css">
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/animate.css">
+  <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/bootstrap-datepicker3.min.css" />
+  <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/flag-icon/css/flag-icon.css" />
+  <!-- Font Family -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+  <!-- Own CSS Files -->
+  <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/style.css">
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/js/i18n.js"></script>
+</head>
+
+<body>
+  <div id="preloader">
+    <div id="status">
+      <div id="loader"></div>
+      <div id="loading">Please wait...</div>
+    </div>
+  </div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/images/cwc.png">
+        </a>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="operation-postpaid-dashboard">
+              <i class="fa fa-angle-left" aria-hidden="true"></i> Postpaid
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="operation-postpaid-order">Order</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <span class="visible-xs">Notifications</span>
+              <i class="fa fa-bell-o hidden-xs"></i>
+              <span class="label label-warning">4</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 4 Notifications</li>
+              <li>
+                <!-- Inner menu contains the notifications -->
+                <ul class="menu">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-ticket text-red"></i> 10 new tickets has been raised.
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-exclamation-triangle text-orange"></i> 4 critical Health Check Status failure.
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-shopping-cart text-green2"></i> 10 new order received.
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-sitemap text-red"></i> 2 site availability is down.
+                    </a>
+                  </li>
+                </ul>
+                <!-- End Notifications -->
+              </li>
+              <li class="footer">
+                <a href="#">View all</a>
+              </li>
+            </ul>
+          </li>
+          <li style="background-color: #e0e0e0; border-right: 1px solid #d2cfcf;">
+              <a id="ctryNameHolder" aria-haspopup="true" aria-expanded="true">
+              </a>
+          </li>
+          <li style="background-color: #e0e0e0;">
+              <a id="userNameHolder" aria-haspopup="true" aria-expanded="true">
+                  <i class="fa fa-user"></i>&nbsp;
+                  <span id="userId"></span>
+              </a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Operations View
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu profile-menu">
+              <li>
+                <a href="business-dashboard"> <!--// redirect -->
+                  <i class="fa fa-briefcase" aria-hidden="true"></i>Switch to Business</a>
+              </li>
+              <li>
+                <a href="monitoring-dashboard"> <!--// redirect -->
+                  <i class="fa fa-tachometer" aria-hidden="true"></i>Switch to Monitoring</a>
+              </li>
+              <li role="separator" class="divider"></li>
+              <li>
+                <a href="../../account/logout" onclick="return clearSessionVariables();">
+                  <i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+      <!-- /.container-fluid -->
+  </nav>
+
+  <!-- Dashboard Contents starts from here -->
+  <div id="wrapper" class="container-fluid">
+    <div class="main-content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="pull-right date-range">
+            <ul class="updateTimeBar" type="none">
+              <li>
+                <form class="form-inline pull-right">
+                  <div class="custom-date">
+                    <div class="form-group">
+                      <div class="input-group date">
+                        <input type="text" class="form-control input-sm datePicker" id="fromDate" placeholder="From Date" disabled>
+                        <span class="input-group-addon">
+                          <i class="glyphicon glyphicon-calendar"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group date" id="ToDate">
+                        <input type="text" class="form-control input-sm datePicker" id="toDate" placeholder="To Date" disabled>
+                        <span class="input-group-addon">
+                          <i class="glyphicon glyphicon-calendar"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group" id="applyCustomDate">
+                        <button id="searchBtn" type="button" class="btn btn-success btn-sm" disabled>Apply</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group date" id="exportExcelDateHelp" data-toggle="tooltip" data-container="body" data-placement="left">
+                      <div id="downloadExportData"></div>
+                    </div>
+                  </div>
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-group filterDiv" data-toggle="buttons">
+            <label id="tillDate" class="btn btn-sm btn-outline-primary customDateDisable">
+                <input type="radio" name="options" id="option1" autocomplete="off">Till Date
+            </label>
+            <label id="today" class="btn btn-sm btn-outline-primary customDateDisable">
+              <input type="radio" name="options" id="option2" autocomplete="off">Today
+            </label>
+            <label id="daily" class="btn btn-sm btn-outline-primary active customDateDisable">
+              <input type="radio" name="options" id="option3" autocomplete="off" checked>Daily
+            </label>
+            <label id="weekly" class="btn btn-sm btn-outline-primary customDateDisable">
+              <input type="radio" name="options" id="option4" autocomplete="off">Weekly
+            </label>
+            <label id="monthly" class="btn btn-sm btn-outline-primary customDateDisable">
+              <input type="radio" name="options" id="option5" autocomplete="off">Monthly
+            </label>
+            <label id="customDate" class="btn btn-sm btn-outline-primary">
+              <input type="radio" name="options1" id="option6" autocomplete="off">Custom Date
+            </label>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="modal fade" id="exportTableModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <p>
+                <b id="modalInfoText"></b>
+              </p>
+            </div>
+            <div class="modal-body">
+              <div>
+                <span id="downloadprocess" style="display: grid;">
+                  <i class="fa fa-refresh fa-spin" style="font-size:45px; text-align: center;"></i>
+                </span>
+              </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-6 p-sm-0">
+          <div class="card card-stats">
+            <div class="chart">
+              <div class="chart-title">
+                <h5>
+                  Order - Status Wise View
+                  <span id="statuswiseHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                  </span>
+                </h5>
+              </div>
+              <div id="orderStatusChart" class="chart-area">
+                <div id="orderStatusChartPreloader" class="chartPreloader">
+                  <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="orderTypeContainer" class="col-xs-12 col-sm-6">
+          <div class="card card-stats">
+            <div class="chart theme-green">
+              <div class="chart-title">
+                <h5>
+                  Order - Type Wise View
+                  <span id="typewiseHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                  </span>
+                </h5>
+              </div>
+              <div class="chart-container">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div id="typewiseChart" class="chart-area">
+                      <div id="typewiseChartPreloader" class="chartPreloader">
+                        <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="orderCompleteContainer" class="col-xs-12 col-sm-6">
+          <div class="card card-stats">
+            <div class="chart theme-green">
+              <div class="chart-title">
+                <h5>
+                  Order - Completion Trend
+                  <span id="orderCompleteHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                  </span>
+                </h5>
+              </div>
+              <div class="chart-container">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div id="orderCompleteChart" class="chart-area">
+                      <div id="orderCompletionChartPreloader" class="chartPreloader">
+                        <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 p-sm-0">
+          <div class="card card-stats">
+            <div class="chart">
+              <div class="chart-title">
+                <h5>
+                  Order - Plan Wise View
+                  <span id="planwiseHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                  </span>
+                </h5>
+              </div>
+              <div id="planwiseChart" class="chart-area">
+                <div id="orderPlanChartPreloader" class="chartPreloader">
+                  <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="orderIntakeContainer" class="col-xs-12 col-sm-6 p-sm-0">
+          <div class="card card-stats">
+            <div class="chart">
+              <div class="chart-title">
+                <h5>
+                  Order - Intake Trend
+                  <span id="orderIntakeHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                  </span>
+                </h5>
+              </div>
+              <div id="orderIntakeChart" class="chart-area">
+                <div id="orderIntakeChartPreloader" class="chartPreloader">
+                  <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right Side Bar -->
+    <div class="right-sidebar icon-menu-side">
+      <div class="country-setting" data-toggle="tooltip" data-placement="left" title="Select country">
+        <div class="icon-right">
+          <i class="fa fa-globe fa-3x" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="right-sidebar-container pull-right">
+        <div class="sidebar-content">
+          <div class="sidebar-item">
+            <h5>
+              Countries
+              <span class="pull-left m-l-r-10">
+                <i class="fa fa-flag" aria-hidden="true"></i>
+              </span>
+            </h5>
+          </div>
+          <ul class="country-list" id="countryContainer">
+            <!-- Country List will be added from commmon-util.js -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="errorDiv">
+      <div class="col-xs-12 col-sm-12 p-sm-0">
+              <div class="card card-stats">
+                  <div class="chart theme-green">
+                      <div class="chart-title-grey">
+                          <h5>
+                              User Not Authorized!!!
+                          </h5>
+                      </div>
+                      <div class="chart-container">
+                          <div class="row">
+                              <div class="col-xs-12 col-sm-12">
+                                  <div id="errorMsg" class="chart-area">
+                                      
+                                      
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      </div>
+  </div>
+  </div>
+
+  <footer id="admin-footer" class="clearfix">
+    <div class="pull-left">
+      <img src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/images/prodapt_logo.png" width="100">
+      <span class="hidden-xs">
+        <b>Copyright &copy; </b>2018. All Rights Reserved.
+      </span>
+    </div>
+    <div class="pull-right refreshDateTime">
+      Last refreshed :
+      <span id="refreshId"></span>
+    </div>
+  </footer>
+
+  <!-- custom changes for splunk js ends here-->
+  <!-- Bootstrap core JavaScript
+        ================================================== -->
+
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/jquery.min.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/bootstrap.min.js"></script>
+  <!-- HighChart JS and 3rd Party JS Files -->
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/highcharts.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/highcharts-more.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/highcharts-3d.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/exporting.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/export-data.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/no-data-to-display.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/drilldown.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/waypoints.min.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/jquery.counterup.min.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/moment.min.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/bootstrap-datepicker.min.js"></script>
+  <!-- Splunk  JS Files -->
+  <script src="/en-US/config?autoload=1" crossorigin="use-credentials"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/js/i18n.js"></script>
+  <script src="/en-US/i18ncatalog?autoload=1"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/build/simplexml/index.js"></script>
+  <!-- Custom JS Files -->
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/index-drilldown.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/QueriesOperations.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/commonHelpText.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/common-util.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/chart-util.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/chartConfig/operation-postpaid-order-chartConfig.js"></script>
+  <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/operation-postpaid-order.js"></script>
+
+
+
+</body>
+
+</html>

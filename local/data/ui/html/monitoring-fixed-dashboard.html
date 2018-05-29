@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="CWC Global Dashboard">
+    <meta name="author" content="Prodapt Solutions">
+    <!-- Brand Image and Title -->
+    <link rel="icon" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/images/cwc-logo.png">
+    <title>CWC Global Dashboard</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/bootstrap.min.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/ie10-viewport-bug-workaround.css">
+    <!-- 3rd Party CSS -->
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/animate.css?v=1.1">
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/flag-icon/css/flag-icon.css" />
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/style.css">
+	<link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/css/monitoringSVGStyle.css">
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/js/i18n.js"></script>
+    <meta name="referrer" content="never" />
+    <meta name="referrer" content="no-referrer" />
+    <style>
+        .node-modal {
+            cursor: pointer;
+        }
+
+        @media screen and (min-width: 768px) {
+            .modal-dialog {
+                width: 700px;
+                /* New width for default modal */
+            }
+            .modal-sm {
+                width: 350px;
+                /* New width for small modal */
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .modal-lg {
+                width: 1130px;
+                /* New width for large modal */
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="status">
+            <div id="loader"></div>
+            <div id="loading">Please wait...</div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/images/cwc.png">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="monitoring-dashboard">Home</a>
+                    </li>
+                    <li>
+                        <a href="monitoring-prepaid-dashboard">Prepaid</a>
+                    </li>
+                    <li>
+                        <a href="monitoring-postpaid-dashboard">Postpaid</a>
+                    </li>
+                    <li class="active">
+                        <a href="monitoring-fixed-dashboard">Fixed</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown notifications-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="visible-xs">Notifications</span>
+                            <i class="fa fa-bell-o hidden-xs"></i>
+                            <span class="label label-warning">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 4 Notifications</li>
+                            <li>
+                                <!-- Inner menu contains the notifications -->
+                                <ul class="menu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-ticket text-red"></i> 10 new tickets has been raised.
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-exclamation-triangle text-orange"></i> 4 critical Health Check Status failure.
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-cart text-green2"></i> 10 new order received.
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-sitemap text-red"></i> 2 site availability is down.
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- End Notifications -->
+                            </li>
+                            <li class="footer">
+                                <a href="#">View all</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="background-color: #e0e0e0; border-right: 1px solid #d2cfcf;">
+                            <a id="ctryNameHolder" aria-haspopup="true" aria-expanded="true">
+                            </a>
+                        </li>
+                        <li style="background-color: #e0e0e0;">
+                            <a id="userNameHolder" aria-haspopup="true" aria-expanded="true">
+                                <i class="fa fa-user"></i>&nbsp;
+                                <span id="userId"></span>
+                            </a>
+                        </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Monitoring View
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu profile-menu">
+                            <li>
+                                <a href="business-dashboard"> <!--// redirect -->
+                                    <i class="fa fa-server" aria-hidden="true"></i>Switch to Business</a>
+                            </li>
+                            <li>
+                                <a href="operation-dashboard"> <!--// redirect -->
+                                    <i class="fa fa-tachometer" aria-hidden="true"></i>Switch to Operations</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="../../account/logout" onclick="return clearSessionVariables();">
+                                    <i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div id="wrapper" class="container-fluid">
+        <div class="main-content">
+            <div class="row">
+            <div class="col-xs-12">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active">
+						<a href="#postpaid-monitor" aria-controls="postpaid-monitor" role="tab" data-toggle="tab" id="homeid">Home</a>
+					</li>
+					<li role="presentation">
+						<a href="#system-monitor" aria-controls="system-monitor" role="tab" data-toggle="tab" class="siteMonitorId">Site Monitoring</a>
+					</li>
+					<li role="presentation">
+						<a href="#interface-monitor" aria-controls="interface-monitor" role="tab" data-toggle="tab" class="interfaceMonitorId">System/Interface Monitoring</a>
+					</li>
+				</ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active card-tab" id="postpaid-monitor">
+                        <div class="row">
+                    
+                            <div class="col-xs-12 col-sm-4 p-sm-0">
+                                <div class="card card-stats animated zoomIn">
+                                    <div class="chart theme-green">
+                                        <div class="chart-title">
+                                            <h5>
+                                                Incidents
+                                                <span id="openIncHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                                </span>
+                                            </h5>
+                                        </div>
+                                        <div class="chart-container">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div id="incidentPriorityChart" class="widget-container">
+                                                        <div id="monitorPreloader" class="chartPreloader">
+                                                            <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="col-xs-12 col-sm-4 p-sm-0">
+                                <div class="card card-stats animated zoomIn">
+                                    <div class="chart theme-green">
+                                        <div class="chart-title">
+                                            <h5>
+                                                Alarm Summary
+                                                <span id="alarmHelp" class="pull-right" data-toggle="tooltip" data-placement="left" data-container="body">
+                                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                                </span>
+                                            </h5>
+                                        </div>
+                                        <div class="chart-container">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="widget-container">
+                                                        <ul class="alarmStatus" type="none">
+                                                            <li>
+                                                                <button id="criticalBtn" type="button" class="btn btn-danger btn-circle btn-xl">
+                                                                    <span id="criticalCount">0</span>
+                                                                </button>
+                                                                <h4>Critical</h4>
+                                                            </li>
+                                                            <li>
+                                                                <button id="majorBtn" type="button" class="btn btn-warning btn-circle btn-xl">
+                                                                    <span id="majorCount">0</span>
+                                                                </button>
+                                                                <h4>Major</h4>
+                                                            </li>
+                                                            <li>
+                                                                <button id="minorBtn" type="button" class="btn btn-success btn-circle btn-xl">
+                                                                    <span id="minorCount">0</span>
+                                                                </button>
+                                                                <h4>Minor</h4>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                    
+                            <div class="col-xs-12 col-sm-4">
+                                    <div class="card card-stats animated zoomIn">
+                                        <div class="chart theme-green">
+                                            <div class="chart-title">
+                                                <h5>
+                                                    Site Availability
+                                                    <span id="serverAvailHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                                    </span>
+                                                </h5>
+                                            </div>
+                                            <div class="chart-container">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="widget-container" id="sysAvailDiv">
+                                                            <div id="monitorPreloader" class="chartPreloader">
+                                                                <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+            
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="row">
+                    
+                            <div class="col-xs-12 col-sm-6 p-sm-0">
+                                <div class="card card-stats animated zoomIn">
+                                    <div class="chart theme-green">
+                                        <div class="chart-title">
+                                            <h5>
+                                                Maintenance Window
+                                                <span id="mainWindowHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                                </span>
+                                            </h5>
+                                        </div>
+                                        <div class="chart-container">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="server-table table-view" id="maintenanceWindowDiv">
+                                                        <div id="monitorPreloader" class="chartPreloader">
+                                                            <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="card card-stats animated zoomIn">
+                                    <div class="chart theme-green">
+                                        <div class="chart-title">
+                                            <h5>
+                                                Last 5 Issues
+                                                <span id="topIncHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                                </span>
+                                            </h5>
+                                        </div>
+                                        <div class="chart-container">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="table-resposive server-table table-view" id="topIncidentsDiv">
+                                                        <div id="monitorPreloader" class="chartPreloader">
+                                                            <i class="fa fa-spinner fa-spin fa-4x fa-gradient"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane card-tab" id="system-monitor">
+
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-8">
+                                <div class="chart-title">
+                                    <h5>Monitoring
+                                        <div class="pull-right">
+                                            <div class="input-group input-group-sm pull-left">
+                                                    <input list="servers" type="text" class="form-control" id="server-selected" placeholder="Search" value="All" />
+                                                    <datalist id="servers">
+                                                        <option data-value="" value="All" selected>
+                                                            <option data-value="12.0989103, -68.8585774" value="Curacao">
+                                                                <option data-value="25.0479835, -77.355413" value="Nassau">
+                                                    </datalist>
+                                            </div>
+                                            <button type="button" class="btn btn-success btn-sm locate-in-map" title="Locate in Map" id="server_search">Search</button>
+                                        </div>
+                                    </h5>
+                                </div>
+                                <div id="monitoringMap"></div>
+                            </div>
+
+                            <!-- Jamaica -->
+                            <div class="col-sm-6 col-lg-4 site-table animated zoomIn">
+                                <div class="card card-stats animated zoomIn">
+                                    <div class="chart theme-green">
+                                        <div class="chart-title">
+                                            <h5 id="site-name">
+                                                <span id="siteName"></span> Site Status
+                                                <span id="siteStatusHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                                </span>
+                                            </h5>
+                                        </div>
+                                        <div class="chart-container">
+                                            <div class="table-responsive">
+                                                <table class="table table-condensed table-hover">
+                                                    <div class="modal-title" id="modalSiteLabel"></div>
+                                                    <thead id="site_details_table_header">
+                                                        <tr></tr>
+                                                    </thead>
+                                                    <tbody id="site_details_table_values">
+                                                        <tr></tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane card-tab" id="interface-monitor">
+                            <div class="row">
+                                    <div class="col-xs-12 col-sm-12">
+                                        <div class="svg-container chart theme-green">
+                                            <span id="interfaceMonitorHelp" class="pull-right" data-toggle="tooltip" data-container="body" data-placement="left">
+                                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                            </span>
+                                            <div id="svg">
+    
+                                                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: block;margin: auto;" viewBox="-0.225283 -0.157135 1500.44 700.313"
+                                                    preserveAspectRatio="none meet" width="100%" height="100%">
+                                                    <defs id="svgEditorDefs">
+                                                        <polygon id="svgEditorShapeDefs" style="fill:khaki;stroke:black;vector-effect:non-scaling-stroke;stroke-width:1px;" />
+                                                        <linearGradient id="lgrd2-fire" x1="0%" x2="100%" y1="0%" y2="0%" gradientUnits="objectBoundingBox" spreadMethod="pad">
+                                                            <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                                                            <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                                                        </linearGradient>
+                                                        <linearGradient id="gradient1" x1="1.2%" x2="63.8%" y1="39.6%" y2="35.6%" gradientTransform="rotate(25.5252)" gradientUnits="objectBoundingBox"
+                                                            spreadMethod="pad">
+                                                            <stop offset="0%" stop-color="#A2B2E1" />
+                                                            <stop offset="100%" stop-color="white" />
+                                                        </linearGradient>
+                                                        <!-- <marker id="square12" markerHeight="12" markerUnits="strokeWidth" markerWidth="12" orient="auto" refX="0" refY="0" viewBox="-5 -5 10 10">
+                                                                                                <rect width="10" height="10" x="-5" y="-5" style="fill:black;stroke:none;" />
+                                                                                            </marker>
+                                                                                            <marker id="arrow20-16-right" markerHeight="16" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="-3" refY="0"
+                                                                                                viewBox="-15 -5 20 20">
+                                                                                                <path fill="#868585" d="M -15 -5 L 0 0 L -15 5 z" />
+                                                                                            </marker>
+                                                                                            <marker id="arrow8-6-left" markerHeight="6" markerUnits="strokeWidth" markerWidth="8" orient="auto" refX="3" refY="0" viewBox="0 -5 20 20">
+                                                                                                <path fill="#868585" d="M 15 -5 L 0 0 L 15 5 z" />
+                                                                                            </marker>
+                                                                                            <marker id="arrow10-8-left" markerHeight="8" markerUnits="strokeWidth" markerWidth="10" orient="auto" refX="3" refY="0" viewBox="0 -5 20 20">
+                                                                                                <path fill="#868585" d="M 15 -5 L 0 0 L 15 5 z" />
+                                                                                            </marker>
+                                                                                            <marker id="arrow15-12-left" markerHeight="12" markerUnits="strokeWidth" markerWidth="15" orient="auto" refX="3" refY="0"
+                                                                                                viewBox="0 -5 20 20">
+                                                                                                <path fill="#868585" d="M 15 -5 L 0 0 L 15 5 z" />
+                                                                                            </marker>
+                                                                                            <marker id="arrow20-16-left" markerHeight="16" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="3" refY="0"
+                                                                                                viewBox="0 -5 20 20">
+                                                                                                <path fill="#868585" d="M 15 -5 L 0 0 L 15 5 z" />
+                                                                                            </marker> -->
+                                                    </defs>
+                                                    <rect id="svgEditorBackground" width="1230" height="670" x="0" y="0" style="fill:none; stroke: none;" />
+                                                    <g id="api_main_group" transform="matrix(1 0 0 0.864078 0 0.681867)">
+                                                        <rect id="api_main_rect" width="348.004" height="99.0012" x="157.015" y="7.01662" rx="0" ry="0" style="fill:#edf3f3;stroke:#7D7D7D;stroke-width:1px;stroke-dasharray:4px,4px;"
+                                                            transform="matrix(1 0 0 1 -28.0937 0)" />
+                                                        <g id="e14_group" transform="matrix(1 0 0 1 -26.0937 0)">
+                                                            <text id="numero_api_icon" x="305.556" y="95.4" dx="" dy="" style="fill: #337ab7;font-family:FontAwesome;font-size: 90px;"
+                                                                transform="matrix(1 0 0 1 -25.4594 0.644598)">
+                                                                
+                                                            </text>
+                                                            <text id="numero_api_text" x="321.556" y="50.4" dx="" dy="" style="fill:rgb(49, 93, 8);font-family:Arial;font-size:14px;font-weight:bold;"
+                                                                transform="matrix(1 0 0 1 -25.4594 0.644598)">
+                                                                NUMERO
+                                                            </text>
+                                                            <text id="tallysoft_api_icon" x="198.663" y="94.4" dx="" dy="" style="fill: #337ab7;font-family:FontAwesome;font-size: 90px;"
+                                                                transform="matrix(1 0 0 1 -25.4594 0.644598)">
+                                                                
+                                                            </text>
+                                                            <text id="tallysoft_api__text" x="205.663" y="50.4" dx="" dy="" style="fill:rgb(49, 93, 8);font-family:Arial;font-size: 13px;font-weight:bold;"
+                                                                transform="matrix(1 0 0 1 -24.5544 -0.219494)">
+                                                                TALLYSOFT
+                                                            </text>
+                                                            <text id="voxgen_api_icon" x="409.557" y="95.5373" dx="" dy="" style="fill: #337ab7;font-family:FontAwesome;font-size: 90px;"
+                                                                transform="matrix(1 0 0 1 -19.6927 -1.49602)">
+                                                                
+                                                            </text>
+                                                            <text id="voxgen_api_text" x="430.557" y="53.5373" dx="" dy="" style="fill:rgb(49, 93, 8);font-family:Arial;font-size: 13px;font-weight:bold;"
+                                                                transform="matrix(1 0 0 1 -19.6927 -1.49602)">
+                                                                VOXGEN
+                                                            </text>
+                                                        </g>
+                                                        <rect id="api_main_rect1" width="253.003" height="100.001" x="662.332" y="9.26799" rx="0" ry="0" style="fill:#edf3f3;stroke:#8A8A8A;stroke-width:1px;stroke-dasharray:4px,4px;"
+                                                            transform="matrix(1 0 0 1 -94.1138 -1.62564)" />
+                                                        <g id="e11_group" transform="matrix(1 0 0 1 -94.1138 -1.62564)">
+                                                            <text id="iccare_api_icon" x="688.403" y="99.1" dx="" dy="" style="fill: #337ab7;font-family:FontAwesome;font-size: 90px;"
+                                                                transform="matrix(1 0 0 1 -11.1972 -2.41776)">
+                                                                
+                                                            </text>
+                                                            <text id="iccare_api_text" x="708.403" y="56.6059" dx="" dy="" style="fill:rgb(49, 93, 8);font-family:Arial;font-size:14px;font-weight:bold;"
+                                                                transform="matrix(1 0 0 1 -11.1972 -2.41776)">
+                                                                ICCARE
+                                                            </text>
+                                                            <text id="porting_api_icon" x="818.708" y="97.4686" dx="" dy="" style="fill: #337ab7;font-family:FontAwesome;font-size: 90px;"
+                                                                transform="matrix(1 0 0 1 -11.1972 -2.41776)">
+                                                                
+                                                            </text>
+                                                            <text id="porting_api_text" x="827.708" y="52.4686" dx="" dy="" style="fill:rgb(49, 93, 8);font-family:Arial;font-size: 13px;font-weight:bold;"
+                                                                transform="matrix(1 0 0 1 -11.1972 -2.41776)">
+                                                                PORTINGXS
+                                                            </text>
+                                                            <text id="e1_api_icon" x="1033.8" y="249.378" dx="" dy="" style="fill: #337ab7;font-family:FontAwesome;font-size: 60px;"
+                                                                transform="matrix(0.648745 0 0 0.648745 533.008 143.528)">
+                                                                
+                                                            </text>
+                                                        </g>
+                                                    </g>
+                                                    <rect id="core_rect" width="130.002" height="192.002" x="292.38117459012324" y="654.475341796875" rx="0" ry="0" style="fill:#E6E6E6;stroke:black;stroke-width:1px;stroke-dasharray:4px,4px;"
+                                                        transform="matrix(1.28238 0 0 0.469124 -245.204 239.073)" />
+                                                    <text id="e1_texte" x="165.558" y="601.051" dx="" dy="" style="fill:rgb(49, 93, 8);font-family:Arial;font-size:15px;font-weight:bold;"
+                                                        transform="matrix(1 0 0 1 -25.8372 -4.43457)">
+                                                        CORE NETWORKS
+                                                    </text>
+                                                    <g id="cert_group">
+                                                        <rect id="ceri_rect" width="464.909" height="355.164" x="388.95001220703125" y="144.8307941895715" rx="0" ry="0" style="fill:#edf3f3;stroke:#515199;stroke-width:1px;stroke-dasharray:4px,4px;"
+                                                            transform="matrix(1 0 0 1 -43.5819 -5.44774)" />
+                                                        <text id="ceri_head" x="592.991" y="162.989" dx="" dy="" style="fill: rgb(49, 93, 8); font-family: Arial; font-size: 15px; font-weight: bold;"
+                                                            transform="matrix(1 0 0 1 -242.169 -5.93954)">
+                                                            CERILLION
+                                                        </text>
+                                                        <g id="ceri_be_node_group" transform="matrix(1 0 0 1 -61.741 0)">
+                                                            <rect id="ceri_be_rect" width="61.0008" height="128.002" x="437.019" y="255.02" rx="0" ry="0" style="fill:#FFFFED;stroke:black;stroke-width:1px;"
+                                                                transform="matrix(1.09081 0 0 1 -38.7159 0)" />
+                                                            <text id="ceri_be_sub_head" x="458.343" y="229.245" dx="" dy="" style="fill:rgb(39, 100, 102);font-family:Arial;font-size:12px;font-weight:bold;"
+                                                                transform="matrix(1 0 0 1 -40.9613 12.8237)">
+                                                                BACK-END SERVER
+                                                            </text>
+                                                            <g id="e27_group" class="nodes_shape" data-toggle="tooltip" data-container="body" data-placement="left" transform="matrix(1.11554 0 0 1 208.399 80.3635)">
+                                                                <rect id="ceri_be_node1_shape" width="46.9586" height="83.0697" x="212.058" y="198.019" rx="0" ry="0" style="fill:#759eba;stroke:#000088;stroke-width:1px;"
+                                                                />
+                                                                <text id="e3_node1_text" x="214.535" y="216.248" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:13px;font-weight:normal;"
+                                                                    transform="matrix(1 0 0 1 1.62782 0)">
+                                                                    BES01
+                                                                </text>
+                                                                <line id="e27_line" x1="213.01571655278434" x2="259.01681518559684" y1="227.0192718506346" y2="226.76901245122053" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="e3_node1_text" x="230.535" y="245.248" class="nodeServer" dx="" dy="">
+                                                                    
+                                                                </text>
+                                                                <line id="e28_line" x1="213.27088928227653" x2="259.2715148926281" y1="257.39950561528303" y2="257.14950561528303" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="ceri_be_node1_icon" x="230.535" y="275.248" class="nodeAvail" dx="" dy="" label="BES01" status="NotFound">
+                                                                    
+                                                                </text>
+                                                            </g>
+                                                        </g>
+                                                        <g id="ceri_app_node_group">
+                                                            <rect id="ceri_app_rect" width="72.0008920353" height="283.0035061944" x="559.0200425142" y="193.0189253238" style="fill:#FFFFED;stroke:black;stroke-width:1px;"
+                                                            />
+                                                            <text id="e1_be_sub_head" x="597.403" y="169.401" dx="" dy="" style="fill:rgb(39, 100, 102);font-family:Arial;font-size:12px;font-weight:bold;"
+                                                                transform="matrix(1 0 0 1 -40.9613 12.8237)">
+                                                                APP SERVER
+                                                            </text>
+                                                            <g id="e30_group" class="nodes_shape" data-toggle="tooltip" data-container="body" data-placement="left" transform="matrix(1.11554 0 0 1 332.361 1.28416)">
+                                                                <rect id="ceri_app_node1_shape" width="46.9586" height="83.0697" x="212.058" y="198.019" rx="0" ry="0" style="fill:#759eba;stroke:#000088;stroke-width:1px;"
+                                                                />
+                                                                <text id="e4_node1_text" x="215.592" y="218.601" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:13px;font-weight:normal;"
+                                                                    transform="matrix(1 0 0 1 1.62782 0)">
+                                                                    APP01
+                                                                </text>
+                                                                <line id="e31_line" x1="213.01571655278434" x2="259.01681518559684" y1="227.0192718506346" y2="226.76901245122053" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="e4_node1_text" x="230.592" y="245.601" class="nodeServer" dx="" dy="">
+                                                                    
+                                                                </text>
+                                                                <line id="e32_line" x1="213.27088928227653" x2="259.2715148926281" y1="257.39950561528303" y2="257.14950561528303" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="ceri_app_node1_icon" x="230.592" y="274.601" class="nodeAvail" dx="" dy="" label="APP01" status="NotFound">
+                                                                    
+                                                                </text>
+                                                            </g>
+                                                            <g id="e34_group" class="nodes_shape" data-toggle="tooltip" data-container="body" data-placement="left" transform="matrix(1.11554 0 0 1 332.361 96.3931)">
+                                                                <rect id="ceri_app_node2_shape" width="46.9586" height="83.0697" x="212.058" y="198.019" rx="0" ry="0" style="fill:#759eba;stroke:#000088;stroke-width:1px;"
+                                                                />
+                                                                <text id="e5_node1_text" x="215.509" y="217.287" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:13px;font-weight:normal;"
+                                                                    transform="matrix(1 0 0 1 1.62782 0)">
+                                                                    APP02
+                                                                </text>
+                                                                <line id="e35_line" x1="213.01571655278434" x2="259.01681518559684" y1="227.0192718506346" y2="226.76901245122053" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="e5_node1_text" x="230.509" y="245.287" class="nodeServer" dx="" dy="">
+                                                                    
+                                                                </text>
+                                                                <line id="e36_line" x1="213.27088928227653" x2="259.2715148926281" y1="257.39950561528303" y2="257.14950561528303" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="ceri_app_node2_icon" x="230.509" y="275.287" class="nodeAvail" dx="" dy="" label="APP02" status="NotFound">
+                                                                    
+                                                                </text>
+                                                            </g>
+                                                            <g id="e38_group" class="nodes_shape" data-toggle="tooltip" data-container="body" data-placement="left" transform="matrix(1.11554 0 0 1 332.362 189.365)">
+                                                                <rect id="ceri_app_node3_shape" width="46.9586" height="83.0697" x="212.058" y="198.019" rx="0" ry="0" style="fill:#759eba;stroke:#000088;stroke-width:1px;"
+                                                                />
+                                                                <text id="e6_node1_text" x="214.55" y="217.523" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:13px;font-weight:normal;"
+                                                                    transform="matrix(1 0 0 1 1.62782 0)">
+                                                                    APP03
+                                                                </text>
+                                                                <line id="e39_line" x1="213.01571655278434" x2="259.01681518559684" y1="227.0192718506346" y2="226.76901245122053" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="e6_node1_text" x="229.55" y="245.523" class="nodeServer" dx="" dy="">
+                                                                    
+                                                                </text>
+                                                                <line id="e40_line" x1="213.27088928227653" x2="259.2715148926281" y1="257.39950561528303" y2="257.14950561528303" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="ceri_app_node3_icon" x="229.55" y="275.523" class="nodeAvail" dx="" dy="" label="APP03" status="NotFound">
+                                                                    
+                                                                </text>
+                                                            </g>
+                                                        </g>
+                                                        <g id="ceri_ws_node_group" transform="matrix(1 0 0 1 23.6069 0)">
+                                                            <rect id="ceri_ws_rect" width="72.0008920353" height="283.0035061944" x="690.021240234375" y="192.01886938325066" style="fill:#FFFFED;stroke:black;stroke-width:1px;"
+                                                            />
+                                                            <text id="e2_be_sub_head" x="732.051" y="169.401" dx="" dy="" style="fill:rgb(39, 100, 102);font-family:Arial;font-size:12px;font-weight:bold;"
+                                                                transform="matrix(1 0 0 1 -40.9613 12.8237)">
+                                                                WS SERVER
+                                                            </text>
+                                                            <g id="e42_group" class="nodes_shape" data-toggle="tooltip" data-container="body" data-placement="left" transform="matrix(1.11554 0 0 1 462.735 1.28416)">
+                                                                <rect id="ceri_ws_node1_shape" width="46.9586" height="83.0697" x="212.058" y="198.019" rx="0" ry="0" style="fill:#759eba;stroke:#000088;stroke-width:1px;"
+                                                                />
+                                                                <text id="e7_node1_text" x="216.661" y="218.532" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:13px;font-weight:normal;"
+                                                                    transform="matrix(1 0 0 1 1.62782 0)">
+                                                                    WS01
+                                                                </text>
+                                                                <line id="e43_line" x1="213.01571655278434" x2="259.01681518559684" y1="227.0192718506346" y2="226.76901245122053" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="e7_node1_text" x="228.661" y="245.532" class="nodeServer" dx="" dy="">
+                                                                    
+                                                                </text>
+                                                                <line id="e44_line" x1="213.27088928227653" x2="259.2715148926281" y1="257.39950561528303" y2="257.14950561528303" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="ceri_ws_node1_icon" x="228.661" y="275.532" class="nodeAvail" dx="" dy="" label="WS01" status="NotFound">
+                                                                    
+                                                                </text>
+                                                            </g>
+                                                            <g id="e46_group" class="nodes_shape" data-toggle="tooltip" data-container="body" data-placement="left" transform="matrix(1.11554 0 0 1 462.735 96.3931)">
+                                                                <rect id="ceri_ws_node2_shape" width="46.9586" height="83.0697" x="212.058" y="198.019" rx="0" ry="0" style="fill:#759eba;stroke:#000088;stroke-width:1px;"
+                                                                />
+                                                                <text id="e8_node1_text" x="216.619" y="217.218" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:13px;font-weight:normal;"
+                                                                    transform="matrix(1 0 0 1 1.62782 0)">
+                                                                    WS02
+                                                                </text>
+                                                                <line id="e47_line" x1="213.01571655278434" x2="259.01681518559684" y1="227.0192718506346" y2="226.76901245122053" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="e8_node1_text" x="228.619" y="245.218" class="nodeServer" dx="" dy="">
+                                                                    
+                                                                </text>
+                                                                <line id="e48_line" x1="213.27088928227653" x2="259.2715148926281" y1="257.39950561528303" y2="257.14950561528303" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="ceri_ws_node2_icon" x="228.619" y="275.218" class="nodeAvail" dx="" dy="" label="WS02" status="NotFound">
+                                                                    
+                                                                </text>
+                                                            </g>
+                                                            <g id="e50_group" class="nodes_shape" data-toggle="tooltip" data-container="body" data-placement="left" transform="matrix(1.11554 0 0 1 462.736 189.365)">
+                                                                <rect id="ceri_ws_node3_shape" width="46.9586" height="83.0697" x="212.058" y="198.019" rx="0" ry="0" style="fill:#759eba;stroke:#000088;stroke-width:1px;"
+                                                                />
+                                                                <text id="e9_node1_text" x="216.619" y="217.317" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:13px;font-weight:normal;"
+                                                                    transform="matrix(1 0 0 1 1.62782 0)">
+                                                                    WS03
+                                                                </text>
+                                                                <line id="e51_line" x1="213.01571655278434" x2="259.01681518559684" y1="227.0192718506346" y2="226.76901245122053" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="e9_node1_text" x="228.619" y="245.317" class="nodeServer" dx="" dy="">
+                                                                    
+                                                                </text>
+                                                                <line id="e52_line" x1="213.27088928227653" x2="259.2715148926281" y1="257.39950561528303" y2="257.14950561528303" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="ceri_ws_node3_icon" x="228.619" y="275.317" class="nodeAvail" dx="" dy="" label="WS03" status="NotFound">
+                                                                    
+                                                                </text>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                    <g id="dr_group" transform="matrix(1 0 0 1 106.756 0)">
+                                                        <g id="dr_node_group">
+                                                            <rect id="dr_rect" width="153.218" height="338.132" x="22.43249995421624" y="167.7709861831554" rx="0" ry="0" style="fill:#edf3f3; stroke:#737373; stroke-width: 1px;stroke-dasharray:4px,4px;"
+                                                                transform="matrix(1 0 0 1 0 0)" />
+                                                            <text id="dr_text" x="39.5316" y="192.351" dx="" dy="" style="fill:rgb(49, 93, 8);font-family:Arial;font-size:15px;font-weight:bold;"
+                                                                transform="matrix(1 0 0 1 -13.4669 -7.47218)">
+                                                                DIGITAL ROUTE
+                                                            </text>
+                                                            <g id="e7_group" class="nodes_shape" data-toggle="tooltip" data-container="body" data-placement="left" transform="matrix(1 0 0 1 4.91339 99.3884)">
+                                                                <rect id="dr_node1_shape" width="52.9003" height="84.4267" x="70.52362060546875" y="211.05348205566406" rx="0" ry="0" style="fill:#759eba;stroke:#000088;stroke-width:1px;"
+                                                                />
+                                                                <text id="e8_texte" x="90.9556" y="260.362" class="nodeServer" dx="" dy="">
+                                                                    
+                                                                </text>
+                                                                <line id="e6_line" x1="70.80316162109375" x2="123.70344543457031" y1="269.57550048828125" y2="269.0411682128906" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="dr_node1_icon" x="90.9556" y="289.362" class="nodeAvail" dx="" dy="" label="MZE1" status="NotFound">
+                                                                    
+                                                                </text>
+                                                            </g>
+                                                            <line id="e5_line" x1="123.703" x2="70.8031" y1="239.118" y2="239.117" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                transform="matrix(1 0 0 1 4.91339 99.3884)" />
+                                                            <g id="e15_group" class="nodes_shape" data-toggle="tooltip" data-container="body" data-placement="left" transform="matrix(1 0 0 1 5.44774 -3.20603)">
+                                                                <rect id="dr_node2_shape" width="52.9003" height="84.4267" x="70.52362060546875" y="211.05348205566406" rx="0" ry="0" style="fill:#759eba;stroke:#000088;stroke-width:1px;"
+                                                                />
+                                                                <text id="e8rr_texte" x="90.9556" y="260.362" class="nodeServer" dx="" dy="">
+                                                                    
+                                                                </text>
+                                                                <line id="e15_line" x1="70.80316162109375" x2="123.70344543457031" y1="269.57550048828125" y2="269.0411682128906" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="dr_node2_icon" x="90.9556" y="289.362" class="nodeAvail" dx="" dy="" label="MZP" status="NotFound">
+                                                                    
+                                                                </text>
+                                                            </g>
+                                                            <line id="e16_line" x1="123.703" x2="70.8031" y1="239.118" y2="239.117" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                transform="matrix(1 0 0 1 5.44774 -3.20603)" />
+                                                            <g id="e16_group" class="nodes_shape" data-toggle="tooltip" data-container="body" data-placement="left" transform="matrix(1 0 0 1 4.91339 200.38)">
+                                                                <rect id="dr_node3_shape" width="52.9003" height="84.4267" x="70.52362060546875" y="211.05348205566406" rx="0" ry="0" style="fill:#759eba;stroke:#000088;stroke-width:1px;"
+                                                                />
+                                                                <text id="e8_texte" x="90.9556" y="260.362" class="nodeServer" dx="" dy="">
+                                                                    
+                                                                </text>
+                                                                <line id="e17_line" x1="70.80316162109375" x2="123.70344543457031" y1="269.57550048828125" y2="269.0411682128906" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="dr_node3_icon" x="90.9556" y="289.362" class="nodeAvail" dx="" dy="" label="MZE2" status="NotFound">
+                                                                    
+                                                                </text>
+                                                            </g>
+                                                            <text id="e8ww_texte" x="80.9556" y="227.362" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:13px;font-weight:normal;"
+                                                                transform="matrix(1 0 0 1 9.07954 0)">
+                                                                MZP
+                                                            </text>
+                                                            <line id="e18_line" x1="123.703" x2="70.8031" y1="239.118" y2="239.117" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                transform="matrix(1 0 0 1 4.91339 200.38)" />
+                                                            <text id="e2rewr_texte" x="78.2839" y="330.491" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:13px;font-weight:normal;"
+                                                                transform="matrix(1 0 0 1 7.26364 0)">
+                                                                MZE1
+                                                            </text>
+                                                            <text id="e3rw_texte" x="76.1465" y="431.482" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:13px;font-weight:normal;"
+                                                                transform="matrix(1 0 0 1 9.07954 0)">
+                                                                MZE2
+                                                            </text>
+                                                        </g>
+                                                    </g>
+                                                    <g id="sig_group" transform="matrix(1 0 0 1 196.08 -8.4281)">
+                                                        <rect id="sig_rect" width="208.8210144042969" height="137.06900024414062" x="276.292" y="531.863" rx="0" ry="0" style="fill:#edf3f3;stroke:#7D7D7D;stroke-width:1px;stroke-dasharray:4px,4px;"
+                                                            transform="matrix(1 0 0 1 0 0)" />
+                                                        <text id="sig_head" x="465.214" y="566.935" dx="" dy="" style="fill:rgb(49, 93, 8);font-family:Arial;font-size:15px;font-weight:bold;"
+                                                            transform="matrix(1 0 0 1 -185.279 -16.1424)">
+                                                            SIGMA
+                                                        </text>
+                                                        <g id="sig_node_group" transform="matrix(1 0 0 1 50.702 0)">
+                                                            <g id="e54_group" class="nodes_shape" data-toggle="tooltip" data-container="body" data-placement="left" transform="matrix(1.11554 0 0 1 19.5436 380.985)">
+                                                                <rect id="sig_node1_shape" width="46.0005699115" height="82.0010159291" x="213.01565551757812" y="198.0189151095097" style="fill:#759eba;stroke:#000088;stroke-width:1px;"
+                                                                />
+                                                                <text id="e10_node1_text" x="214.845" y="217.569" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:13px;font-weight:normal;">
+                                                                    SMP01
+                                                                </text>
+                                                                <line id="e55_line" x1="213.01571655278434" x2="259.01681518559684" y1="227.0192718506346" y2="226.76901245122053" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="e10_node1_text" x="229.845" y="245.569" class="nodeServer" dx="" dy="">
+                                                                    
+                                                                </text>
+                                                                <line id="e56_line" x1="213.27090454101562" x2="259.2715148925781" y1="257.39949325090925" y2="257.14949325090925" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="sig_node1_icon" x="229.845" y="275.569" class="nodeAvail" dx="" dy="" label="SMP01" status="NotFound">
+                                                                    
+                                                                </text>
+                                                            </g>
+                                                            <g id="e58_group" class="nodes_shape" data-toggle="tooltip" data-container="body" data-placement="left" transform="matrix(1.11554 0 0 1 117.858 382.053)">
+                                                                <rect id="sig_node2_shape" width="46.0005699115" height="82.0010159291" x="213.01565020729086" y="198.01892379290132" style="fill:#759eba;stroke:#000088;stroke-width:1px;"
+                                                                />
+                                                                <text id="e11_node1_text" x="214.092" y="216.432" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:13px;font-weight:normal;">
+                                                                    SMP02
+                                                                </text>
+                                                                <line id="e59_line" x1="213.01571655278434" x2="259.01681518559684" y1="227.0192718506346" y2="226.76901245122053" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="e11_node1_text" x="229.092" y="245.432" class="nodeServer" dx="" dy="">
+                                                                    
+                                                                </text>
+                                                                <line id="e60_line" x1="213.27090454101562" x2="259.2715148925781" y1="257.39949325090925" y2="257.14949325090925" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                                />
+                                                                <text id="sig_node2_icon" x="229.092" y="275.432" class="nodeAvail" dx="" dy="" label="SMP02" status="NotFound">
+                                                                    
+                                                                </text>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                    <g id="interface_lines">
+                                                        <rect id="e2_rectangle" width="7.1558" height="16.2638" x="168.66" y="348.934" rx="0" ry="0" style="fill:#0D0D0D;stroke:#595959;stroke-width:1px;"
+                                                            transform="matrix(1 0 0 1 106.756 0)" />
+                                                        <rect id="e4_rectangle" width="45.0447" height="5.40381" x="484.234" y="139.212" rx="0" ry="0" style="fill:#0D0D0D;stroke:#595959;stroke-width:1px;"
+                                                        />
+                                                        <rect id="e1_rectangle" width="19.517" height="8.45695" x="414.986833709702" y="531.8828125" rx="0" ry="0" style="fill:#0D0D0D;stroke:#595959;stroke-width:1px;"
+                                                            transform="matrix(1 0 0 1 196.08 -8.4281)" />
+                                                        <g id="e17_group" x="" y="" class="" transform="matrix(0.968676 0 0 0.868347 901.181 -39.7081)">
+                                                            <rect id="e17_be_node1_shape" width="46.9586" height="83.0697" x="212.058" y="198.019" rx="0" ry="0" style="fill:#759eba;stroke:#000088;stroke-width:1px;"
+                                                            />
+                                                            <text id="e17_node1_text" x="214.535" y="216.248" dx="" dy="" style="stroke:white;fill:white;font-family:Arial;font-size:13px;font-weight:normal;"
+                                                                transform="matrix(1 0 0 1 1.62782 0)">
+                                                                BES01
+                                                            </text>
+                                                            <line id="e19_line" x1="213.016" x2="259.017" y1="227.019" y2="226.769" style="stroke:#000088;fill:none;stroke-width:1px;"
+                                                            />
+                                                            <text id="e19_node1_text" x="219.173" y="245.248" class="nodeServer" dx="" dy="">
+                                                                
+                                                            </text>
+                                                            <text id="e1_node1_text" x="239.799" y="245.248" class="nodeServer" dx="" dy="">
+                                                                
+                                                            </text>
+                                                            <line id="e20_line" x1="213.271" x2="259.272" y1="257.4" y2="257.15" style="stroke:#000088;fill:none;stroke-width:1px;" />
+                                                            <text id="e20_be_node1_icon" x="230.535" y="275.248" class="nodeAvail" dx="" dy="" label="BES01" status="NotFound">
+                                                                
+                                                            </text>
+                                                        </g>
+                                                        <line id="mze1_bes_line" class="interface_shape interfaceAvail" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="mze1_bes" x1="130.4" x2="168.44" y1="356.02"
+                                                            y2="355.165" style=" stroke-width: 2px; marker-start: url(&quot;#arrow8-6-left&quot;);"
+                                                            transform="matrix(1 0 0 1 106.756 0)" />
+                                                        <line id="mzp_bes_line" class="interface_shape interfaceAvail" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="mzp_bes" x1="129.728" x2="169.283" y1="250.463"
+                                                            y2="355.857" style=" marker-start: url(&quot;#arrow10-8-left&quot;); stroke-width: 2px;"
+                                                            transform="matrix(1 0 0 1 106.756 0)" />
+                                                        <line id="mze2_bes_line" class="interface_shape interfaceAvail" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="mze2_bes" x1="129.485" x2="169.203" y1="450.45"
+                                                            y2="355.776" style=" stroke-width: 2.4px; marker-start: url(&quot;#arrow8-6-left&quot;);"
+                                                            transform="matrix(1 0 0 1 106.756 0)" />
+                                                        <polyline id="mz_ceri_line" class="interface_shape interfaceAvail" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="mze_ceri" points="283.223 357.598 376.655 357.458"
+                                                            style=" stroke-width:3.92px; " />
+                                                        <polyline id="ceri_sig_line" class="interface_shape interfaceAvail" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="ceri_sig" points="619.952 523.237 620.009 504.076 409.906 503.713 410.847 383.204"
+                                                            style="stroke-width:3.92px;" />
+                                                        <line id="smp1_bes_line" class="interface_shape interfaceAvail" type="sigma" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="smp1_bes" x1="345.596" x2="423.139" y1="577.876"
+                                                            y2="539.095" style=" stroke-width:2px; marker-start: url(&quot;#arrow8-6-left&quot;);"
+                                                            transform="matrix(1 0 0 1 196.08 -8.4281)" />
+                                                        <line id="smp2_bes_line" class="interface_shape interfaceAvail" type="sigma" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="smp2_bes" x1="433.305" x2="424.373" y1="579.164"
+                                                            y2="538.808" style=" stroke-width: 2px; marker-start: url(&quot;#arrow8-6-left&quot;);"
+                                                            transform="matrix(1 0 0 1 196.08 -8.4281)" />
+                                                        <polyline id="api_app1_line" class="interface_shape interfaceAvail" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="api_app1" points="566.935 247.788 517.43 247.788 517.289 144.836"
+                                                            style=" stroke-width:2px; stroke-opacity:0.93;marker-start:url(#arrow10-8-left);"
+                                                        />
+                                                        <polyline id="api_app2_line" class="interface_shape interfaceAvail" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="api_app2" points="567.078 338.968 507.158 338.865 507.018 144.759"
+                                                            style=" stroke-width:2px; stroke-opacity:0.93;marker-start:url(#arrow10-8-left);"
+                                                        />
+                                                        <polyline id="api_app3_line" class="interface_shape interfaceAvail" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="api_app3" points="567.246 426.002 497.167 426.039 497.027 144.76"
+                                                            style=" stroke-width:2px; stroke-opacity:0.93;marker-start:url(#arrow10-8-left);"
+                                                        />
+                                                        <line id="tally_app_line" class="interface_shape interfaceAvail" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="tally_app" x1="221.71" x2="518.437" y1="83.7831"
+                                                            y2="140.994" style=" stroke-width:2px; marker-start:url(#arrow10-8-left);"
+                                                            transform="matrix(1 0 0 1 -10.4088 0)" />
+                                                        <line id="nume_app_line" class="interface_shape interfaceAvail" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="nume_app" x1="328.132" x2="516.153" y1="83.8867"
+                                                            y2="140.293" style=" stroke-width:2px; marker-start:url(#arrow10-8-left);"
+                                                            transform="matrix(1 0 0 1 -10.4088 0)" />
+                                                        <line id="voxy_app_line" class="interface_shape interfaceAvail" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="voxy_app" x1="438.847" x2="519.145" y1="83.8867"
+                                                            y2="140.736" style=" stroke-width:2px; marker-start:url(#arrow10-8-left);"
+                                                            transform="matrix(1 0 0 1 -10.4088 0)" />
+                                                        <line id="icare_app_line" class="interface_shape interfaceAvail" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="icare_app" x1="624.126" x2="519.651" y1="84.9805"
+                                                            y2="140.272" style=" stroke-width:2px; marker-start:url(#arrow10-8-left);"
+                                                            transform="matrix(1 0 0 1 -10.4088 0)" />
+                                                        <line id="port_app_line" class="interface_shape interfaceAvail" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="port_app" x1="752.896" x2="518.867" y1="86.9033"
+                                                            y2="141.024" style="stroke-width:2px; marker-start:url(#arrow10-8-left);"
+                                                            transform="matrix(1 0 0 1 -10.4088 0)" />
+                                                        <polyline id="mz_core_line" class="interface_shape interfaceAvail" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="mz_core" points="208.938 545.682 209.04 506.582"
+                                                            style=" stroke-width:3.92px; " />
+                                                        <polyline id="smp_core_line" class="interface_shape interfaceAvail" status="NotFound" data-toggle="tooltip" data-container="body"
+                                                            data-placement="left" label="smp_core" points="298.838 597.655 473.789 597.886"
+                                                            style=" stroke-width:3.92px; " />
+                                                        <line id="e1_bes_line" class="interfaceAvail" status="NotFound" label="mze1_bes" x1="138.322" x2="176.362" y1="344.074" y2="344.074"
+                                                            style=" stroke-width: 2px; marker-start: url(&quot;#arrow8-6-left&quot;);"
+                                                            transform="matrix(1 0 0 1 976.652 -125.206)" />
+                                                    </g>
+                                                    <g id="legend_group" transform="matrix(1 0 0 1 183.861 84.7236)">
+                                                        <rect x="914.8404505693807" y="17.331525707418095" style="fill:none;stroke:#A6A6A6;stroke-width:1px;" id="legend_rect" width="310.358"
+                                                            height="343.547" rx="0" transform="matrix(1.05128 0 0 1.05128 -46.5541 -0.528928)"
+                                                            ry="0" />
+                                                        <text style="font-size:15px;font-style:normal;" x="1011.49" y="58.5254" id="e5_texte" dy="" dx="" transform="matrix(1.07816 0 0 1.07816 -113.299 -29.7752)">
+                                                            <tspan x="1011.49">
+                                                            </tspan>
+                                                            <tspan></tspan>
+                                                            <tspan x="988.49">Server Node</tspan>
+                                                            <tspan x="1011.49" dy="1.9em">- Node Name</tspan>
+                                                            <tspan x="1011.49" dy="1.5em" />
+                                                            <tspan x="1011.49" dy="1.5em" />
+                                                            <tspan x="1011.49" dy="1.5em">- Windows / Linux</tspan>
+                                                            <tspan x="1011.49" dy="1.5em" />
+                                                            <tspan x="1011.49" dy="1.5em">- Availability</tspan>
+                                                        </text>
+                                                        <line id="e12_line" x1="915.4515991210938" y1="125.02020263671875" x2="1240.3787625957539" y2="125.02020263671875" style="stroke:#B3B3B3;fill:none;stroke-width:1px;stroke-dasharray:2px,2px;"
+                                                        />
+                                                        <text style="font-size:15px;font-style:normal;" x="1014.27" y="156.823" id="e2_texte" dy="" dx="" transform="matrix(1.07816 0 0 1.07816 -125.974 -29.7752)">
+                                                            <tspan x="1014.27" dy="1.25em" id="e4_tspan" y="" />
+                                                            <tspan x="1014.27" dy="1.25em" id="e5_tspan" y="" />
+                                                            <tspan x="1014.27" dy="1.25em" id="e7_tspan" y="" />
+                                                            <tspan x="1022.77" id="e2_tspan" y="" dy="">- Interfaces</tspan>
+                                                        </text>
+                                                        <text style="font-size:15px;font-style:normal;" x="983.969" y="173.393" id="e6_texte" transform="matrix(1 0 0 1 -7.92189 -6.33751)"
+                                                            dy="" dx="">- User Interfaces</text>
+                                                        <line id="e7_line" x1="914.0483584259013" y1="188.4444069364261" x2="1240.3787625957539" y2="188.4444069364261" style="stroke:#B3B3B3;fill:none;stroke-width:1px;stroke-dasharray:2px,2px;"
+                                                        />
+                                                        <rect x="940.9828820950127" y="199.53502137723925" style="fill: red; stroke-width: 1px;" id="fail" width="23.7656797076223"
+                                                            height="15.8437864717482" />
+                                                        <rect x="1073.2792688137627" y="234.3914031982422" style="fill:#FFBF00; stroke-width: 1px;" id="alarm" width="23.7656797076223"
+                                                            height="15.8437864717482" />
+                                                        <rect x="940.1914392239189" y="234.39138793945312" style="fill:#28e928; stroke-width: 1px;" id="pass" width="23.7656797076223"
+                                                            height="15.8437864717482" />
+                                                        <rect x="1073.2784423828125" y="199.53502137723925" style="fill:#868585; stroke-width: 1px;" id="unknown" width="23.7656797076223"
+                                                            height="15.8437864717482" />
+                                                        <text style="font-family:Arial;font-size:15px;font-style:normal;" x="977.424" y="217.755" id="e3_texte" transform="matrix(1 0 0 1 -7.92189 -6.33751)"
+                                                            dy="" dx="">- Not Available</text>
+                                                        <text style="font-family:Arial;font-size:15px;font-style:normal;" x="977.424" y="251.027" id="e4_texte" transform="matrix(1 0 0 1 -7.92189 -6.33751)"
+                                                            dy="" dx="">- Available</text>
+                                                        <text style="font-family:Arial;font-size:15px;font-style:normal;" x="1110.51" y="217.755" id="e7_texte" transform="matrix(1 0 0 1 -7.92189 -6.33751)"
+                                                            dy="" dx="">- Unknown</text>
+                                                        <text style="font-family:Arial;font-size:15px;font-style:normal;" x="1110.51" y="251.027" id="e10_texte" transform="matrix(1 0 0 1 -7.92189 -6.33751)"
+                                                            dy="" dx="">- Critical Alerts</text>
+                                                        <line id="e2_line" x1="915.4515991210938" y1="260.02020263671875" x2="1240.3787625957539" y2="260.02020263671875" style="stroke:#B3B3B3;fill:none;stroke-width:1px;stroke-dasharray:2px,2px;"
+                                                        />
+                                                    </g>
+                                                    <text style="fill:black;font-family:Arial;font-size:15px;font-weight:normal;" x="1193.15" y="282.535" id="e9_texte" transform="matrix(1 0 0 1 -68.7685 81.3999)"
+                                                        dx="" dy="">
+                                                        <tspan x="1172.1" style="font-weight:bold;" dy="" y="">APP </tspan>
+                                                        <tspan>- App Server</tspan>
+                                                    </text>
+                                                    <text style="fill:black;font-family:Arial;font-size:15px;font-weight:normal;"
+                                                        x="1182.62" y="313.411" id="e11_texte" transform="matrix(1 0 0 1 -68.7685 81.3999)">
+                                                        <tspan x="1172.8" style="font-weight:bold;" id="e11_tspan" dy="" y="">WS </tspan>
+                                                        <tspan id="e12_tspan">- Terminal Server</tspan>
+                                                    </text>
+                                                    <text style="fill:black;font-family:Arial;font-size:15px;font-weight:normal;"
+                                                        x="1319.46" y="283.237" id="e12_texte" transform="matrix(1 0 0 1 -68.7685 81.3999)">
+                                                        <tspan x="1319.47" style="font-weight:bold;" id="e13_tspan" dy="" y="" dx="">BES </tspan>
+                                                        <tspan id="e14_tspan">- Back End Server</tspan>
+                                                    </text>
+                                                    <text style="fill:black;font-family:Arial;font-size:15px;font-weight:normal;"
+                                                        x="1320.87" y="313.411" id="e13_texte" transform="matrix(1 0 0 1 -68.7685 81.3999)">
+                                                        <tspan x="1320.87" style="font-weight:bold;" id="e15_tspan" dy="" y="">MZ </tspan>
+                                                        <tspan id="e16_tspan">- Digital Route Server</tspan>
+                                                    </text>
+                                                    <text style="fill:black;font-family:Arial;font-size:15px;font-weight:normal;"
+                                                        x="1172.81" y="344.988" id="e14_texte" transform="matrix(1 0 0 1 -68.7685 81.3999)">
+                                                        <tspan x="1172.81" style="font-weight:bold;" id="e17_tspan" dy="" y="">SMP </tspan>
+                                                        <tspan id="e18_tspan">- Sigma Server</tspan>
+                                                    </text>
+                                                    <text style="fill:black;font-family:Arial;font-size:15px;font-weight:normal;"
+                                                        x="1320.17" y="344.989" id="e15_texte" transform="matrix(1 0 0 1 -68.7685 81.3999)">
+                                                        <tspan x="1320.17" style="font-weight:bold;" id="e19_tspan" dy="" y="">CERI </tspan>
+                                                        <tspan id="e20_tspan">- Cerillion System</tspan>
+                                                    </text>
+                                                </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+
+         <!-- Right Side Bar -->
+		 <div class="right-sidebar icon-menu-side">
+			<div class="country-setting" data-toggle="tooltip" data-placement="left" title="Select country">
+				<div class="icon-right">
+					<i class="fa fa-globe fa-3x" aria-hidden="true"></i>
+				</div>
+			</div>
+			<div class="right-sidebar-container pull-right">
+				<div class="sidebar-content">
+					<div class="sidebar-item">
+						<h5>
+							Countries
+							<span class="pull-left m-l-r-10">
+								 <i class="fa fa-flag" aria-hidden="true"></i>
+							</span>
+						</h5>
+					</div>
+					<ul class="country-list" id="countryContainer">
+						<!-- Country List will be added from commmon-util.js -->
+					</ul>
+				</div>
+			</div>
+		</div>
+
+        <div class="row" id="errorDiv">
+            <div class="col-xs-12 col-sm-12 p-sm-0">
+                <div class="card card-stats">
+                    <div class="chart theme-green">
+                        <div class="chart-title-grey">
+                            <h5>
+                                User Not Authorized!!!
+                            </h5>
+                        </div>
+                        <div class="chart-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <div id="errorMsg" class="chart-area">
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="critical-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Critical Alarms</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive" id="criticalAlarmDiv"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="major-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Major Alarms</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive" id="majorAlarmDiv"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="minor-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Minor Alarms</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive" id="minorAlarmDiv"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="incident-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Incidents</h4>
+                </div>
+                <div class="modal-body" style="max-height: calc(100vh - 210px); overflow-y: auto;">
+                    <div class="table-responsive" id="incDetailDiv"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="admin-footer" class="clearfix">
+        <div class="pull-left">
+            <img src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/images/prodapt_logo.png" width="100">
+            <span class="hidden-xs">
+                <b>Copyright &copy; </b>2018. All Rights Reserved.
+            </span>
+        </div>
+        <div class="pull-right refreshDateTime">
+            Last refreshed :
+            <span class="currentDateTime"></span>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="node-modal" tabindex="-1" role="dialog" aria-labelledby="modalNodeLabel">
+            <div class="modal-dialog modal-sm modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="modal-title" id="nodeModalLabel">Node - </div>
+                    </div>
+                    <div class="modal-body customModalBody">
+                        <div role="tabpanel">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#node" aria-controls="node" role="tab" data-toggle="tab">Node Details</a>
+        
+                                </li>
+                                <li role="presentation">
+                                    <a href="#alerts" aria-controls="alerts" role="tab" data-toggle="tab">Alerts</a>
+        
+                                </li>
+                                <li role="presentation">
+                                    <a href="#diskUsage" aria-controls="diskUsage" role="tab" data-toggle="tab">Disk Usage</a>
+        
+                                </li>
+                                <li role="presentation">
+                                    <a href="#cpuLoad" aria-controls="cpuLoad" role="tab" data-toggle="tab">CPU Load</a>
+        
+                                </li>
+                                <li role="presentation">
+                                    <a href="#errorLog" aria-controls="errorLog" role="tab" data-toggle="tab">Error Log Details</a>
+        
+                                </li>
+                                <li role="presentation">
+                                    <a href="#processDetails" aria-controls="processDetails" role="tab" data-toggle="tab">Process Details</a>
+        
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="node">
+                                    <table class="table table-striped">
+                                        <thead id="node_details_table_header">
+                                            <tr></tr>
+                                        </thead>
+                                        <tbody id="node_details_table_values">
+                                            <tr></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="alerts">
+                                    <table class="table table-striped">
+                                        <thead id="node_alerts_table_header">
+                                            <tr></tr>
+                                        </thead>
+                                        <tbody id="node_alerts_table_values">
+                                            <tr></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="diskUsage">
+                                    <table class="table table-striped">
+                                        <thead id="node_disk_table_header">
+                                            <tr></tr>
+                                        </thead>
+                                        <tbody id="node_disk_table_values">
+                                            <tr></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="cpuLoad">
+                                    <table class="table table-striped">
+                                        <thead id="node_cpu_table_header">
+                                            <tr></tr>
+                                        </thead>
+                                        <tbody id="node_cpu_table_values">
+                                            <tr></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="errorLog">
+                                    <table class="table table-striped">
+                                        <thead id="node_error_table_header">
+                                            <tr></tr>
+                                        </thead>
+                                        <tbody id="node_error_table_values">
+                                            <tr></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="processDetails">
+                                    <table class="table table-striped">
+                                        <thead id="node_process_table_header">
+                                            <tr></tr>
+                                        </thead>
+                                        <tbody id="node_process_table_values">
+                                            <tr></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="modal fade" id="interface-modal" tabindex="-1" role="dialog" aria-labelledby="modalInterfaceLabel">
+        <div class="modal-dialog modal-sm modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-title" id="interfaceModalLabel">Interfaces - </div>
+                </div>
+                <div class="modal-body customModalBody">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <div class="modal-title" id="modalInterfaceLabel">Interface Details</div>
+                            <thead id="interface_details_table_header">
+                                <tr></tr>
+                            </thead>
+                            <tbody id="interface_details_table_values">
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- custom changes for splunk js ends here-->
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/jquery.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/bootstrap.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/d3.v3.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/d3-collection.v1.min.js"></script>
+    <!-- HighChart JS and 3rd Party JS Files -->
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/highcharts.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/highcharts-more.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/highcharts-3d.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/exporting.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/export-data.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/no-data-to-display.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/drilldown.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/highcharts/waypoints.min.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/moment.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAp1lFRiYqrFRh6XYGNosN8skCY5mcCXD8&libraries=visualization"></script>
+    <!-- Splunk  JS Files -->
+    <script src="/en-US/config?autoload=1" crossorigin="use-credentials"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/js/i18n.js"></script>
+    <script src="/en-US/i18ncatalog?autoload=1"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/build/simplexml/index.js"></script>
+    <!-- Custom JS Files -->
+    <script type="text/javascript" src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/index.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/commonHelpText.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/Queries.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/common-util.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/chart-util.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/SplunkUI-PRODv1/js/monitoring-fixed-dashboard.js"></script>
+</body>
+
+</html>
