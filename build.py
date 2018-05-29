@@ -16,6 +16,7 @@ def replace_string(**kwargs):
     oldstr = 'SplunkUI-PRODv1'
 
     print ("path-> name "+path_name)
+    print ("appNameappNameappName ----> "+newapp_name)
 
     for dirpath, dirname, filename in os.walk(drc):
         #Getting a list of the full paths of files
@@ -47,5 +48,7 @@ if __name__=="__main__":
     pathValue=vars.pathVar.strip()
     zipPathValue=vars.zipPathVar.strip()
     appName=vars.appName.strip()
+
+    print ("appNameappNameappName "+appName)
 
     replace_string(pathVar=pathValue, zipPathVar=zipPathValue, newappName=appName)
