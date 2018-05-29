@@ -60,4 +60,4 @@ if __name__=="__main__":
 
     replace_string(pathVar=pathValue, zipPathVar=zipPathValue, oldappName=oldName, newappName=appName)
 
-    replace_string(pathVar='../sampleapp/app', zipPathVar='../sampleapp/app', oldappName='Global_Dashboard_V3', newappName='SplunkUI-PRODv1')
+    #replace_string(pathVar='../sampleapp/app', zipPathVar='../sampleapp/app', oldappName='Global_Dashboard_V3', newappName='SplunkUI-PRODv1')
