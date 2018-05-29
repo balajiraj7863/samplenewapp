@@ -12,8 +12,8 @@ def replace_string(**kwargs):
     #version_name=kwargs['newVersion']
     drc = path_name
     #backup = path_name+'/tmp'
-    oldstr = 'SplunkUI-PRODv1'
     pattern = re.compile('SplunkUI-PRODv1')
+    oldstr = 'SplunkUI-PRODv1'
 
     print ("path-> name "+path_name)
     print ("appNameappNameappName ----> "+newapp_name)
@@ -24,12 +24,9 @@ def replace_string(**kwargs):
             path = os.path.join(dirpath, fname) #Joining dirpath and filenames
             print (path)
             strg = open(path, encoding='cp437').read() #Opening the files for reading only
-            print (pattern)
-            print ("strg "+strg)
             if re.search(pattern, strg):#If we find the pattern ....
                 #print path, strg
                 #shutil.copy2(path, backup) #we will create a backup of it
-                print (strg)
                 strg = strg.replace(oldstr, newapp_name) #We will create the replacement condistion
                 f = open(path, 'w') #We open the files with the WRITE option
                 f.write(strg) # We are writing the the changes to the files
