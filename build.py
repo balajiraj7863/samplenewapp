@@ -13,7 +13,7 @@ def replace_string(**kwargs):
     oldstr=kwargs['oldappName']
     #version_name=kwargs['newVersion']
     drc = path_name
-    #backup = path_name+'/tmp'
+    backup = path_name+'/tmp'
     pattern = re.compile(oldstr)
 
     #print ("path-> name "+path_name)
@@ -32,14 +32,14 @@ def replace_string(**kwargs):
             strg = open(path)
             strg = strg.read() #Opening the files for reading only
             if re.search(pattern, strg):#If we find the pattern ....
-                #shutil.copy2(path, backup) #we will create a backup of it
+                shutil.copy2(path, backup) #we will create a backup of it
                 strg = strg.replace(oldstr, newapp_name) #We will create the replacement condistion
                 f = open(path, 'w') #We open the files with the WRITE option
                 f.write(strg) # We are writing the the changes to the files
                 print (strg)
                 f.close() #Closing the files
     # archiev the files
-    shutil.make_archive(newapp_name,"zip", zip_path) ## archiev the files zip
+    shutil.make_archive(newapp_name,"zip", zip_path+'/tmp') ## archiev the files zip
     # archiev the files final
 
 
@@ -59,3 +59,5 @@ if __name__=="__main__":
     oldName=vars.oldappName.strip()
 
     replace_string(pathVar=pathValue, zipPathVar=zipPathValue, oldappName=oldName, newappName=appName)
+
+    replace_string(pathVar='../sampleapp/app', zipPathVar='../sampleapp/app', oldappName='Global_Dashboard_V3', newappName='SplunkUI-PRODv1')
