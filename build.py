@@ -39,8 +39,8 @@ def replace_string(**kwargs):
                 #print (strg)
                 f.close() #Closing the files
     # archiev the files
-    if not os.path.exists(zip_path+"/"+newapp_name):
-        os.makedirs(zip_path+"/"+newapp_name)
+    # if not os.path.exists(zip_path+"/"+newapp_name):
+    #     os.makedirs(zip_path+"/"+newapp_name)
     shutil.make_archive(zip_path+"/"+newapp_name,"zip", path_name) ## archiev the files zip
     # archiev the files final
 
