@@ -28,7 +28,7 @@ def replace_string(**kwargs):
             #     configParser = configparser.ConfigParser()
             #     configFilePath = r''+os.path.join(dirpath, fname)
             #     configParser.read(configFilePath)
-            print ("path-> "+path)
+            #print ("path-> "+path)
             strg = open(path)
             strg = strg.read() #Opening the files for reading only
             if re.search(pattern, strg):#If we find the pattern ....
@@ -36,14 +36,15 @@ def replace_string(**kwargs):
                 strg = strg.replace(oldstr, newapp_name) #We will create the replacement condistion
                 f = open(path, 'w') #We open the files with the WRITE option
                 f.write(strg) # We are writing the the changes to the files
-                print (strg)
+                #print (strg)
                 f.close() #Closing the files
     # archiev the files
     if not os.path.exists(zip_path+"/"+newapp_name):
         os.makedirs(zip_path+"/"+newapp_name)
     zip_root_dir = zip_path+"/"+newapp_name
     zippath = zip_root_dir+"/"+newapp_name
-    shutil.make_archive(zippath,"zip", zippath) ## archiev the files zip
+    print (zippath)
+    shutil.make_archive(zippath,"zip", zip_root_dir) ## archiev the files zip
     # archiev the files final
 
 
