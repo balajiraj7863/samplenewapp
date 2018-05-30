@@ -40,7 +40,7 @@ def replace_string(**kwargs):
                 f.close() #Closing the files
     # archiev the files
     if not os.path.exists(path_name+"/"+newapp_name):
-        os.makedirs(newapp_name)
+        os.makedirs(path_name+"/"+newapp_name)
     shutil.make_archive(newapp_name,"zip", zip_path+"/"+newapp_name) ## archiev the files zip
     # archiev the files final
 
