@@ -25,10 +25,15 @@ def replace_string(**kwargs):
         for fname in filename:
             path = os.path.join(dirpath, fname) #Joining dirpath and filenames
             # if fname == 'app.conf':
-            #     configParser = configparser.ConfigParser()
-            #     configFilePath = r''+os.path.join(dirpath, fname)
-            #     configParser.read(configFilePath)
-            #print ("path-> "+path)
+            #     config_parser = configparser.SafeConfigParser()
+            #     config_file_path = r''+os.path.join(dirpath, fname)
+            #     config_parser.read(config_file_path)
+            # print ("path-> "+path)
+            if fname == 'app.conf':
+            config_file_path = r''+os.path.join(dirpath, fname)
+            days_file = open(config_file_path,'r')
+            days = days_file.read()
+            print (days)
             strg = open(path)
             strg = strg.read() #Opening the files for reading only
             if re.search(pattern, strg):#If we find the pattern ....
