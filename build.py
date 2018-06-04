@@ -10,11 +10,9 @@ def replace_string(**kwargs):
     path_name=kwargs['pathVar']
     zip_path=kwargs['zipPathVar']
     newapp_name=kwargs['newappName']
-    oldstr=kwargs['oldappName']
     #version_name=kwargs['newVersion']
     drc = path_name
     #backup = path_name+'/tmp'
-    pattern = re.compile(oldstr)
 
     print ("path-> name "+path_name)
     print ("appNameappNameappName ----> "+newapp_name)
@@ -27,11 +25,16 @@ def replace_string(**kwargs):
             if fname == 'app.conf':
                 config = ConfigObj(os.path.join(dirpath, fname))
                 print (config['ui']['label'])
+                if ('' != config['ui']['label']):
+                    old_app_name=config['ui']['label']
+                    pattern = re.compile(old_app_name)
+            else:
+                print ("app.conf not found in the package")
             strg = open(path)
             strg = strg.read() #Opening the files for reading only
             if re.search(pattern, strg):#If we find the pattern ....
                 #shutil.copy2(path, backup) #we will create a backup of it
-                strg = strg.replace(oldstr, newapp_name) #We will create the replacement condistion
+                strg = strg.replace(old_app_name, newapp_name) #We will create the replacement condistion
                 f = open(path, 'w') #We open the files with the WRITE option
                 f.write(strg) # We are writing the the changes to the files
                 #print (strg)
@@ -49,15 +52,13 @@ if __name__=="__main__":
     parser.add_argument('--pathVar',help="path to start change",required=True)
     parser.add_argument('--zipPathVar',help="path to artifacts",required=True)
     parser.add_argument('--appName',help="new name for splunk app",required=True)
-    parser.add_argument('--oldappName',help="old name for splunk app",required=True)
 
     vars=parser.parse_args()
 
     pathValue=vars.pathVar.strip()
     zipPathValue=vars.zipPathVar.strip()
     appName=vars.appName.strip()
-    oldName=vars.oldappName.strip()
 
-    replace_string(pathVar=pathValue, zipPathVar=zipPathValue, oldappName=oldName, newappName=appName)
+    replace_string(pathVar=pathValue, zipPathVar=zipPathValue, newappName=appName)
 
     #replace_string(pathVar='../sampleapp/app', zipPathVar='../sampleapp/app', oldappName='Global_Dashboard_V3', newappName='SplunkUI-PRODv1')
