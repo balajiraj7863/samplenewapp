@@ -26,7 +26,7 @@ def replace_string(**kwargs):
             path = os.path.join(dirpath, fname) #Joining dirpath and filenames
             if fname == 'app.conf':
                 config = ConfigObj(os.path.join(dirpath, fname))
-                print ("path-> "+config['ui'])
+                print (config['ui']['label'])
             strg = open(path)
             strg = strg.read() #Opening the files for reading only
             if re.search(pattern, strg):#If we find the pattern ....
