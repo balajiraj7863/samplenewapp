@@ -4,7 +4,7 @@ import sys, os
 import shutil
 from zipfile import ZipFile
 from shutil import make_archive
-from configobj import ConfigObj
+import ConfigObj
 
 def replace_string(**kwargs):
     path_name=kwargs['pathVar']
