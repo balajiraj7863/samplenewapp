@@ -4,7 +4,7 @@ import sys, os
 import shutil
 from zipfile import ZipFile
 from shutil import make_archive
-import ConfigObj
+import configobj
 
 def replace_string(**kwargs):
     path_name=kwargs['pathVar']
@@ -23,7 +23,7 @@ def replace_string(**kwargs):
         for fname in filename:
             path = os.path.join(dirpath, fname) #Joining dirpath and filenames
             if fname == 'app.conf':
-                config = ConfigObj(os.path.join(dirpath, fname))
+                config = configobj.ConfigObj(os.path.join(dirpath, fname))
                 print (config['ui']['label'])
                 if ('' != config['ui']['label']):
                     old_app_name=config['ui']['label']
