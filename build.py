@@ -36,6 +36,7 @@ def replace_string(**kwargs):
             strg = strg.read() #Opening the files for reading only
             if re.search(pattern, strg):#If we find the pattern ....
                 #shutil.copy2(path, backup) #we will create a backup of it
+                print (newapp_name)
                 strg = strg.replace(old_app_name, newapp_name) #We will create the replacement condistion
                 f = open(path, 'w') #We open the files with the WRITE option
                 f.write(strg) # We are writing the the changes to the files
