@@ -28,6 +28,7 @@ def replace_string(**kwargs):
                 print (config['ui'])
                 if ('' != config['ui']['label']):
                     old_app_name=config['ui']['label']
+                    print (old_app_name)
                     pattern = re.compile(old_app_name)
             else:
                 print ("app.conf not found in the package")
