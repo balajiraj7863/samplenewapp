@@ -24,7 +24,8 @@ def replace_string(**kwargs):
             path = os.path.join(dirpath, fname) #Joining dirpath and filenames
             if fname == 'app.conf':
                 config = configobj.ConfigObj(os.path.join(dirpath, fname))
-                print (config['ui']['label'])
+                print ("path ----->>>>"+os.path.join(dirpath, fname))
+                print (config['ui'])
                 if ('' != config['ui']['label']):
                     old_app_name=config['ui']['label']
                     pattern = re.compile(old_app_name)
