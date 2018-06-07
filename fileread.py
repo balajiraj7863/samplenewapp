@@ -6,12 +6,14 @@ from zipfile import ZipFile
 from shutil import make_archive
 import configobj
 
-drc = "D:\GIT\sampleapp"
+drc = "D:\\sv1007\\app"
 
-
+print (drc)
 for dirpath, dirname, filename in os.walk(drc):
-        #Getting a list of the full paths of files
+    #Getting a list of the full paths of files
+    #print (filename)
     for fname in filename:
+            print (fname)
             path = os.path.join(dirpath, fname) #Joining dirpath and filenames
             if fname == 'app.conf':
                 print (os.path.join(dirpath, fname))

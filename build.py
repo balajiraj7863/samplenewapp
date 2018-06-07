@@ -10,6 +10,7 @@ def replace_string(**kwargs):
     path_name=kwargs['pathVar']
     zip_path=kwargs['zipPathVar']
     newapp_name=kwargs['newappName']
+    old_app_name='';
     #version_name=kwargs['newVersion']
     drc = path_name
     #backup = path_name+'/tmp'
@@ -19,30 +20,33 @@ def replace_string(**kwargs):
 
     for dirpath, dirname, filename in os.walk(drc):
         #Getting a list of the full paths of files
-        
-        for fname in filename:
-            path = os.path.join(dirpath, fname) #Joining dirpath and filenames
-            print (fname)
-            if fname == 'app.conf':
-                config = configobj.ConfigObj(os.path.join(dirpath, fname))
-                print ("path ----->>>>"+os.path.join(dirpath, fname))
-                print (config['ui'])
-                if ('' != config['ui']['label']):
-                    old_app_name=config['ui']['label']
-                    print (old_app_name)
-                    pattern = re.compile(old_app_name)
-            else:
-                print ("app.conf not found in the package")
-            strg = open(path)
-            strg = strg.read() #Opening the files for reading only
-            if re.search(pattern, strg):#If we find the pattern ....
-                #shutil.copy2(path, backup) #we will create a backup of it
-                print (newapp_name)
-                strg = strg.replace(old_app_name, newapp_name) #We will create the replacement condistion
-                f = open(path, 'w') #We open the files with the WRITE option
-                f.write(strg) # We are writing the the changes to the files
-                #print (strg)
-                f.close() #Closing the files
+            #print ("dirpathss--->"+dirpath)
+            print (dirname)
+            #print (filename)
+            for fname in filename:
+                path = os.path.join(dirpath, fname) #Joining dirpath and filenames
+                print (fname)
+                if fname == 'app.conf':
+                    config = configobj.ConfigObj(os.path.join(dirpath, fname))
+                    print ("path ----->>>>"+os.path.join(dirpath, fname))
+                    print (config['ui'])
+                    if ('' != config['ui']['label']):
+                        old_app_name=config['ui']['label']
+                        print (old_app_name)
+                        pattern = re.compile(old_app_name)
+                else:
+                    print ("app.conf not found in the package")
+                if '' != old_app_name:
+                    strg = open(path)
+                    strg = strg.read() #Opening the files for reading only
+                    if re.search(pattern, strg):#If we find the pattern ....
+                        #shutil.copy2(path, backup) #we will create a backup of it
+                        print (newapp_name)
+                        strg = strg.replace(old_app_name, newapp_name) #We will create the replacement condistion
+                        f = open(path, 'w') #We open the files with the WRITE option
+                        f.write(strg) # We are writing the the changes to the files
+                        #print (strg)
+                        f.close() #Closing the files
     # archiev the files
     shutil.make_archive(zip_path+"/"+newapp_name,"zip", path_name) ## archiev the files zip
     if not os.path.exists(zip_path+"/"+newapp_name):
@@ -65,4 +69,4 @@ if __name__=="__main__":
 
     replace_string(pathVar=pathValue, zipPathVar=zipPathValue, newappName=appName)
 
-    #replace_string(pathVar='../sampleapp/app', zipPathVar='../sampleapp/app', oldappName='Global_Dashboard_V3', newappName='SplunkUI-PRODv1')
+    #replace_string(pathVar='../sampleapp/app', zipPathVar='../sampleapp/app', oldappName='Global_Dashboard_V3', newappName='GD-v1')
