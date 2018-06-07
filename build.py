@@ -22,6 +22,7 @@ def replace_string(**kwargs):
         
         for fname in filename:
             path = os.path.join(dirpath, fname) #Joining dirpath and filenames
+            print (fname)
             if fname == 'app.conf':
                 config = configobj.ConfigObj(os.path.join(dirpath, fname))
                 print ("path ----->>>>"+os.path.join(dirpath, fname))
