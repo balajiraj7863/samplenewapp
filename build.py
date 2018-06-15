@@ -21,10 +21,10 @@ def replace_string(**kwargs):
     
     for dirpath, dirname, filename in os.walk(drc):
         #Getting a list of the full paths of files
-        print (dirname)
+        #print (dirname)
         for fname in filename:
             path = os.path.join(dirpath, fname) #Joining dirpath and filenames
-            print (fname)
+            #print (fname)
             if fname == 'app.conf':
                 config = configobj.ConfigObj(os.path.join(dirpath, fname))
                 print ("path ----->>>>"+os.path.join(dirpath, fname))
