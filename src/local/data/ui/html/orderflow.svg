@@ -1,0 +1,590 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-3348.86 -2795.21 16839.4 8262.33" preserveAspectRatio="none meet" width="1064px" height="522px">
+    <g id="svgHeader" transform="matrix(1 0 0 1 1115.2 561.2)">
+        <defs id="svgEditorDefs">
+            <marker id="arrow20-16-left" markerHeight="16" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="3" refY="0" viewBox="0 -5 20 20">
+                <path d="M 15 -5 L 0 0 L 15 5 z" fill="black" />
+            </marker>
+            <marker id="arrow15-12-right" markerHeight="12" markerUnits="strokeWidth" markerWidth="15" orient="auto" refX="-3" refY="0" viewBox="-15 -5 20 20">
+                <path d="M -15 -5 L 0 0 L -15 5 z" fill="black" />
+            </marker>
+            <marker id="arrow20-16-right" markerHeight="16" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="-3" refY="0" viewBox="-15 -5 20 20">
+                <path d="M -15 -5 L 0 0 L -15 5 z" fill="black" />
+            </marker>
+            <marker id="arrow15-12-left" markerHeight="12" markerUnits="strokeWidth" markerWidth="15" orient="auto" refX="3" refY="0" viewBox="0 -5 20 20">
+                <path d="M 15 -5 L 0 0 L 15 5 z" fill="black" />
+            </marker>
+            <marker id="arrow8-6-right" markerHeight="6" markerUnits="strokeWidth" markerWidth="8" orient="auto" refX="-3" refY="0" viewBox="-15 -5 20 20">
+                <path d="M -15 -5 L 0 0 L -15 5 z" fill="black" />
+            </marker>
+            <marker id="arrow10-8-left" markerHeight="8" markerUnits="strokeWidth" markerWidth="10" orient="auto" refX="3" refY="0" viewBox="0 -5 20 20">
+                <path d="M 15 -5 L 0 0 L 15 5 z" fill="black" />
+            </marker>
+            <linearGradient gradientUnits="objectBoundingBox" id="lgrd2-fire" spreadMethod="pad" x1="0%" x2="100%" y1="0%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+            </linearGradient>
+            <marker id="arrow8-6-left" markerHeight="6" markerUnits="strokeWidth" markerWidth="8" orient="auto" refX="3" refY="0" viewBox="0 -5 20 20">
+                <path d="M 15 -5 L 0 0 L 15 5 z" fill="black" />
+            </marker>
+            <linearGradient gradientUnits="objectBoundingBox" id="lgrd2-black-white" spreadMethod="pad" x1="0%" x2="100%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="black" />
+                <stop offset="100%" stop-color="white" />
+            </linearGradient>
+            <polygon id="svgEditorShapeDefs" style="fill:khaki;stroke:black;vector-effect:non-scaling-stroke;stroke-width:1px;" />
+            <linearGradient gradientUnits="objectBoundingBox" id="lgrd2-peachpuff-sienna-h" spreadMethod="pad" x1="0%" x2="100%" y1="0%" y2="0%">
+                <stop offset="0%" style="stop-color:peachpuff;  stop-opacity:1;" />
+                <stop offset="100%" style="stop-color:sienna;  stop-opacity:1" />
+            </linearGradient>
+            <radialGradient gradientUnits="objectBoundingBox" id="rgrd3-c" x1="0" x2="100%" y1="0" y2="100%">
+                <stop offset="0%" stop-color="#3e3168" />
+                <stop offset="60%" stop-color="#7363a5" />
+                <stop offset="90%" stop-color="#8979ba" />
+            </radialGradient>
+            <radialGradient cx="60%" cy="60%" fx="75%" fy="75%" gradientUnits="objectBoundingBox" id="rgrd6-a" r="45%">
+                <stop offset="0%" stop-color="#a595d8" />
+                <stop offset="20%" stop-color="#a595d8" />
+                <stop offset="40%" stop-color="#8979ba" />
+                <stop offset="60%" stop-color="#7363a5" />
+                <stop offset="80%" stop-color="#605091" />
+                <stop offset="100%" stop-color="#3e3168" />
+            </radialGradient>
+            <radialGradient fx="30%" fy="30%" gradientUnits="objectBoundingBox" id="rgrd11-a">
+                <stop offset="0" stop-color="#f9caaa" />
+                <stop offset="20%" stop-color="#f9caaa" />
+                <stop offset="20%" stop-color="#f9ae7a" />
+                <stop offset="40%" stop-color="#f9ae7a" />
+                <stop offset="40%" stop-color="#f79959" />
+                <stop offset="60%" stop-color="#f79959" />
+                <stop offset="60%" stop-color="#fc9149" />
+                <stop offset="80%" stop-color="#fc9149" />
+                <stop offset="80%" stop-color="#f79959" />
+                <stop offset="90%" stop-color="#f97821" />
+                <stop offset="100%" stop-color="#f97821" />
+            </radialGradient>
+            <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" id="rgrd2-white-blue" r="50%">
+                <stop offset="0%" style="stop-color:white;stop-opacity:0" />
+                <stop offset="100%" style="stop-color:blue;stop-opacity:1" />
+            </radialGradient>
+            <linearGradient gradientUnits="objectBoundingBox" id="lgrd2-peachpuff-sienna-v" spreadMethod="pad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" style="stop-color:peachpuff;  stop-opacity:0.84;" />
+                <stop offset="100%" style="stop-color:sienna;  stop-opacity:1" />
+            </linearGradient>
+            <linearGradient gradientUnits="objectBoundingBox" id="lgrd4-green-red-blue" spreadMethod="pad" x1="0%" x2="100%" y1="0%" y2="0%">
+                <stop offset="10%" stop-color="#00cc00" stop-opacity="1" />
+                <stop offset="30%" stop-color="#006600" stop-opacity="1" />
+                <stop offset="70%" stop-color="#cc0000" stop-opacity="1" />
+                <stop offset="90%" stop-color="#000099" stop-opacity="1" />
+            </linearGradient>
+            <linearGradient gradientUnits="objectBoundingBox" id="lgrd2-b-reflect" spreadMethod="reflect" x1="0%" x2="10%" y1="0%" y2="10%">
+                <stop offset="5%" stop-color="#babc91" stop-opacity="1" />
+                <stop offset="95%" stop-color="#c8d591" stop-opacity="1" />
+            </linearGradient>
+            <linearGradient gradientUnits="objectBoundingBox" id="lrgd2-e1-repeat" spreadMethod="repeat" x1="20%" x2="40%" y1="0%" y2="0%">
+                <stop offset="0%" stop-color="lightblue" />
+                <stop offset="100%" stop-color="#ef5b2b" />
+            </linearGradient>
+            <linearGradient gradientUnits="objectBoundingBox" id="lrgd2-e1" spreadMethod="pad" x1="0%" x2="100%" y1="0%" y2="0%">
+                <stop offset="0%" stop-color="lightblue" />
+                <stop offset="100%" stop-color="#ef5b2b" />
+            </linearGradient>
+            <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" gradientUnits="objectBoundingBox" id="rgrd3-red-blue-red-reflect" r="5%" spreadMethod="reflect">
+                <stop offset="0%" stop-color="red" />
+                <stop offset="50%" stop-color="blue" />
+                <stop offset="100%" stop-color="red" />
+            </radialGradient>
+        </defs>
+        <rect id="svgEditorBackground" x="-3348.858184523809" y="-2795.2099609375" width="16839.41558779762" height="8262.330078125" style="fill:none; stroke: none;" />
+        <defs>
+            <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-99ccff-1-ffffff-1-s-0">
+                <stop offset="40%" style="stop-color:#d7d2cc" />
+                <stop offset="90%" style="stop-color:#fff" />
+            </linearGradient>
+            <linearGradient x1="0%" y1="100%" x2="0%" y2="0%" id="mx-gradient-f88f68-1-fe8c00-1-s-0">
+                <stop offset="0%" style="stop-color:#ffffff" />
+                <stop offset="100%" style="stop-color:#ffffff" />
+            </linearGradient>
+            <linearGradient x1="0%" y1="100%" x2="0%" y2="0%" id="mx-gradient-e65245-1-e43a15-1-s-0" gradientTransform="rotate(0)">
+                <stop offset="0%" style="stop-color:#ffffff" />
+                <stop offset="100%" style="stop-color:#ffffff" />
+            </linearGradient>
+            <linearGradient x1="0%" y1="100%" x2="0%" y2="0%" id="mx-gradient-f9d423-1-e65c00-1-s-0">
+                <stop offset="0%" style="stop-color:#ffffff" />
+                <stop offset="100%" style="stop-color:#ffffff" />
+            </linearGradient>
+            <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-bbd2c5-1-536976-1-s-0">
+                <stop offset="0%" style="stop-color:#ffffff" />
+                <stop offset="100%" style="stop-color:#ffffff" />
+            </linearGradient>
+            <linearGradient x1="0%" y1="100%" x2="0%" y2="0%" id="mx-gradient-e9e4f0-1-d3cce3-1-s-0">
+                <stop offset="0%" style="stop-color:#ffffff" />
+                <stop offset="100%" style="stop-color:#ffffff" />
+            </linearGradient>
+            <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-ff9966-1-ff5e62-1-s-0">
+                <stop offset="0%" style="stop-color:#ffffff" />
+                <stop offset="100%" style="stop-color:#ffffff" />
+            </linearGradient>
+            <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-74ebd5-1-acb6e5-1-s-0">
+                <stop offset="0%" style="stop-color:#ffffff" />
+                <stop offset="100%" style="stop-color:#ffffff" />
+            </linearGradient>
+            <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-ffe259-1-ffa751-1-s-0">
+                <stop offset="0%" style="stop-color:#ffffff" />
+                <stop offset="100%" style="stop-color:#ffffff" />
+            </linearGradient>
+            <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-d5e8d4-1-159957-1-s-0">
+                <stop offset="0%" style="stop-color:#ffffff" />
+                <stop offset="100%" style="stop-color:#ffffff" />
+            </linearGradient>
+            <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-f5f5f5-1-b3b3b3-1-s-0">
+                <stop offset="0%" style="stop-color:#f5f5f5" />
+                <stop offset="100%" style="stop-color:#b3b3b3" />
+            </linearGradient>
+            <linearGradient x1="0%" y1="100%" x2="0%" y2="0%" id="mx-gradient-7ea6e0-1-dae8fc-1-s-0" gradientTransform="">
+                <stop offset="0%" style="stop-color:#ffffff" />
+                <stop offset="100%" style="stop-color:#ffffff" />
+            </linearGradient>
+        </defs>
+    </g>
+    <g id="legends" transform="matrix(1 0 0 1 12015.4 -4524.9)">
+        <ellipse xmlns="http://www.w3.org/2000/svg" stroke-width="25" cx="808.6642456054688" cy="7302.984328861941" rx="150" ry="150" fill="url(#mx-gradient-ffe259-1-ffa751-1-s-0)" stroke="#030303" pointer-events="none" transform="matrix(1 0 0 1 -999.6 39.5)" />
+        <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="899.565" y="5181.34" id="e59_texte" transform="matrix(1 0 0 1 -715.476 286.441)">AVAILABLE</text>
+        <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="900.387" y="7211.94" id="e60_texte" transform="matrix(1 0 0 1 -731.214 176.276)">CURRENT</text>
+        <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="-3961.32" y="7006.99" id="e65_texte" transform="matrix(0.975361 0 0 1 4041.46 -1063.17)">LOCKED</text>
+        <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="176.457" y="6190.89" id="e98_texte" transform="matrix(1 0 0 1 -5.17568 252.116)">CANCELLED</text>
+        <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="108.988" y="4224.26" id="e103_texte" transform="matrix(1 0 0 1 57.7757 252.116)">DEAD</text>
+        <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="138.207" y="4768.88" id="e104_texte" transform="matrix(1 0 0 1 26.3 204.903)">COMPLETED</text>
+        <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="184.839" y="6719.7" id="e105_texte" transform="matrix(1 0 0 1 -5.17568 189.165)">PENDING</text>
+        <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="174.839" y="7872.48" id="e105_texte" transform="matrix(1 0 0 1 -20.9135 16.0486)">RETRIEVED</text>
+        <ellipse stroke-width="25" cx="-182.88450586389445" cy="4425.39453125" rx="150" ry="150" fill="url(#mx-gradient-e65245-1-e43a15-1-s-0)" stroke="#cf4a3e" />
+        <ellipse stroke-width="25" cx="-187.7978973388672" cy="6852.923293705691" rx="150" ry="150" fill="url(#mx-gradient-bbd2c5-1-536976-1-s-0)" stroke="#586f7d" />
+        <ellipse stroke-width="25" cx="-184.62232971191406" cy="4923.804153080691" rx="150" ry="150" fill="url(#mx-gradient-74ebd5-1-acb6e5-1-s-0)" stroke="#6c8ebf" />
+        <ellipse stroke-width="25" cx="-182.88447534631632" cy="5419.84033203125" rx="150" ry="150" fill="url(#mx-gradient-d5e8d4-1-159957-1-s-0)" stroke="#82b366" />
+        <ellipse stroke-width="25" cx="-184.42225646972656" cy="6389.537551518191" rx="150" ry="150" fill="url(#mx-gradient-ff9966-1-ff5e62-1-s-0)" stroke="#b85450" />
+        <ellipse stroke-width="25" cx="-184.2223358154297" cy="5922.239303950559" rx="150" ry="150" fill="url(#mx-gradient-f88f68-1-fe8c00-1-s-0)" stroke="#ebc821" />
+        <ellipse stroke-width="25" cx="-207.17373657226562" cy="7827.745559330691" rx="150" ry="150" fill="url(#mx-gradient-f88f68-1-fe8c00-1-s-0)" stroke="#100a9e" />
+    </g>
+    <g id="total_links">
+        <polyline style="stroke: black; stroke-width:15px; marker-start:url(#arrow15-12-left); fill-opacity:0;" id="link_sys2_sys9" points="10298 -800.9 10298 -1488.9 5530 -1504.9" transform="matrix(1 0 0 1 310 784.9)" />
+        <polyline style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" id="link_sys2_sys8" points="7754 -816.9 7754 -1504.9 5530 -1504.9" transform="matrix(1 0 0 1 310 784.9)" />
+        <polyline style="stroke: black; fill: none; stroke-width:15px; marker-start:url(#arrow15-12-left);" id="link_sys3_sys10" points="-1674.12 1166.42 -1670 527.1" transform="matrix(1 0 0 1 310 784.9)" />
+        <polyline style="stroke: black; fill: none; stroke-width: 11px; marker-start:url(#arrow15-12-left);" id="link_sys2_sys3" points="-1463.89 -804.625 -1462 -1529.03 2343.42 -1521.91" transform="matrix(1 0 0 1 310 784.9)" />
+        <line id="link_sys8_sys13" x1="8346.4" y1="1135.1" x2="8041.51" y2="490.352" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 437.6 800.9)" />
+        <line id="link_sys13_sys12" x1="7045.24" y1="1172.88" x2="7292.55" y2="1175.35" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 1414.9 1082.3)" />
+        <line id="link_sys7_sys14" x1="5226" y1="2047.6" x2="5237.63" y2="390.46" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 310 928.4)" />
+        <polyline style="stroke:black; fill: none; stroke-width:15px; marker-start:url(#arrow15-12-left);" id="link_sys2_sys4" points="724.296 -834.184 730 -1520.9 2362 -1520.9" transform="matrix(1 0 0 1 310 784.9)" />
+        <polyline style="stroke:black; fill: none; stroke-width:15px;marker-start:url(#arrow15-12-left);" id="link_sys4_sys11" points="378 927.1 378 527.1" transform="matrix(1 0 0 1 310 784.9)" />
+        <line id="link_sys5_sys14" x1="2586" y1="2063.6" x2="2590.01" y2="307.805" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 310 928.4)" />
+        <polyline style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" id="link_sys10_sys7" points="4755.82 238.614 4759.23 456.048 -1506.8 445.6 -1506.8 845.6" transform="matrix(1 0 0 1 450.8 1090.4)" />
+        <polyline style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" id="link_sys13_sys7" points="5767.56 576.642 5769.71 768.079 9050 767.1 9057.84 1177.38" transform="matrix(1 0 0 1 310 784.9)" />
+        <line id="link_sys12_sys7" x1="5655.86" y1="435.802" x2="5660.69" y2="864.94" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 310 928.4)" />
+        <line id="link_sys12_sys14" x1="6435.653305171997" y1="1880.1303981269452" x2="6435.453109859497" y2="1683.6905787910077" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 776.4 1134.2)" />
+        <line id="link_sys10_sys4" x1="-722.8499124713502" y1="544.3480063646" x2="-722.3399027057252" y2="1170.6299277513187" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 310 784.9)" />
+        <line id="link_sys2_sys5" x1="3044.13" y1="-783.768" x2="3051.09" y2="-1108.62" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 310 784.9)" />
+        <line id="link_sys11_sys5" x1="2170" y1="383.6" x2="2170" y2="815.6" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 310 928.4)" />
+        <line id="link_sys2_sys6" x1="3473.8995932953353" y1="1094.3900146484375" x2="3484.3695639984603" y2="-1138.739990234375" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 310 784.9)" />
+        <line id="link_sys6_sys7" x1="4625.45" y1="382.927" x2="4618" y2="1039.6" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 310 928.4)" />
+        <line id="link_sys5_sys6" x1="3324.24" y1="1012.18" x2="3322" y2="367.6" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 310 928.4)" />
+        <line id="link_sys2_sys7" x1="4794" y1="-832.9" x2="4798.04" y2="-1153.99" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 310 784.9)" />
+        <polyline style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" id="link_sys2_sys13" points="10762 1135.1 10789.3 -1492.06 5530 -1504.9" transform="matrix(1 0 0 1 310 784.9)" />
+        <polyline style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" id="link_sys8_sys12" points="7310.46 968.677 7308.54 531.297" transform="matrix(1 0 0 1 310 784.9)" />
+        <line id="link_sys4_sys14" x1="-535.0242606914799" y1="2256.60009765625" x2="-521.3852836406986" y2="581.468017578125" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 577.4 728.6)" />
+        <line id="link_sys1_sys2" x1="3875.11" y1="-596.472" x2="3875.11" y2="-890.388" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow10-8-left);" transform="matrix(1 0 0 1 372 -501.5)" />
+        <line id="sys7_dummy" x1="5985.85" y1="-9.68379" x2="5694.05" y2="-16.9" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 478.019 784.9)" />
+    </g>
+    <g id="total_systems">
+        <g id="sys1" transform="matrix(1 0 0 1 2690.54 -1641.44)">
+            <rect x="-124.726" y="-493.368" width="3332.4" height="735.845" stroke="#000000" stroke-width="11" transform="matrix(1 0 0 1 0.5 0.5)" ry="0" rx="0" class="loadmodalwindow" style="fill:url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0);" />
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="956.42" y="-301.705" id="e41_texte" transform="matrix(1 0 0 1 0 -37.7)">
+                <tspan x="956.42" dy="" y="">WORK ORDER</tspan>
+            </text>
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="3070.66" cy="41.01" rx="230" ry="230" fill="url(#mx-gradient-d5e8d4-1-159957-1-s-0)" id="Available" stroke="#82b366" transform="matrix(1 0 0 1 -1466.58 -80.36)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="2572.54" cy="39.01" rx="230" ry="230" fill="url(#mx-gradient-74ebd5-1-acb6e5-1-s-0)" id="Completed" stroke="#6c8ebf" transform="matrix(1 0 0 1 -1466.58 -80.36)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="3592.45" cy="40.2001" rx="230" ry="230" fill="url(#mx-gradient-ff9966-1-ff5e62-1-s-0)" id="Cancelled" stroke="#b85450" transform="matrix(1 0 0 1 -1466.58 -80.36)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="2055.79" cy="44.02" rx="230" ry="230" id="Retrieved" stroke="#100a9e" transform="matrix(1 0 0 1 -1466.58 -80.36)" style="fill:url(#mx-gradient-e65245-1-e43a15-1-s-0);" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="4102.76" cy="37.6101" rx="230" ry="230" fill="url(#mx-gradient-bbd2c5-1-536976-1-s-0)" id="Current" stroke="#030303" transform="matrix(1 0 0 1 -1466.58 -80.36)" />
+            <g id="workorder_statusgp" transform="matrix(1 0 0 1 -1535.2 -80.86)">
+                <text class="loadmodalwindow" id="workorder-RE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="2117.38" y="97.4" dx="" dy="">--
+                                                                                                                                                                                                                                </text>
+                <text class="loadmodalwindow" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="2639.77" y="102.4" id="workorder-CO" dx="" dy="">--
+                                                                                                                                                                                                                                                                                    </text>
+                <text class="loadmodalwindow" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="3131.16" y="103.66" id="workorder-AV" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="3672.69" y="95.37" id="workorder-CA" dx="">--
+                                                                                                                                                                                                                                                                                    </text>
+                <text class="loadmodalwindow" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="4165.66" y="94.13" id="workorder-CU" dx="" dy="">--
+                                                                                                                                                                                                                                                                                    </text>
+            </g>
+        </g>
+        <g id="sys2" transform="matrix(1 0 0 1 1839.56 -75.89)">
+            <rect x="578.784" y="65.6281" width="3146.04" height="758.868" stroke="#000000" stroke-width="11" transform="matrix(1 0 0 1 265.9 -1080.6)" ry="1234" rx="455" style="fill:url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0);" />
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="1922.79" y="237.839" id="e32_texte" transform="matrix(1 0 0 1 24.4 -1088.6)">AGREEMENT</text>
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="3227.03" cy="99.91" rx="230" ry="230" fill="url(#mx-gradient-d5e8d4-1-159957-1-s-0)" id="Available" stroke="#82b366" transform="matrix(1 0 0 1 -729.317 -655.935)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="3738.81" cy="87.51" rx="230" ry="230" fill="url(#mx-gradient-ff9966-1-ff5e62-1-s-0)" id="Cancelled" stroke="#b85450" transform="matrix(1 0 0 1 -729.317 -655.935)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="2728.99" cy="92.92" rx="230" ry="230" fill="url(#mx-gradient-74ebd5-1-acb6e5-1-s-0)" id="Completed" stroke="#6c8ebf" transform="matrix(1 0 0 1 -729.317 -655.935)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="4241.62" cy="86.82" rx="230" ry="230" fill="url(#mx-gradient-bbd2c5-1-536976-1-s-0)" id="Pending" stroke="#586f7d" transform="matrix(1 0 0 1 -729.317 -655.935)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="2212.31" cy="102.94" rx="230" ry="230" fill="url(#mx-gradient-e65245-1-e43a15-1-s-0)" id="Dead" stroke="#cf4a3e" transform="matrix(1 0 0 1 -729.317 -655.935)" />
+            <g id="agreementstep_statusgp" transform="matrix(1 0 0 1 -794.3 -1094.3)">
+                <text class="loadmodalwindow" id="agreementstep-DE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="2266.3" y="593.961" dx="" dy="">--
+                                                                                                                                                                                                                                                                                    </text>
+                <text class="loadmodalwindow" id="agreementstep-CO" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="2801.79" y="590.181" dx="" dy="">--
+                                                                                                                                                                                                                                                                                    </text>
+                <text class="loadmodalwindow" id="agreementstep-AV" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="3301.23" y="597.708" dx="" dy="">--
+                                                                                                                                                                                                                                                                                    </text>
+                <text class="loadmodalwindow" id="agreementstep-CA" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="3801.54" y="583.441" dx="" dy="">--
+                                                                                                                                                                                                                                                                                    </text>
+                <text class="loadmodalwindow" id="agreementstep-PE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="4301.03" y="584.571" dx="" dy="">--
+                                                                                                                                                                                                                            </text>
+            </g>
+        </g>
+        <g id="sys3" transform="matrix(1 0 0 1 -1708.2 -419.306)">
+            <rect x="-820.038" y="406.189" width="1842.62" height="1325.26" rx="0" ry="0" stroke="#000000" stroke-width="11" transform="matrix(1 0 0 1 0.5 0.5)" style="fill:url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0);" />
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="-818.47" y="602.155" id="e43_texte" transform="matrix(1 0 0 1 0 -36.89)">
+                <tspan x="-818.47" dx="3em" y="" dy="">CALC/APPLY</tspan>
+                <tspan x="-818.47" dy="1.25em" y="" dx="1em"> CONTRACT CEASE</tspan>
+            </text>
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="-288.302" cy="1694.69" rx="230" ry="230" fill="url(#mx-gradient-ff9966-1-ff5e62-1-s-0)" id="Cancelled" stroke="#b85450" transform="matrix(1 0 0 1 78.017 -240.4)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="62.72" cy="1660.38" rx="230" ry="230" fill="url(#mx-gradient-bbd2c5-1-536976-1-s-0)" id="Pending" stroke="#586f7d" transform="matrix(1 0 0 1 287.117 -215.8)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="547.482" cy="1261.34" rx="230" ry="230" fill="url(#mx-gradient-d5e8d4-1-159957-1-s-0)" id="Available" stroke="#82b366" transform="matrix(1 0 0 1 78.017 -240.4)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="-13.46" cy="1271.39" rx="230" ry="230" fill="url(#mx-gradient-74ebd5-1-acb6e5-1-s-0)" id="Completed" stroke="#6c8ebf" transform="matrix(1 0 0 1 78.017 -240.4)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="-565.672" cy="1278.14" rx="230" ry="230" fill="url(#mx-gradient-e65245-1-e43a15-1-s-0)" id="Dead" stroke="#cf4a3e" transform="matrix(1 0 0 1 78.017 -240.4)" />
+            <g id="calcapplycontracttermcharg_statusgp" transform="matrix(1 0 0 1 218.5 -216.3)">
+                <text class="loadmodalwindow" id="calcapplycontracttermcharg-DE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="-707.975" y="1296.04" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="calcapplycontracttermcharg-CO" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="-168.063" y="1301.89" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="calcapplycontracttermcharg-AV" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="415.19" y="1296.17" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="calcapplycontracttermcharg-CA" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="-434.306" y="1729.59" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="calcapplycontracttermcharg-PE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="139.29" y="1715.43" dx="" dy="">--</text>
+            </g>
+        </g>
+        <g id="sys4" transform="matrix(1 0 0 1 1514.47 -230.316)">
+            <rect x="-2032.7" y="218.665" width="2044.64" height="1314.67" rx="0" ry="0" stroke="#000000" stroke-width="11" transform="matrix(1 0 0 1 0.5 0.5)" style="fill:url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0);" />
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="-1818.01" y="374.299" id="e39_texte">
+                <tspan x="-1818.01" dx="" y="" dy="">ROLLBACK PREPAID </tspan>
+                <tspan x="-1818.01" dy="1.25em" y="" dx="2.5em">MIGRATION</tspan>
+            </text>
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="-1129.4999146243817" cy="1451.1401201153167" rx="230" ry="230" fill="url(#mx-gradient-f88f68-1-fe8c00-1-s-0)" id="Current" stroke="#030303" transform="matrix(1 0 0 1 640.4 -185.72)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="-1653.68" cy="1411.19" rx="230" ry="230" fill="url(#mx-gradient-ff9966-1-ff5e62-1-s-0)" id="Cancelled" stroke="#b85450" transform="matrix(1 0 0 1 139.4 -155.62)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="-1138.27" cy="1411.9" rx="230" ry="230" fill="url(#mx-gradient-bbd2c5-1-536976-1-s-0)" id="Pending" stroke="#586f7d" transform="matrix(1 0 0 1 139.4 -155.62)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="-394.163" cy="975.32" rx="230" ry="230" fill="url(#mx-gradient-f88f68-1-fe8c00-1-s-0)" id="Locked" stroke="#ebc821" transform="matrix(1 0 0 1 139.4 -155.62)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="-900.449" cy="972.04" rx="230" ry="230" fill="url(#mx-gradient-d5e8d4-1-159957-1-s-0)" id="Available" stroke="#82b366" transform="matrix(1 0 0 1 139.4 -155.62)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="-1894.61" cy="974.71" rx="230" ry="230" fill="url(#mx-gradient-e65245-1-e43a15-1-s-0)" id="Dead" stroke="#cf4a3e" transform="matrix(1 0 0 1 139.4 -155.62)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="-1395.15" cy="978.31" rx="230" ry="230" fill="url(#mx-gradient-74ebd5-1-acb6e5-1-s-0)" id="Completed" stroke="#6c8ebf" transform="matrix(1 0 0 1 139.4 -155.62)" />
+            <g id="rollbackprepaidmigration_statusgp" transform="matrix(1 0 0 1 138.9 -156.12)">
+                <text class="loadmodalwindow" id="rollbackprepaidmigration-DE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="-1901.09" y="1023.98" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="rollbackprepaidmigration-CO" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="-1393.78" y="1019.78" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="rollbackprepaidmigration-AV" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="-893.12" y="1029.45" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="rollbackprepaidmigration-LG&quot;,&quot;LP&quot;,&quot;LW" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="-377.295" y="1035.86" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="rollbackprepaidmigration-CA" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="-1657.89" y="1466.3" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="rollbackprepaidmigration-PE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="-1140.63" y="1464.28" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="rollbackprepaidmigration-CU" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="-617.6" y="1478.83" dx="" dy="">--</text>
+            </g>
+        </g>
+        <g id="sys5" transform="matrix(1 0 0 1 1223.58 -640.206)">
+            <rect onmouseover="tooltipboot(this.id)" id="cease" x="-151.339" y="939.787" width="2031.99" height="1298.28" rx="0" ry="0" stroke="#000000" stroke-width="11" transform="matrix(1 0 0 1 579.7 -311.4)" style="fill:url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0);" />
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="39.98" y="1182.85" id="e27_texte" transform="matrix(1 0 0 1 579.2 -311.9)">CEASE ON NETWORK</text>
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="3170.12" cy="943.93" rx="230" ry="230" fill="url(#mx-gradient-f88f68-1-fe8c00-1-s-0)" id="Locked" stroke="#ebc821" transform="matrix(1 0 0 1 -957 229.14)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="1577.47" cy="2000.27" rx="230" ry="230" fill="url(#mx-gradient-ff9966-1-ff5e62-1-s-0)" id="Cancelled" stroke="#b85450" transform="matrix(1 0 0 1 -596.2 -359.56)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="2687.72" cy="948.92" rx="230" ry="230" fill="url(#mx-gradient-d5e8d4-1-159957-1-s-0)" id="Available" stroke="#82b366" transform="matrix(1 0 0 1 -957 229.14)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="2206.81" cy="958.23" rx="230" ry="230" fill="url(#mx-gradient-74ebd5-1-acb6e5-1-s-0)" id="Completed" stroke="#6c8ebf" transform="matrix(1 0 0 1 -957 229.14)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="1703.2001464843752" cy="958.220166015625" rx="230" ry="230" fill="url(#mx-gradient-e65245-1-e43a15-1-s-0)" id="Dead" stroke="#cf4a3e" transform="matrix(1 0 0 1 -957 229.14)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="2607.6202527370656" cy="2001.7600810902327" rx="230" ry="230" fill="url(#mx-gradient-f88f68-1-fe8c00-1-s-0)" id="Current" stroke="#030303" transform="matrix(1 0 0 1 -596.2 -359.56)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="2109.43" cy="2007.35" rx="230" ry="230" fill="url(#mx-gradient-bbd2c5-1-536976-1-s-0)" id="Pending" stroke="#586f7d" transform="matrix(1 0 0 1 -596.2 -359.56)" />
+            <g id="ceaseonnetwork_statusgp" transform="matrix(1 0 0 1 -596.7 -360.06)">
+                <text class="loadmodalwindow" id="ceaseonnetwork-DE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="1338.7" y="1602.31" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaseonnetwork-CO" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="1843.99" y="1605.39" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaseonnetwork-AV" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="2299.71" y="1601.92" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaseonnetwork-LG&quot;,&quot;LP&quot;,&quot;LW" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="2783.32" y="1586.92" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaseonnetwork-CA" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="1581.76" y="2054.41" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaseonnetwork-PE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="2104.53" y="2071.97" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaseonnetwork-CU" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="2594.53" y="2069.05" dx="" dy="">--</text>
+            </g>
+        </g>
+        <g id="sys6" transform="matrix(0.931724 0 0 0.931724 901.099 943.456)">
+            <rect x="2274.28" y="1100.89" width="2575.25" height="858.618" rx="103.5" ry="103.5" stroke="#000000" stroke-width="11" transform="matrix(1 0 0 1 0.5 0.5)" style="fill:url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0);" />
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="2426.51" y="1298.29" id="e25_texte" transform="matrix(1 0 0 1 -36.9 24.6)">
+                <tspan x="2426.51" y="" dy="" dx="">AUTO COORDINATE COMPOSITE</tspan>
+            </text>
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="3068.81" cy="1492.38" rx="230" ry="230" fill="url(#mx-gradient-74ebd5-1-acb6e5-1-s-0)" id="Completed" stroke="#6c8ebf" transform="matrix(1 0 0 1 -16.6724 155.267)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="3554.01" cy="1505.64" rx="230" ry="230" fill="url(#mx-gradient-d5e8d4-1-159957-1-s-0)" id="Available" stroke="#82b366" transform="matrix(1 0 0 1 -16.6724 155.267)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="2579.96" cy="1493.36" rx="230" ry="230" fill="url(#mx-gradient-e65245-1-e43a15-1-s-0)" id="Dead" stroke="#cf4a3e" transform="matrix(1 0 0 1 -16.6724 155.267)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="4547.73" cy="1483.6" rx="230" ry="230" fill="url(#mx-gradient-bbd2c5-1-536976-1-s-0)" id="Pending" stroke="#586f7d" transform="matrix(1 0 0 1 -16.6724 155.267)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="4047.99" cy="1497.57" rx="230" ry="230" fill="url(#mx-gradient-ff9966-1-ff5e62-1-s-0)" id="Cancelled" stroke="#b85450" transform="matrix(1 0 0 1 -16.6724 155.267)" />
+            <g id="autocoordinatecomposite_statusgp" transform="matrix(1 0 0 1 -17.1724 154.767)">
+                <text class="loadmodalwindow" id="autocoordinatecomposite-DE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="2590.58" y="1542.25" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="autocoordinatecomposite-CO" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;font-style:normal;" x="2981.53" y="1572.87" transform="matrix(1 0 0 1 96.6226 -4.995)">--</text>
+                <text class="loadmodalwindow" id="autocoordinatecomposite-AV" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="3553.81" y="1574.46" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="autocoordinatecomposite-CA" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="4058.66" y="1560.71" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="autocoordinatecomposite-PE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="4553.14" y="1561.21" dx="" dy="">--</text>
+            </g>
+        </g>
+        <g id="sys7" transform="matrix(1 0 0 1 2147.87 -281.465)">
+            <rect x="1921.84" y="269.037" width="2097.97" height="1337.05" rx="0" ry="0" stroke="#000000" stroke-width="11" transform="matrix(1 0 0 1 0.5 0.5)" style="fill:url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0);" />
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="2375.66" y="807.16" id="e28_texte" transform="matrix(1 0 0 1 -296.6 -296.6)">ACTIVATE ON NETWORK</text>
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="4641.38" cy="1041.49" rx="230" ry="230" fill="url(#mx-gradient-d5e8d4-1-159957-1-s-0)" id="Available" stroke="#82b366" transform="matrix(1 0 0 1 -1424.7 -199.62)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="5152.98" cy="1063.21" rx="230" ry="230" fill="url(#mx-gradient-f88f68-1-fe8c00-1-s-0)" id="Locked" stroke="#ebc821" transform="matrix(1 0 0 1 -1424.7 -199.62)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="4118.13" cy="1040.01" rx="230" ry="230" fill="url(#mx-gradient-74ebd5-1-acb6e5-1-s-0)" id="Completed" stroke="#6c8ebf" transform="matrix(1 0 0 1 -1424.7 -199.62)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="3622.52" cy="1044.63" rx="230" ry="230" fill="url(#mx-gradient-e65245-1-e43a15-1-s-0)" id="Dead" stroke="#cf4a3e" transform="matrix(1 0 0 1 -1424.7 -199.62)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="4907.13" cy="1511.74" rx="230" ry="230" fill="url(#mx-gradient-f88f68-1-fe8c00-1-s-0)" id="Current" stroke="#030303" transform="matrix(1 0 0 1 -1424.7 -199.62)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="3815.62" cy="1500.3" rx="230" ry="230" fill="url(#mx-gradient-ff9966-1-ff5e62-1-s-0)" id="Cancelled" stroke="#b85450" transform="matrix(1 0 0 1 -1424.7 -199.62)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="4375.02" cy="1507.59" rx="230" ry="230" fill="url(#mx-gradient-bbd2c5-1-536976-1-s-0)" id="Pending" stroke="#586f7d" transform="matrix(1 0 0 1 -1424.7 -199.62)" />
+            <g id="activateonnetwork_statusgp" transform="matrix(1 0 0 1 -1425.2 -200.12)">
+                <text class="loadmodalwindow" id="activateonnetwork-DE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="3621.63" y="1113.29" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="activateonnetwork-CO" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="4115.05" y="1106.94" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="activateonnetwork-AV" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="4634.79" y="1103.8" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="activateonnetwork-LG&quot;,&quot;LP&quot;,&quot;LW" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="5147.79" y="1123.06" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="activateonnetwork-CA" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="3817.48" y="1554.9" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="activateonnetwork-PE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="4387.01" y="1570.23" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="activateonnetwork-CU" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="4916.42" y="1565.09" dx="">--</text>
+            </g>
+        </g>
+        <g id="sys8" transform="matrix(1 0 0 1 2614.68 -594.66)">
+            <rect x="4887.07" y="580.215" width="1740.03" height="1317.86" rx="0" ry="0" stroke="#000000" stroke-width="11" transform="matrix(1 0 0 1 0.5 0.5)" style="fill:url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0);" />
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="5011.16" y="846.029" id="e29_texte">SECURITY DEPOSIT</text>
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="4736.38" cy="1888.71" rx="230" ry="230" fill="url(#mx-gradient-ff9966-1-ff5e62-1-s-0)" id="Cancelled" stroke="#b85450" transform="matrix(1 0 0 1 750.79 -266.84)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="6114.15" cy="1423.11" rx="230" ry="230" fill="url(#mx-gradient-d5e8d4-1-159957-1-s-0)" id="Available" stroke="#82b366" transform="matrix(1 0 0 1 116.36 -243.52)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="4983.79" cy="1440.44" rx="230" ry="230" fill="url(#mx-gradient-74ebd5-1-acb6e5-1-s-0)" id="Completed" stroke="#6c8ebf" transform="matrix(1 0 0 1 750.79 -266.84)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="4579.45" cy="1193.87" rx="230" ry="230" fill="url(#mx-gradient-e65245-1-e43a15-1-s-0)" id="Dead" stroke="#cf4a3e" transform="matrix(1 0 0 1 647.29 -10.34)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="5237.2" cy="1891.88" rx="230" ry="230" fill="url(#mx-gradient-bbd2c5-1-536976-1-s-0)" id="Pending" stroke="#586f7d" transform="matrix(1 0 0 1 750.79 -266.84)" />
+            <g id="takesecuritydeposit_statusgp" transform="matrix(1 0 0 1 750.29 -267.34)">
+                <text class="loadmodalwindow" id="takesecuritydeposit-DE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="4472.62" y="1517.46" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="takesecuritydeposit-CO" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="4984.49" y="1493.75" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="takesecuritydeposit-AV" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="5483.42" y="1500.36" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="takesecuritydeposit-CA" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="4745.85" y="1950.68" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="takesecuritydeposit-PE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="5240.71" y="1939.42" dx="" dy="">--</text>
+            </g>
+        </g>
+        <g id="sys9" transform="matrix(1 0 0 1 3337.31 -812.7)">
+            <rect x="5996.090022982835" y="797.4119873046875" width="1680.11" height="1286.89" rx="0" ry="0" stroke="#000000" stroke-width="11" transform="matrix(1 0 0 1 0.5 0.5)" style="fill:url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0);" />
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="6147.74" y="1022.23" id="e42_texte">WAIT TILL MOVING</text>
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="5300.27" cy="1824.41" rx="230" ry="230" fill="url(#mx-gradient-ff9966-1-ff5e62-1-s-0)" id="Cancelled" stroke="#b85450" transform="matrix(1 0 0 1 1261.03 -21.79)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="6082.15" cy="1372.16" rx="230" ry="230" fill="url(#mx-gradient-d5e8d4-1-159957-1-s-0)" id="Available" stroke="#82b366" transform="matrix(1 0 0 1 1261.03 -21.79)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="5550.69" cy="1380.19" rx="230" ry="230" fill="url(#mx-gradient-74ebd5-1-acb6e5-1-s-0)" id="Completed" stroke="#6c8ebf" transform="matrix(1 0 0 1 1261.03 -21.79)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="5013.83" cy="1378.4" rx="230" ry="230" fill="url(#mx-gradient-e65245-1-e43a15-1-s-0)" id="Dead" stroke="#cf4a3e" transform="matrix(1 0 0 1 1261.03 -21.79)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="5842.47" cy="1814.38" rx="230" ry="230" fill="url(#mx-gradient-bbd2c5-1-536976-1-s-0)" id="Pending" stroke="#586f7d" transform="matrix(1 0 0 1 1261.03 -21.79)" />
+            <g id="waittillmoving_statusgp" transform="matrix(1 0 0 1 1260.53 -22.29)">
+                <text class="loadmodalwindow" id="waittillmoving-DE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="5010.23" y="1435.65" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="waittillmoving-CO" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="5562.44" y="1445.14" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="waittillmoving-AV" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="6081.63" y="1426.64" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="waittillmoving-CA" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="5299.58" y="1881.49" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="waittillmoving-PE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="5831.99" y="1832.92" dx="" dy="">--</text>
+            </g>
+        </g>
+        <g id="sys10" transform="matrix(1 0 0 1 -332.268 -1093.9)">
+            <rect x="-2378.11" y="2934.07" width="2560.4" height="784.373" rx="103.5" ry="103.5" stroke="#000000" stroke-width="11" transform="matrix(1 0 0 1 113.3 121.2)" style="fill:url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0);" />
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="-1793.77" y="3200.64" id="e38_texte" transform="matrix(1 0 0 1 -15.6 78)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="-1042.3396617905835" cy="2617.259804818457" rx="230" ry="230" fill="url(#mx-gradient-ff9966-1-ff5e62-1-s-0)" id="Cancelled" stroke="#b85450" transform="matrix(1 0 0 1 576.255 926.043)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="-540.7501448862108" cy="2613.3901615069744" rx="230" ry="230" fill="url(#mx-gradient-bbd2c5-1-536976-1-s-0)" id="Pending" stroke="#586f7d" transform="matrix(1 0 0 1 576.255 926.043)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="-2572.2800484748464" cy="2606.470053860602" rx="230" ry="230" fill="url(#mx-gradient-e65245-1-e43a15-1-s-0)" id="Dead" stroke="#cf4a3e" transform="matrix(1 0 0 1 576.255 926.043)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="-1542.3196132610626" cy="2600.229692831807" rx="230" ry="230" fill="url(#mx-gradient-d5e8d4-1-159957-1-s-0)" id="Available" stroke="#82b366" transform="matrix(1 0 0 1 576.255 926.043)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="-2050.009999251386" cy="2602.489829251227" rx="230" ry="230" fill="url(#mx-gradient-74ebd5-1-acb6e5-1-s-0)" id="Completed" stroke="#6c8ebf" transform="matrix(1 0 0 1 576.255 926.043)" />
+            <g id="refundsecuritydepositgsm_statusgp" transform="matrix(1 0 0 1 553.9 921.9)">
+                <text class="loadmodalwindow" id="refundsecuritydepositgsm-DE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="-2569.81" y="2657.91" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="refundsecuritydepositgsm-CO" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="-2039.11" y="2654.56" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="refundsecuritydepositgsm-AV" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="-1539.11" y="2655.98" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="refundsecuritydepositgsm-CA" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="-1014.87" y="2667.43" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="refundsecuritydepositgsm-PE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="-506.049" y="2669.18" dx="" dy="">--</text>
+            </g>
+        </g>
+        <g id="sys11" transform="matrix(1 0 0 1 877.8 -283.9)">
+            <rect x="-528.772" y="2184.5" width="2659.9" height="1036.74" rx="103.5" ry="103.5" stroke="#000000" stroke-width="11" transform="matrix(1 0 0 1 -195.56 -155.143)" style="fill:url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0);" />
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="-324.951" y="2339.53" id="e26_texte" transform="matrix(1 0 0 1 -196.06 -155.643)">CEASE RE-PATRIATE PREPAID</text>
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="1223.2199778107504" cy="2730.4700394553697" rx="230" ry="230" fill="url(#mx-gradient-ff9966-1-ff5e62-1-s-0)" id="Cancelled" stroke="#b85450" transform="matrix(1 0 0 1 -1307.36 83.0573)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="1949.23" cy="2724.87" rx="230" ry="230" fill="url(#mx-gradient-bbd2c5-1-536976-1-s-0)" id="Pending" stroke="#586f7d" transform="matrix(1 0 0 1 -1307.36 83.0573)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="2296.5" cy="2366.02" rx="230" ry="230" fill="url(#mx-gradient-d5e8d4-1-159957-1-s-0)" id="Available" stroke="#82b366" transform="matrix(1 0 0 1 -1307.36 83.0573)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="866.1200459430177" cy="2391.470268068277" rx="230" ry="230" fill="url(#mx-gradient-e65245-1-e43a15-1-s-0)" id="Dead" stroke="#cf4a3e" transform="matrix(1 0 0 1 -1307.36 83.0573)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="1567.2499096616598" cy="2361.480058013799" rx="230" ry="230" fill="url(#mx-gradient-74ebd5-1-acb6e5-1-s-0)" id="Completed" stroke="#6c8ebf" transform="matrix(1 0 0 1 -1307.36 83.0573)" />
+            <ellipse stroke-width="25" cx="1831.59" cy="2926.46" onmouseover="tooltipboot(this.id)" rx="230" ry="230" fill="url(#mx-gradient-e65245-1-e43a15-1-s-0)" id="Current" stroke="#030303" transform="matrix(1 0 0 1 -495.86 -127.343)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="2981.65" cy="2373.38" rx="230" ry="230" fill="url(#mx-gradient-74ebd5-1-acb6e5-1-s-0)" id="Locked" stroke="#ebc821" transform="matrix(1 0 0 1 -1307.36 83.0573)" />
+            <g id="ceaserepatriateprepaid_statusgp" transform="matrix(1 0 0 1 -1307.86 82.5573)">
+                <text class="loadmodalwindow" id="ceaserepatriateprepaid-DE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="866.21" y="2443.77" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaserepatriateprepaid-CO" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="1563.49" y="2420.13" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaserepatriateprepaid-AV" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="2304.65" y="2421.53" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaserepatriateprepaid-LG&quot;,&quot;LW&quot;,&quot;LP" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="2982.85" y="2401.73" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaserepatriateprepaid-CA" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="1232.44" y="2772.11" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaserepatriateprepaid-PE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="1953.54" y="2787.1" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaserepatriateprepaid-CU" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="2646.65" y="2759.93" dx="" dy="">--</text>
+            </g>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="-2951.56" y="2419.72" id="e148_texte" transform="matrix(1 0 0 1 -314.468 -7.5)">REFUND SECURITY DEPOSIT</text>
+        </g>
+        <g id="sys12" transform="matrix(1 0 0 1.03219 1769.74 -671.87)">
+            <rect x="3622.23" y="2047.75" width="2780.49" height="1027.89" rx="103.5" ry="103.5" stroke="#000000" stroke-width="11" transform="matrix(1 0 0 1 248.4 297.635)" style="fill:url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0);" />
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="3605.45" y="2298.52" id="e24_texte" transform="matrix(1 0 0 1 590.3 214.491)">CEASE PREPAID SERVICE</text>
+            <ellipse onmouseover="tooltipboot(this.id)" id="Dead" stroke-width="25" cx="3752.7099126140574" cy="2614.4229246929854" rx="230" ry="230" fill="#ffffff" stroke="#cf4a3e" transform="matrix(1 0 0 1 368.583 168.652)" />
+            <ellipse onmouseover="tooltipboot(this.id)" id="Completed" stroke-width="25" cx="4177.048111979166" cy="2593.026676894282" rx="230" ry="230" fill="url(#mx-gradient-74ebd5-1-acb6e5-1-s-0)" stroke="#6c8ebf" transform="matrix(1 0 0 1 675.983 180.568)" />
+            <ellipse onmouseover="tooltipboot(this.id)" id="Available" stroke-width="25" cx="4934.3462729126295" cy="2593.096233724128" rx="230" ry="230" fill="url(#mx-gradient-d5e8d4-1-159957-1-s-0)" stroke="#82b366" transform="matrix(1 0 0 1 675.983 180.568)" />
+            <ellipse onmouseover="tooltipboot(this.id)" id="Cancelled" stroke-width="25" cx="3843.983627185279" cy="2948.4068038137048" rx="230" ry="230" fill="url(#mx-gradient-ff9966-1-ff5e62-1-s-0)" stroke="#b85450" transform="matrix(1 0 0 1 675.983 180.568)" />
+            <ellipse onmouseover="tooltipboot(this.id)" id="Pending" stroke-width="25" cx="4545.135178203731" cy="2937.1333546895657" rx="230" ry="230" fill="url(#mx-gradient-bbd2c5-1-536976-1-s-0)" stroke="#586f7d" transform="matrix(1 0 0 1 675.983 180.568)" />
+            <ellipse onmouseover="tooltipboot(this.id)" id="Locked" stroke-width="25" cx="5720.779471495478" cy="2551.4246104290823" rx="230" ry="230" fill="url(#mx-gradient-ff9966-1-ff5e62-1-s-0)" stroke="#ebc821" transform="matrix(1 0 0 1 654.983 234.822)" />
+            <ellipse onmouseover="tooltipboot(this.id)" id="Current" stroke-width="25" cx="5343.3382492026" cy="2811.5151790029267" rx="230" ry="230" fill="url(#mx-gradient-bbd2c5-1-536976-1-s-0)" stroke="#030303" transform="matrix(1 0 0 1 654.983 295.857)" />
+            <g id="ceaseprepaidservice_statusgp" transform="matrix(1 0 0 1 675.483 180.068)">
+                <text class="loadmodalwindow" id="ceaseprepaidservice-DE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="3456.71" y="2646.24" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaseprepaidservice-CO" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="4178.95" y="2656.43" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaseprepaidservice-AV" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="4941.96" y="2653.63" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaseprepaidservice-LG&quot;,&quot;LP&quot;,&quot;LW" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="5697.23" y="2646.69" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaseprepaidservice-CA" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="3855.42" y="3006.22" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaseprepaidservice-PE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="5326.75" y="2984.61" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="ceaseprepaidservice-CU" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="4556.54" y="2998.17" dx="" dy="">--</text>
+            </g>
+        </g>
+        <g id="sys13" transform="matrix(1 0 0 1.03219 2159.28 -280.31)">
+            <rect x="5888.12" y="1618.45" width="2524.87" height="755.821" rx="103.5" ry="103.5" stroke="#000000" stroke-width="11" transform="matrix(1 0 0 1 629.5 552.433)" style="fill:url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0);" />
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="6133.46" y="1763.32" id="e31_texte" transform="matrix(1 0 0 1 905.64 576.523)">ISSUE SIM/DEVICE</text>
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="7582.19" cy="2255.1" rx="230" ry="230" fill="url(#mx-gradient-ff9966-1-ff5e62-1-s-0)" id="Cancelled" stroke="#b85450" transform="matrix(1 0 0 1 702.7 406.53)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="7100.16" cy="2247.51" rx="230" ry="230" fill="url(#mx-gradient-d5e8d4-1-159957-1-s-0)" id="Available" stroke="#82b366" transform="matrix(1 0 0 1 702.7 406.53)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="6744.54" cy="2277.97" rx="230" ry="230" fill="url(#mx-gradient-74ebd5-1-acb6e5-1-s-0)" id="Completed" stroke="#6c8ebf" transform="matrix(1 0 0 1 554.9 379.306)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="6096.81" cy="2266.45" rx="230" ry="230" fill="url(#mx-gradient-e65245-1-e43a15-1-s-0)" id="Dead" stroke="#cf4a3e" transform="matrix(1 0 0 1 702.7 406.53)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="8078.01" cy="2255.59" rx="230" ry="230" fill="url(#mx-gradient-bbd2c5-1-536976-1-s-0)" id="Pending" stroke="#586f7d" transform="matrix(1 0 0 1 702.7 406.53)" />
+            <g id="issuesimcardanddevice_statusgp" transform="matrix(1 0 0 1 702.2 406.03)">
+                <text class="loadmodalwindow" id="issuesimcardanddevice-DE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="6099.84" y="2312.78" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="issuesimcardanddevice-CO" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="6614.79" y="2315.06" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="issuesimcardanddevice-AV" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="7110.94" y="2294.05" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="issuesimcardanddevice-CA" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="7597.51" y="2308.36" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="issuesimcardanddevice-PE" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="8081.11" y="2284.68" dx="" dy="">--</text>
+            </g>
+        </g>
+        <g id="sys14">
+            <rect x="-995.02" y="3612.8" width="7870.23" height="1557.63" style="fill:url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0);" stroke="#000000" stroke-width="11" ry="0" rx="0" transform="matrix(1 0 0 1 746.7 -605.2)" />
+            <rect x="-951.19" y="3906.26" width="561.576" height="255.739" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width: 3;" fill="#ffffff" />
+            <g id="sys17" transform="matrix(1 0 0 1 -209.9 -348.1)">
+                <rect x="-1782.9701635050217" y="4353.7196983437625" width="1121.73" height="473.098" style="fill:url(#mx-gradient-99ccff-1-ffffff-1-s-0);" stroke="#000000" stroke-width="11" rx="0" ry="0" />
+            </g>
+            <g id="sys18" transform="matrix(1 0 0 1 968.2 -1081.8)">
+                <rect x="1939.51" y="7978.5" width="3024.3" height="1745.74" style="fill:url(#mx-gradient-99ccff-1-ffffff-1-s-0);" stroke="#000000" stroke-width="11" rx="100" ry="100" transform="matrix(0.975361 0 0 1 5192.57 -4011.5)" />
+                <ellipse stroke-width="25" id="Initial" onmouseover="tooltipboot(this.id)" cx="2624.2" cy="4806" rx="230" ry="230" fill="none" stroke="#6c8ebf" transform="matrix(0.975361 0 0 1 4829.53 -384.145)" />
+                <ellipse stroke-width="25" id="Final" onmouseover="tooltipboot(this.id)" cx="2882.95" cy="4799.85" rx="230" ry="230" fill="none" stroke="#6c8ebf" transform="matrix(0.975361 0 0 1 5080.32 -375.845)" />
+                <ellipse stroke-width="25" id="Node" onmouseover="tooltipboot(this.id)" cx="3485.14" cy="4789.68" rx="230" ry="230" fill="none" stroke="#6c8ebf" transform="matrix(0.975361 0 0 1 4990.93 -351.595)" />
+                <ellipse stroke-width="25" id="Ultimate" onmouseover="tooltipboot(this.id)" cx="3903" cy="4802" rx="230" ry="230" fill="none" stroke="#6c8ebf" transform="matrix(0.975361 0 0 1 5084.63 -382.795)" />
+                <ellipse stroke-width="25" id="Transient" onmouseover="tooltipboot(this.id)" cx="4342.6" cy="4789.96" rx="230" ry="230" fill="none" stroke="#6c8ebf" transform="matrix(0.975361 0 0 1 5166.61 -378.807)" />
+                <ellipse stroke-width="25" id="Initial" onmouseover="tooltipboot(this.id)" cx="4494.8" cy="4829.7" rx="230" ry="230" fill="none" stroke="#6c8ebf" transform="matrix(0.899387 0 0 0.922108 3422.66 835.467)" />
+                <ellipse stroke-width="25" id="Final" onmouseover="tooltipboot(this.id)" cx="4933.7" cy="4798" rx="230" ry="230" fill="none" stroke="#6c8ebf" transform="matrix(0.899387 0 0 0.922108 3481.58 879.691)" />
+                <ellipse stroke-width="25" id="Node" onmouseover="tooltipboot(this.id)" cx="5400.6" cy="4795.96" rx="230" ry="230" fill="none" stroke="#6c8ebf" transform="matrix(0.899387 0 0 0.922108 3544.08 885.391)" />
+                <ellipse stroke-width="25" id="Ultimate" onmouseover="tooltipboot(this.id)" cx="5825.8" cy="4742.68" rx="230" ry="230" fill="none" stroke="#6c8ebf" transform="matrix(0.899387 0 0 0.922108 3676.08 930.791)" />
+                <ellipse stroke-width="25" id="Transient" onmouseover="tooltipboot(this.id)" cx="6940.46" cy="4671.94" rx="230" ry="230" fill="none" stroke="#6c8ebf" transform="matrix(0.899387 0 0 0.922108 3177.73 996.537)" />
+                <g transform="matrix(1 0 0 1 6186.3 4820.8)">
+                    <switch transform="matrix(0.899387 0 0 0.922108 1976.11 338.941)" />
+                    <text style="fill:black;font-family:Arial;font-size:20px;" x="3922" y="3928.7" id="e8_texte" transform="matrix(1 0 0 1 -7.9 55.4)">NODE</text>
+                    <text style="fill:black;font-family:Arial;font-size:20px;" x="7523.76" y="3936.66" id="e9_texte" transform="matrix(1 0 0 1 39.5 39.5)">NODE</text>
+                </g>
+            </g>
+            <rect x="-299.099" y="3898.69" width="596.531" height="263.743" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width: 3;" id="e1_rect" />
+            <rect x="1035.45" y="3921.3" width="584.103" height="255.691" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e2_rect" />
+            <rect x="413.447" y="3921.3" width="553.966" height="255.656" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e3_rect" />
+            <rect x="2343.45" y="3921.3" width="554.042" height="255.656" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e4_rect" />
+            <rect x="1721.45" y="3921.3" width="569.05" height="263.196" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e5_rect" />
+            <rect x="3601.75" y="3921.3" width="554.016" height="263.261" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e6_rect" />
+            <rect x="2949.54" y="3921.3" width="546.439" height="255.691" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e7_rect" />
+            <rect x="4869.24" y="3927.9" width="508.772" height="263.186" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e8_rect" />
+            <rect x="4239.74" y="3920.4" width="538.885" height="255.717" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e9_rect" />
+            <rect x="-929.456" y="4399.76" width="538.938" height="248.164" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e10_rect" />
+            <rect x="-292.376" y="4399.76" width="576.61" height="255.659" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e11_rect" />
+            <rect x="1019.54" y="4399.77" width="584.134" height="255.729" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e12_rect" />
+            <rect x="397.535" y="4399.77" width="554.031" height="255.664" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e13_rect" />
+            <rect x="2327.54" y="4399.77" width="576.647" height="255.694" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e14_rect" />
+            <rect x="1705.53" y="4399.77" width="591.655" height="263.259" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e15_rect" />
+            <rect x="3585.83" y="4399.77" width="576.581" height="255.694" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e16_rect" />
+            <rect x="2933.63" y="4399.77" width="561.509" height="263.229" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e17_rect" />
+            <rect x="4878.64" y="4398.88" width="516.277" height="255.684" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e18_rect" />
+            <rect x="4271.729583717375" y="4398.86991254828" width="508.75" height="255.684" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e19_rect" />
+            <rect x="6053.56" y="3927.88" width="531.356" height="255.757" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e148_rect" />
+            <rect x="5441.74" y="3927.9" width="538.938" height="255.69" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e149_rect" />
+            <rect x="5489.509765625" y="4398.8193359375" width="523.933" height="248.15" fill="#ffffff" stroke="#000000" transform="matrix(1 0 0 1 889.1 -612.8)" ry="0" rx="0" style="stroke-width:3;" id="e151_rect" />
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="-2576.9" y="4406.2" id="e10_texte" transform="matrix(1 0 0 1 784.4 -138.1)" dy="" dx="">ICCARE</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="2067.68" y="3763.28" id="e21_texte" transform="matrix(1 0 0 1 758.1 -559.6)">MML COMMANDS</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="3284.41" y="4437.08" id="e22_texte" transform="matrix(0.975361 0 0 1 6281.43 -1406.8)">ORDERS</text>
+            <text style="fill: black; font-family:Arial; font-size: 150px;font-weight:bold;" x="6522.22" y="4472.12" id="e23_texte" transform="matrix(0.899387 0 0 0.922108 3442.54 -175.473)" dy="" dx="">SUB ORDERS</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="7884.2" y="3188.06" id="e40_texte" transform="matrix(1 0 0 1 1050.3 -162.6)">SIGMA</text>
+            <text style="fill:black;font-family:Arial;font-size:111px;font-weight:bold;" x="1762.16" y="5839.01" id="e44_texte" dy="" dx="" transform="matrix(0.975361 0 0 1 6560.56 -1283.37)">INITIAL</text>
+            <text style="fill:black;font-family:Arial;font-size:111px;font-weight:bold;" x="2250.35" y="5845.16" id="e45_texte" dy="" dx="" transform="matrix(0.975361 0 0 1 6560.56 -1283.37)">FINAL</text>
+            <text style="fill:black;font-family:Arial;font-size:111px;font-weight:bold;" x="2724.38" y="5829.56" id="e46_texte" dy="" dx="" transform="matrix(0.975361 0 0 1 6564.55 -1263.44)">NODE</text>
+            <text style="fill:black;font-family:Arial;font-size:111px;font-weight:bold;" x="3157.2" y="5821.76" id="e47_texte" dy="" dx="" transform="matrix(0.975361 0 0 1 6564.55 -1263.44)">ULTIMATE</text>
+            <text style="fill:black;font-family:Arial;font-size:111px;font-weight:bold;" x="3759.19" y="5816.17" id="e52_texte" dy="" dx="" transform="matrix(0.975361 0 0 1 6564.55 -1263.44)">TRANSIENT</text>
+            <text style="fill:black;font-family:Arial;font-size:120px;font-weight:bold;" x="5203.46" y="4172.7" id="e54_texte" transform="matrix(0.899387 0 0 0.922108 3588.57 -160.311)" dy="" dx="">INITIAL</text>
+            <text style="fill:black;font-family:Arial;font-size:120px;font-weight:bold;" x="7311.76" y="4255.69" id="e55_texte" dy="" dx="" transform="matrix(0.899387 0 0 0.922108 3522.29 -251.047)">TRANSIENT</text>
+            <text style="fill:black;font-family:Arial;font-size:120px;font-weight:bold;" x="6229.07" y="4266.46" id="e56_texte" dy="" dx="" transform="matrix(0.899387 0 0 0.922108 3522.29 -251.047)">NODE</text>
+            <text style="fill:black;font-family:Arial;font-size:120px;font-weight:bold;" x="6687.97" y="4259.52" id="e57_texte" dy="" dx="" transform="matrix(0.899387 0 0 0.922108 3522.29 -251.047)">ULTIMATE</text>
+            <text style="fill:black;font-family:Arial;font-size:120px;font-weight:bold;" x="5766.54" y="4271.07" id="e58_texte" dy="" dx="" transform="matrix(0.899387 0 0 0.922108 3522.29 -251.047)">FINAL</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="7695.07" y="4012.82" id="sigma" transform="matrix(1 0 0 1 1050.3 -63.1)" dy="" dx="">SIGMA</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="-340.897" y="3921.36" id="mmlcommands-ap" transform="matrix(1 0 0 1 550.8 -209.5)">AP</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="249.31" y="3921.36" id="e108_texte" transform="matrix(1 0 0 1 550.8 -209.5)">CA</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="1469.91" y="3913.86" id="mmlcommands" transform="matrix(1 0 0 1 550.8 -209.5)">DM</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="919.301" y="3921.36" id="mmlcommands" transform="matrix(1 0 0 1 550.8 -209.5)">CH</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="2897.21" y="3905.46" id="mmlcommands" transform="matrix(1 0 0 1 550.8 -209.5)">ES</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="2200.4" y="3921.36" id="e112_texte" transform="matrix(1 0 0 1 550.8 -209.5)">DS</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="4187.51" y="3905.46" id="mmlcommands" transform="matrix(1 0 0 1 550.8 -209.5)">HF</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="3455.5" y="3905.46" id="e114_texte" transform="matrix(1 0 0 1 550.8 -209.5)">FA</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="5388.61" y="3927.96" id="mmlcommands" transform="matrix(1 0 0 1 550.8 -209.5)">NS</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="4679.3" y="3920.46" id="e116_texte" transform="matrix(1 0 0 1 550.8 -209.5)">NC</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="-340.009" y="4399.03" id="mmlcommands" transform="matrix(1 0 0 1 550.8 -209.5)">PD</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="218.2" y="4414.93" id="e118_texte" transform="matrix(1 0 0 1 550.8 -209.5)">OH</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="1476.7" y="4414.83" id="mmlcommands" transform="matrix(1 0 0 1 550.8 -209.5)">PE</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="888.19" y="4414.93" id="mmlcommands" transform="matrix(1 0 0 1 550.8 -209.5)">WE</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="2000.69" y="4390.53" id="e122_texte" transform="matrix(1 0 0 1 550.8 -209.5)">PSXFA</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="4133.7" y="4421.63" id="mmlcommands" transform="matrix(1 0 0 1 550.8 -209.5)">RJ</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="3401.69" y="4421.63" id="mmlcommands" transform="matrix(1 0 0 1 550.8 -209.5)">QD</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="5385.3" y="4428.23" id="mmlcommands" transform="matrix(1 0 0 1 550.8 -209.5)">SU</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="4771.69" y="4436.73" id="mmlcommands" transform="matrix(1 0 0 1 550.8 -209.5)">SE</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="2699.79" y="4405.63" id="mmlcommands" transform="matrix(1 0 0 1 550.8 -209.5)">PSXSU</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="6459.61" y="3918.76" id="mmlcommands" transform="matrix(1 0 0 1 550.8 -209.5)">TS</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="5881.3" y="3927.96" id="mmlcommands" transform="matrix(1 0 0 1 550.8 -209.5)">TO</text>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="5941.71" y="4412.36" id="mmlcommands" transform="matrix(1 0 0 1 550.8 -209.5)">US</text>
+            <g id="sigma_suborders_statusgp" transform="matrix(1 0 0 1 0 99.5)">
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="8384.85" y="4175.85" id="sigma_suborders-initail" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="8889.71" y="4155.2" id="sigma_suborders-final" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="9371.46" y="4169.35" id="sigma_suborders-node" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="9875.52" y="4165" id="sigma_suborders-ultimate" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="10363.1" y="4137.35" id="sigma_suborders-transient" dx="" dy="">--</text>
+            </g>
+            <g id="sigma_orders_statusgp">text-anchor: middle;
+                                                        <text class="loadmodalwindow" style="fill:black;font-family:Arial;text-anchor: middle;font-size:150px;font-weight:bold;" x="8349.86" y="3365.75" id="sigma_orders-initail" dx="" dy="">--
+                                                        </text><text class="loadmodalwindow" style="fill: black; font-family: Arial;text-anchor: middle; font-size: 150px; font-weight: bold;" x="8863.51" y="3379.4" id="sigma_orders-final" dx="" dy="">--</text><text class="loadmodalwindow" style="fill:black;font-family:Arial;text-anchor: middle;font-size:150px;font-weight:bold;" x="9365.46" y="3407.45" id="sigma_orders-node" dx="" dy="">--</text><text class="loadmodalwindow" style="fill:black;font-family:Arial;text-anchor: middle;font-size:150px;font-weight:bold;" x="9808.71" y="3400.8" id="sigma_orders-ultimate" dx="" dy="">--</text><text class="loadmodalwindow" style="fill:black;font-family:Arial;text-anchor: middle;font-size:150px;font-weight:bold;" x="10323.1" y="3407.5" id="sigma_orders-transient" dx="" dy="">--</text></g>
+            <g id="mmlcommands_statusgp">
+                <text class="loadmodalwindow" id="mmlcommands-AP" style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="188.29" y="3480.08" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="809.32" y="3463.31" id="mmlcommands-CA" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="1561.59" y="3467.08" id="mmlcommands-CH" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="2153.62" y="3502.41" id="mmlcommands-DM" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="2898.85" y="3475.14" id="mmlcommands-DS" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="3506.18" y="3488.47" id="mmlcommands-ES" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="4124.75" y="3474.24" id="mmlcommands-FA" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="4774.78" y="3494.47" id="mmlcommands-HF" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="5356.75" y="3495.34" id="mmlcommands-NC" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="5984.88" y="3494.87" id="mmlcommands-NS" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="6603.45" y="3495.74" id="mmlcommands-TO" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="7169.58" y="3486.47" id="mmlcommands-TS" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="254.28" y="3950.07" id="mmlcommands-PD" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="878.251" y="3964.84" id="mmlcommands-OH" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="1542.38" y="3963.97" id="mmlcommands-WE" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="2146.78" y="3963.97" id="mmlcommands-PE" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="2904.85" y="3936.94" id="mmlcommands-PSXSU" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="3518.78" y="3950.07" id="mmlcommands-QD" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="4051.08" y="3963.97" id="mmlcommands-QD" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="4733.55" y="3979.04" id="mmlcommands-RJ" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="5410.48" y="3937.07" id="mmlcommands-SE" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="6021.08" y="3957.47" id="mmlcommands-SU" dx="" dy="">--</text>
+                <text class="loadmodalwindow" style="fill:black;text-anchor: middle;font-family:Arial;font-size:150px;font-weight:bold;" x="6597.45" y="3958.54" id="mmlcommands-US" dx="" dy="">--</text>
+            </g>
+            <g id="link_sys14_sys15" transform="matrix(1 0 0 1 -199 694.2)">
+                <line x1="-975" y1="1720.9" x2="-367" y2="1720.9" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 310 784.9)" />
+                <line id="link_sys14_sys16" x1="-959" y1="2264.9" x2="-367" y2="2264.9" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 310 784.9)" />
+                <line id="link_sys14_sys17" x1="-975" y1="2760.9" x2="-351" y2="2760.9" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 310 784.9)" />
+                <line id="link_sys14_sys18" x1="7937" y1="2344.9" x2="7521" y2="2344.9" style="stroke:black;fill:none;stroke-width:15px;marker-start:url(#arrow15-12-left);" transform="matrix(1 0 0 1 310 784.9)" />
+            </g>
+            <g id="e1_g" transform="matrix(1 0 0 1 -209.9 -348.1)">
+                <rect x="-1782.9702089768057" y="3835.5210056348783" width="1121.73" height="473.098" style="fill:url(#mx-gradient-99ccff-1-ffffff-1-s-0);" stroke="#000000" stroke-width="11" rx="0" ry="0" id="e20_rect" />
+            </g>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="-2576.9" y="3888" id="e30_texte" transform="matrix(1 0 0 1 784.4 -138.1)" dy="" dx="">ERICSSON</text>
+            <g id="e2_g" transform="matrix(1 0 0 1 -209.9 -348.1)">
+                <rect x="-1782.9702286594609" y="3317.4218409512696" width="1121.73" height="473.098" style="fill:url(#mx-gradient-99ccff-1-ffffff-1-s-0);" stroke="#000000" stroke-width="11" rx="0" ry="0" id="e21_rect" />
+            </g>
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="-2674.9" y="3369.9" id="e33_texte" transform="matrix(1 0 0 1 784.4 -138.1)" dy="" dx="">PORTING-XS</text>
+        </g>
+        <g id="dummy">
+            <rect x="4915.07" y="566.315" width="872.217" height="1359.87" rx="0" ry="0" stroke="#000000" stroke-width="11" transform="matrix(1 0 0 1 1537.28 -594.16)" style="fill:url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0);" id="dummy" />
+            <text style="fill:black;font-family:Arial;font-size:150px;font-weight:bold;" x="5011.16" y="846.029" id="e20_texte" transform="matrix(1 0 0 1 1536.78 -594.66)">DUMMY</text>
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="5498.15" cy="1983.31" rx="230" ry="230" fill="url(#mx-gradient-d5e8d4-1-159957-1-s-0)" id="available" stroke="#82b366" transform="matrix(1 0 0 1 1401.14 -908.28)" />
+            <ellipse stroke-width="25" onmouseover="tooltipboot(this.id)" cx="4983.79" cy="1440.44" rx="230" ry="230" fill="url(#mx-gradient-74ebd5-1-acb6e5-1-s-0)" id="completed" stroke="#6c8ebf" transform="matrix(1 0 0 1 1881.57 -889.6)" />
+            <g id="dummystep_statusgp" transform="matrix(1 0 0 1 1881.07 -890.1)">
+                <text class="loadmodalwindow" id="dummystep-CO" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="4984.49" y="1493.75" dx="" dy="">--</text>
+                <text class="loadmodalwindow" id="dummystep-AV" style="fill:black;font-family:Arial;font-size:145px;text-anchor: middle;font-weight:bold;" x="5007.42" y="2004.46" dx="" dy="">--</text>
+            </g>
+        </g>
+    </g>
+    <rect x="11530.4" y="-368" style="stroke:#000000; stroke-width:10px;fill:none;stroke-dasharray:5px,5px;" id="e1_rectangle" width="1728" height="3920" />
+</svg>  

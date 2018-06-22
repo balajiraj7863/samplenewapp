@@ -1,0 +1,24 @@
+Servers,Application,Environment,site_name,server_group,server_name,server_ip,postpaid_Service,Fixed_Service,BusinessUnit_Supported,Country,IP_Supported,Location
+UAT Environment,Cerillion,UAT,Cayman,Database Server ,cwx1-scan.corp-it.cc ,10.255.218.76,y,y,BTC,Bahamas,n,Curacao
+UAT Environment,Cerillion,UAT,Cayman,Application Server ,BSSTAPPCERL01,10.255.215.106 ,y,y,BTC,Bahamas,n,
+UAT Environment,Cerillion,UAT,Cayman,Back End Server ,BSSTBESCERU01,10.255.215.107 ,y,y,BTC,Bahamas,n,
+UAT Environment,Cerillion,UAT,Cayman,Terminal Server ,BSSTWEBCERW01,10.255.215.105 ,y,y,BTC,Bahamas,n,
+Production Environment,Cerillion,Prod,Cayman,Back-End Server,BSPDBESCERU01,10.255.215.86 ,y,y,BTC,Bahamas,y,Curacao
+Production Environment,Cerillion,Prod,Cayman,CRM Terminal Server,BSPDWEBCERW01,10.255.215.80 ,y,y,BTC,Bahamas,y,Curacao
+Production Environment,Cerillion,Prod,Cayman,CRM Terminal Server,BSPDWEBCERW02,10.255.215.81,y,y,BTC,Bahamas,y,Curacao
+Production Environment,Cerillion,Prod,Cayman,CRM Terminal Server,BSPDWEBCERW03,10.255.215.82 ,y,y,BTC,Bahamas,y,Curacao
+Production Environment,Cerillion,Prod,Cayman,Application Server,BSPDAPPCERL01,10.255.215.83 ,y,y,BTC,Bahamas,y,Curacao
+Production Environment,Cerillion,Prod,Cayman,Application Server,BSPDAPPCERL02,10.255.215.84 ,y,y,BTC,Bahamas,y,Curacao
+Production Environment,Cerillion,Prod,Cayman,Application Server,BSPDAPPCERL03,10.255.215.85 ,y,y,BTC,Bahamas,y,Curacao
+Production Environment,Cerillion,Prod,Cayman,Application Server,BSPDAPPCERL04,10.255.215.94 ,y,y,BTC,Bahamas,n,Curacao
+Production Environment,Cerillion,Prod,Cayman,Back-End Server,BSPDBESCERU02,10.255.215.91 ,y,y,BTC,Bahamas,y,Curacao
+CNI server connection,Cerillion,Prod,Cayman,CNI server connection,,10.255.215.68,n,y,BTC,Bahamas,n,
+Prod Business Objects Server,Cerillion,Prod,Cayman,Prod Business Objects Server,BSPDBOSCERW01,10.255.215.87,y,y,BTC,Bahamas,n,
+Prod Invoice Server,Cerillion,Prod,Cayman,Prod Invoice Server,BSPDINVCERW01,10.255.215.88,y,y,BTC,Bahamas,n,
+Prod Invoice Server (unix),Cerillion,Prod,Cayman,Prod Invoice Server (unix),,10.255.215.86,y,y,BTC,Bahamas,n,Curacao
+CRM Appserver Load balancer,Cerillion,Prod,Cayman,CRM Appserver Load balancer,,10.255.239.78,y,y,BTC,Bahamas,n,
+Bahamas Mobile,Sigma,Prod,Cayman,SMP Node1,cursmp01,10.255.253.189,y,y,BTC,Bahamas,y,Curacao
+Bahamas Mobile,Sigma,Prod,Cayman,SMP Node2,cursmp02,10.255.253.190,y,y,BTC,Bahamas,y,Curacao
+Digital Route,Digital Route,Prod,New Providence,,mzplatform,10.0.16.71,y,y,BTC,Bahamas,y,Nassau
+Digital Route,Digital Route,Prod,New Providence,,mzexecution,10.0.16.72,y,y,BTC,Bahamas,y,Nassau
+Digital Route,Digital Route,Prod,New Providence,,mzexection2,10.0.16.73,y,y,BTC,Bahamas,y,Nassau

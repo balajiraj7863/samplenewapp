@@ -1,0 +1,10 @@
+sourcetype,SubscriberStatus,AccessNoStatus,SubscriberStatusDesc
+dbx:CerillionBahamasOracle,SN,TA,Changed
+dbx:CerillionBahamasOracle,SN,FA,Changed
+dbx:CerillionBarbadosOracle,SN,TA,Changed
+dbx:CerillionBarbadosOracle,SN,FA,Changed
+dbx:CerillionJamaicaOracle,SN,TA,Changed
+dbx:CerillionJamaicaOracle,SN,FA,Changed
+dbx:OCSBahamasMysql,Active,Active,Active
+dbx:OCSBahamasMysql,Suspended,Suspended,Suspended
+dbx:OCSBahamasMysql,Installed,Installed,Installed

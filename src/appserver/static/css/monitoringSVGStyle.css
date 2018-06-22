@@ -1,0 +1,280 @@
+.modal-title {
+            font-size: 18px;
+        }
+
+        .api_rect_class {
+            fill: rgb(244, 232, 245);
+            stroke: rgba(200, 110, 110, 0.822);
+            stroke-width: 1px;
+        }
+
+        .api_text_class {
+            fill: blue;
+            font-family: Arial;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .api_inner_rect_class {
+            stroke: black;
+            stroke-width: 1px;
+        }
+
+        #tallysoft_api_rect {
+            fill: #bcb89e;
+            stroke: #a19963;
+        }
+
+        #numero_api_rect {
+            fill: #CFFFE7;
+            stroke: rgb(93, 209, 151);
+        }
+
+        #voxgen_api_rect {
+            fill: #ADFFFF;
+            stroke: rgb(68, 158, 158);
+        }
+
+        #iccare_api_rect {
+            fill: #C4D5F2;
+            stroke: rgb(79, 124, 201);
+        }
+
+        #porting_api_rect {
+            fill: rgb(251, 212, 161);
+            stroke: rgb(192, 116, 89);
+        }
+
+        .api_inner_txt_class {
+            fill: blue;
+            font-family: Arial;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        #svgContainer {
+            fill: none;
+            stroke: none;
+        }
+
+        .nodes_shape {
+            fill: white;
+            stroke: black;
+            vector-effect: non-scaling-stroke;
+            stroke-width: 1px;
+            cursor: pointer;
+        }
+
+        .nodes__legend_shape {
+            fill: white;
+            stroke: black;
+            vector-effect: non-scaling-stroke;
+            stroke-width: 1px;
+        }
+
+        .pass {
+            fill: #28e928 !important;
+            stroke: #28e928 !important;
+            color: #28e928 !important;
+        }
+
+        .warn {
+            fill: #FFBF00 !important;
+            stroke: #FFBF00 !important;
+            color: #FFBF00 !important;
+        }
+
+        .fail {
+            fill: red !important;
+            stroke: red !important;
+            color: red !important;
+        }
+
+        .interface-pass {
+            stroke: #28e928 !important;
+            color: #28e928 !important;
+        }
+
+        .interface-warn {
+            stroke: #FFBF00 !important;
+            color: #FFBF00 !important;
+        }
+
+        .interface-fail {
+            stroke: red !important;
+            color: red !important;
+        }
+
+        .unknown {
+            fill: #868585 !important;
+            stroke: #868585 !important;
+            color: #868585 !important;
+        }
+
+        .nodes_text {
+            stroke:white;
+            fill:white;
+            font-family:Arial;
+            font-weight:normal;
+            font-size:25px;
+        }
+
+        .system_head {
+            fill: rgb(49, 93, 8);
+            font-family: Arial;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .system_sub_head {
+            fill: rgb(39, 100, 102);
+            font-family: Arial;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .interfaces_fill {
+            fill: rgba(241, 111, 111, 0.897);
+            stroke: rgb(192, 98, 98);
+            vector-effect: non-scaling-stroke;
+            stroke-width: 1px;
+            stroke-linecap: butt;
+            stroke-linejoin: miter;
+        }
+
+        .interfaces_legend_fill {
+            fill: white;
+            stroke: none;
+            vector-effect: non-scaling-stroke;
+            stroke-width: 1px;
+            stroke-linecap: butt;
+            stroke-linejoin: miter;
+        }
+
+        .legend_text {
+            fill: black;
+            font-family: Arial;
+            font-size: 20px;
+        }
+
+        .api_text {
+            fill: rgb(34, 89, 161);
+            font-family: Arial;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        #ceri_rect {
+            fill: #FDFFF5;
+            stroke: rgb(42, 48, 21);
+        }
+
+        #ceri_ws_rect {
+            fill: #DCD3D3;
+            stroke: rgb(122, 57, 57);
+        }
+
+        #ceri_app_rect {
+            fill: #FFFFD9;
+            stroke: rgb(100, 100, 34);
+        }
+
+        #ceri_be_rect {
+            fill: #C6E6FA;
+            stroke: rgb(40, 79, 104);
+        }
+
+        #dr_rect {
+            fill: #FFDFB0;
+            stroke: rgb(121, 56, 33)
+        }
+
+        #sig_rect {
+            fill: #FFE5DB;
+            stroke: rgb(114, 59, 39);
+        }
+
+        #core_rect {
+            fill: #dddddd;
+            stroke: #615929
+        }
+
+        #core_head {
+            fill: black;
+            font-family: Arial;
+            font-size: 40px;
+        }
+
+        #legend_rect {
+            fill: snow;
+            stroke: rgb(116, 129, 65);
+        }
+
+        #nodeModalLabel, #interfaceModalLabel {
+            font-weight: bold;
+        }
+
+        .nodeAvail {
+            stroke: #868585;
+            fill: #868585;
+            font-size: 18px;
+            font-weight: normal;
+            font-family: FontAwesome;
+        }
+
+        .prepaidNodeAvail {
+            stroke: #868585;
+            fill: #868585;
+            font-size: 23px;
+            font-weight: normal;
+            font-family: FontAwesome;
+            cursor: pointer;
+        }
+
+        .interfaceAvail {
+            stroke: #868585;
+            /* fill: #868585; */
+            font-size: 18px;
+            font-weight: normal;
+            font-family: FontAwesome;
+        }
+
+        .interface_shape{
+            stroke:#868585; 
+            fill: none; 
+            stroke-width:2px; 
+            cursor: pointer;
+        }
+
+        .prepaid_interface_shape{
+            stroke:#868585; 
+            fill: none; 
+            stroke-width:4px; 
+            cursor: pointer;
+        }
+
+        .nodeServer {
+            stroke: transparent;
+            fill: white;
+            font-size: 18px;
+            font-weight: normal;
+            font-family: FontAwesome;
+        }
+
+        .prepaidNodeServer{
+            stroke: transparent;
+            fill: white;
+            font-size: 23px;
+            font-weight: normal;
+            font-family: FontAwesome;
+            cursor: pointer;
+        }
+
+        .prepaidNodeSwitch{
+            stroke: transparent;
+            fill: #759eba;
+            font-size: 64px;
+            font-weight: normal;
+            font-family: FontAwesome;
+            cursor: pointer;
+        }

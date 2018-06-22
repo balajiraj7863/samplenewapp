@@ -1,0 +1,270 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+body{
+	min-width: 100%;
+	height: 100%;
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	color: #5a5a5a;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5em;
+  font-weight: 600;
+}
+
+/* Login Page
+-------------------------------------------------- */
+
+.login-bg{
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/splash/SplashScreen1@2x.png');
+	background-size: cover;
+}
+.login-container{
+	padding: 20px 20px 0;
+  background: rgb(255,255,255); /* for IE */
+  background: rgba(255,255,255,0.8);
+  border-radius: 6px 6px 0 0;
+  transition: box-shadow .3s ease;
+}
+.login-footer {
+	/*background: #E2DEE3;*/
+	background: rgb(226,222,227); /* for IE */
+  background: rgba(226,222,227,0.95);
+	border-top: 2px solid #CCC;
+	padding: 15px;
+	border-radius: 0 0 6px 6px;
+	transition: box-shadow .3s ease;
+}
+.login-shadow {
+	-webkit-box-shadow: 7px 18px 24px 0px rgba(50, 50, 50, 0.7);
+	-moz-box-shadow:    7px 18px 24px 0px rgba(50, 50, 50, 0.7);
+	box-shadow:         7px 18px 24px 0px rgba(50, 50, 50, 0.7);
+}
+.cwc-logo{
+	padding: 20px 20px 20px;
+}
+.cwc-logo img{
+	position: relative;
+	top: 20%;
+	display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.cwc-logo-admin img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	padding: 0 0 20px 0;
+}
+.cwc-form {
+	padding: 10px 30px 20px;
+}
+.forgot-passwod-form {
+	padding: 20px 30px 0px;
+}
+.app-heading {
+	color: #2D527C;
+	margin-top: 0;
+	margin-bottom: 30px;
+	letter-spacing:1px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.inner-addon {
+    position: relative;
+}
+.left-addon .glyphicon {
+    left: 0px;
+}
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+.left-addon input {
+    padding-left: 30px;
+}
+
+.lg-box-border {
+	border: 1px solid #E2DEE3;
+  border-color: #ccc;
+  border-radius: 0;
+  border-style: none none solid;
+  border-width: 0 0 1px;
+  box-shadow: none;
+  padding-left: 0;
+  /*background-color: rgba(255,255,255,0.8);*/
+}
+
+.lg-box-border:focus {
+  border-color: #2d527c;
+  box-shadow: none;
+  outline: 0 none;
+}
+.btn-width{
+	width: 100px;
+}
+
+/* Forgot Password
+-----------------------*/
+.forgot-password{
+	padding-top: 4px;
+	cursor: pointer;
+}
+.back-to-login{
+	cursor: pointer;
+}
+.forgot-passwod-form{
+	display: none;
+}
+.success-msg{
+	display: none;
+	margin: 20px 0;  
+}
+
+/* Reset Password
+-----------------------*/
+
+#parent{
+	display: table;
+}
+
+#child{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+/* Media Queries
+-----------------------*/
+/*Mobile Screens*/
+@media only screen and (max-width: 480px) {
+	.cwc-logo{
+		padding: 10px;
+	}
+}
+
+/* Bigger screens than mobile*/
+@media only screen and (min-width: 768px) and (max-width: 1500px) {
+  .cwc-logo img{
+		position: relative;
+		top: 20%;
+		display: table-cell;
+	  text-align: center;
+	  vertical-align: middle;
+	  -webkit-transform: translateY(25%);
+	  -ms-transform: translateY(25%);
+	  transform: translateY(25%);
+	}
+	.app-heading {
+		font-size: 20px;
+	}
+}
+
+/* Preloader Background
+-------------------------------------------------- */
+#preloader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.7);
+	z-index: 99;
+	height: 100%;
+}
+#status{
+	width: 100%;
+	height: 100%;
+	/*background-image: url('../images/splash/SplashScreen1@2x.png');*/
+	background-size: cover;
+}
+#loading{
+	display: block;
+	position: relative;
+	left: 51%;
+	top: 45%;
+	width: 200px;
+	height: 100px;
+	margin: 20px 0 0 -75px;
+	color: #ffffff;
+	letter-spacing: 3px;
+	font-size: 12px;
+}
+
+/* Preloader Spinning
+-------------------------------------------------- */
+
+#loader{
+	display: block;
+	position: relative;
+	left: 51%;
+	top: 45%;
+	width: 100px;
+	height: 100px;
+	margin: 0 0 0 -75px;
+	border-top: 3px solid #009fda;
+	z-index: 1500;
+	border-radius: 50%;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+#loader:before{
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	border-top: 3px solid #e74c3c;
+	border-radius: 50%;
+	-webkit-animation: spin 3s linear infinite;
+	animation: spin 3s linear infinite;
+}
+
+#loader:after{
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	right: 15px;
+	bottom: 15px;
+	border-top: 3px solid #f9c922;
+	border-radius: 50%;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+/* include this only once */
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}

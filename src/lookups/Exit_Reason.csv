@@ -1,0 +1,70 @@
+sourcetype,ReasonCode,ReasonDesc
+dbx:CerillionBahamasOracle,DEFL,Default for migrated DSL
+dbx:CerillionBahamasOracle,FLTSTB,Faulty STB
+dbx:CerillionBahamasOracle,LEAPAY,Leaving for non payment
+dbx:CerillionBahamasOracle,MOVCOM,Move to Competitor
+dbx:CerillionBahamasOracle,MOVEXC,Moving to new exchange
+dbx:CerillionBahamasOracle,MOVSEA,Moved Overseas
+dbx:CerillionBahamasOracle,ND,Non Pay Disconnect
+dbx:CerillionBahamasOracle,PORTOUT,Porting Out
+dbx:CerillionBahamasOracle,PPROLLBACK,Rollback of Prepaid Service Migration
+dbx:CerillionBahamasOracle,SEVNLQ,Service no longer required
+dbx:CerillionBahamasOracle,TMPSVC,Temp service
+dbx:CerillionBahamasOracle,WIMAXM,WiMAX Migration
+dbx:CerillionBahamasOracle,Unknown,Unknown
+dbx:CerillionJamaicaOracle,AD,Disconnect Admin Reason
+dbx:CerillionJamaicaOracle,CC,Conversion Correction
+dbx:CerillionJamaicaOracle,CD,Customer Deceased
+dbx:CerillionJamaicaOracle,CM,Customer Moved to Non Serviceable area
+dbx:CerillionJamaicaOracle,DE,Defective TV/PC/Phone
+dbx:CerillionJamaicaOracle,IC,IPTV Conversion
+dbx:CerillionJamaicaOracle,IN,Investigation
+dbx:CerillionJamaicaOracle,LS,No Longer Servicable
+dbx:CerillionJamaicaOracle,MO,Customer Moved Outside Jamaica
+dbx:CerillionJamaicaOracle,MP,Manual Non-Pay Disconnect
+dbx:CerillionJamaicaOracle,MS,Moved [Service Already Exist]
+dbx:CerillionJamaicaOracle,MT,Manual Transfer
+dbx:CerillionJamaicaOracle,ND,Non Pay Disconnect
+dbx:CerillionJamaicaOracle,NN,Service Not Used Enough
+dbx:CerillionJamaicaOracle,NP,Non-Pay Disconnect
+dbx:CerillionJamaicaOracle,PC,Prepaid Conversion
+dbx:CerillionJamaicaOracle,PPROLLBACK,Rollback of Prepaid Service Migration
+dbx:CerillionJamaicaOracle,PT,Promotion Terms Not Met
+dbx:CerillionJamaicaOracle,PV,Payment Void
+dbx:CerillionJamaicaOracle,RC,Return Cheques
+dbx:CerillionJamaicaOracle,SC,Swithed to Competitor
+dbx:CerillionJamaicaOracle,SI,Service Issues
+dbx:CerillionJamaicaOracle,SN,ZZ-DO-NOT-USE-CODE
+dbx:CerillionJamaicaOracle,TD,Transfer Disconnect
+dbx:CerillionJamaicaOracle,TE,Too Expensive [Financial Difficulties]
+dbx:CerillionJamaicaOracle,VD,Video On Demand Not Affordable
+dbx:CerillionJamaicaOracle,VP,Vacation Plan Not Met
+dbx:CerillionBarbadosOracle,AD,Conversion Analog Disconnect
+dbx:CerillionBarbadosOracle,AU,Audit
+dbx:CerillionBarbadosOracle,BR,Bankruptcy
+dbx:CerillionBarbadosOracle,CA,Cant Afford
+dbx:CerillionBarbadosOracle,CH,Upgrade/Downgrade
+dbx:CerillionBarbadosOracle,CI,Change of Address
+dbx:CerillionBarbadosOracle,CP,CPE Not Working
+dbx:CerillionBarbadosOracle,CS,Customer Service Issues
+dbx:CerillionBarbadosOracle,DC,Deceased
+dbx:CerillionBarbadosOracle,IC,Internal Correction
+dbx:CerillionBarbadosOracle,LV,Leaving the country
+dbx:CerillionBarbadosOracle,MI,Migrated As Recovered
+dbx:CerillionBarbadosOracle,MN,Manual Non Pay
+dbx:CerillionBarbadosOracle,ND,Non Pay Disconnect
+dbx:CerillionBarbadosOracle,NP,Non Pay Disconnect
+dbx:CerillionBarbadosOracle,NS,Move to NON Servicable Area
+dbx:CerillionBarbadosOracle,PC,Poor Channel Selection
+dbx:CerillionBarbadosOracle,PPROLLBACK,Rollback of Prepaid Service Migration
+dbx:CerillionBarbadosOracle,RC,Return Cheque
+dbx:CerillionBarbadosOracle,SC,Switch to Competitor
+dbx:CerillionBarbadosOracle,SE,Seasonal/Temporary
+dbx:CerillionBarbadosOracle,SN,Service was not requested
+dbx:CerillionBarbadosOracle,SW,Swap To Same Address
+dbx:CerillionBarbadosOracle,TD,Transfer Disconnect
+dbx:CerillionBarbadosOracle,TO,Too Expensive
+dbx:CerillionBarbadosOracle,TP,Tampering with System by Customer
+dbx:CerillionBarbadosOracle,TS,Technical Service Issues
+dbx:CerillionBarbadosOracle,UP,Unhappy With Product
+dbx:CerillionBarbadosOracle,UR,House Under Repair

@@ -1,0 +1,29 @@
+sourcetype,CountryCode,ServiceCD,ServiceType,Country,ServiceSubType
+dbx:CerillionBahamasOracle,DEFLT,GM,Postpaid,Bahamas,Mobile Postpaid
+dbx:CerillionBahamasOracle,DEFLT,TP,Fixed,Bahamas,Fixed -Telephone
+dbx:CerillionBahamasOracle,DEFLT,DA,Fixed,Bahamas,Fixed - Broadband
+dbx:CerillionBahamasOracle,DEFLT,DS,Fixed,Bahamas,Fixed - Broadband
+dbx:CerillionBahamasOracle,DEFLT,DV,Fixed,Bahamas,Fixed - IPTV
+dbx:CerillionBahamasOracle,DEFLT,AV,Fixed,Bahamas,Fixed - IPTV
+dbx:OCSBahamasMysql,DEFLT,GMPP,Prepaid,Bahamas,Mobile Prepaid
+dbx:CerillionBarbadosOracle,DEFLT,GM,Postpaid,Barbados,Mobile Postpaid
+dbx:CerillionBarbadosOracle,DEFLT,TP,Fixed,Barbados,Fixed -Telephone
+dbx:CerillionBarbadosOracle,DEFLT,DA,Fixed,Barbados,Fixed - Broadband
+dbx:CerillionBarbadosOracle,DEFLT,DS,Fixed,Barbados,Fixed - Broadband
+dbx:CerillionBarbadosOracle,DEFLT,DV,Fixed,Barbados,Fixed - IPTV
+dbx:CerillionBarbadosOracle,DEFLT,AV,Fixed,Barbados,Fixed - IPTV
+dbx:CerillionBarbadosOracle,ANTIG,DA,Fixed,Antigua,Fixed - Broadband
+dbx:CerillionBarbadosOracle,ANTIG,DS,Fixed,Antigua,Fixed - Broadband
+dbx:CerillionBarbadosOracle,ANTIG,DV,Fixed,Antigua,Fixed - IPTV
+dbx:CerillionBarbadosOracle,ANTIG,AV,Fixed,Antigua,Fixed - IPTV
+dbx:CerillionBarbadosOracle,STLUC,DA,Fixed,Saint Lucia,Fixed - Broadband
+dbx:CerillionBarbadosOracle,STLUC,DS,Fixed,Saint Lucia,Fixed - Broadband
+dbx:CerillionBarbadosOracle,STLUC,DV,Fixed,Saint Lucia,Fixed - IPTV
+dbx:CerillionBarbadosOracle,STLUC,AV,Fixed,Saint Lucia,Fixed - IPTV
+dbx:CerillionBarbadosOracle,STVIN,DA,Fixed,Saint Vincent,Fixed - Broadband
+dbx:CerillionBarbadosOracle,STVIN,DS,Fixed,Saint Vincent,Fixed - Broadband
+dbx:CerillionBarbadosOracle,STVIN,DV,Fixed,Saint Vincent,Fixed - IPTV
+dbx:CerillionBarbadosOracle,STVIN,AV,Fixed,Saint Vincent,Fixed - IPTV
+dbx:CerillionJamaicaOracle,DEFLT,TP,Fixed,Jamaica,Fixed -Telephone
+dbx:CerillionJamaicaOracle,DEFLT,DA,Fixed,Jamaica,Fixed - Broadband
+dbx:CerillionJamaicaOracle,DEFLT,DV,Fixed,Jamaica,Fixed - IPTV

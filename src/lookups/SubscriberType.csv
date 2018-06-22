@@ -1,0 +1,51 @@
+sourcetype,AccCategoryCD,AccCategoryDesc,Sub_Classify
+dbx:CerillionBahamasOracle,GV,Government,Government
+dbx:CerillionBahamasOracle,BU,Business,Business
+dbx:CerillionBahamasOracle,RE,Residential,Residential
+dbx:CerillionBahamasOracle,ST,BTC Staff Accounts,Company Staff
+dbx:CerillionBarbadosOracle,VP,VIP,Business
+dbx:CerillionBarbadosOracle,MF,Manufacturing/Distribution,Business
+dbx:CerillionBarbadosOracle,BC,Building & Construction ,Business
+dbx:CerillionBarbadosOracle,MC,MCU,Business
+dbx:CerillionBarbadosOracle,RT,Retailer,Business
+dbx:CerillionBarbadosOracle,GV,Government,Government
+dbx:CerillionBarbadosOracle,SV,Services,Business
+dbx:CerillionBarbadosOracle,RS,Recreational Services,Business
+dbx:CerillionBarbadosOracle,CP,Complimentary,Business
+dbx:CerillionBarbadosOracle,TO,Communication & Information,Business
+dbx:CerillionBarbadosOracle,PS,Tourism,Business
+dbx:CerillionBarbadosOracle,CI,Professional services,Business
+dbx:CerillionBarbadosOracle,MD,MDU,Business
+dbx:CerillionBarbadosOracle,ST,Standard,Residential
+dbx:CerillionBarbadosOracle,HC,Healthcare,Business
+dbx:CerillionBarbadosOracle,CA,Columbus Corporate Apartment,Business
+dbx:CerillionBarbadosOracle,OS,Offshore,Business
+dbx:CerillionBarbadosOracle,HT,Hotel,Business
+dbx:CerillionBarbadosOracle,GH,Guest House,Business
+dbx:CerillionBarbadosOracle,AG,Agriculture & Fisheries,Business
+dbx:CerillionBarbadosOracle,RB,Restaurant or Bar,Business
+dbx:CerillionBarbadosOracle,IT,Columbus Test Account,Business
+dbx:CerillionBarbadosOracle,DS,Defense & Security,Business
+dbx:CerillionBarbadosOracle,OF,Columbus Office Account,Company Staff
+dbx:CerillionBarbadosOracle,AF,Corporate Affinity Account,Business
+dbx:CerillionBarbadosOracle,RP,Rental Properties,Business
+dbx:CerillionBarbadosOracle,FS,Finance Service Sector,Business
+dbx:CerillionBarbadosOracle,WH,Wholesalers,Business
+dbx:CerillionBarbadosOracle,TR,Transport,Business
+dbx:CerillionBarbadosOracle,CY,Charity,Business
+dbx:CerillionJamaicaOracle,VP,VIP,Business
+dbx:CerillionJamaicaOracle,PO,Police,Government
+dbx:CerillionJamaicaOracle,PU,Public,Residential
+dbx:CerillionJamaicaOracle,RB,Resturant or Bar,Business
+dbx:CerillionJamaicaOracle,MR,Commercial MCU Exclusive,Business
+dbx:CerillionJamaicaOracle,CO,Contractor,Business
+dbx:CerillionJamaicaOracle,VO,Pay Plan [VOD],Business
+dbx:CerillionJamaicaOracle,MC,Commercial MCU,Business
+dbx:CerillionJamaicaOracle,MD,MDU,Business
+dbx:CerillionJamaicaOracle,CP,Complimentary,Business
+dbx:CerillionJamaicaOracle,ST,Standard,Residential
+dbx:CerillionJamaicaOracle,HT,Hotel,Business
+dbx:CerillionJamaicaOracle,ME,Residential MDU Exclusive,Residential
+dbx:CerillionJamaicaOracle,PR,Power,Business
+dbx:CerillionJamaicaOracle,RP,Pay Plan [Restart],Business
+dbx:CerillionJamaicaOracle,MA,Media,Business

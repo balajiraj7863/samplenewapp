@@ -1,0 +1,14 @@
+ReasonCode,ReasonDesc
+DEFLT,Default for migrated DSL
+FLTSTB,Faulty STB
+LEAPAY,Leaving for non payment
+MOVCOM,Move to Competitor
+MOVEXC,Moving to new exchange
+MOVSEA,Moved Overseas
+ND,Non Pay Disconnect
+PORTOUT,Porting Out
+PPROLLBACK,Rollback of Prepaid Service Migration
+SEVNLQ,Service no longer required
+TMPSVC,Temp service
+WIMAXM,WiMAX Migration
+Unknown,Unknown

@@ -1,0 +1,67 @@
+UsageCat,Category,NetworkType
+CHCBL,Voice,On Net
+CHIDD,Voice,Off Net
+CHIDD,Voice,Off Net
+CHIEH,Voice,On Net
+CHINCO,Voice,On Net
+CHINSM,SMS,On Net
+CHINT,Voice,On Net
+CHLOC,Voice,On Net
+CHNAT,Voice,On Net
+CHNAT,Voice,On Net
+CHNDD,Voice,On Net
+CHONT,Voice,On Net
+CHOSMS,SMS,On Net
+CHRMSM,SMS,Roaming
+CHROM,Voice,Roaming
+CHSMSD,SMS,On Net
+CHSMSO,SMS,On Net
+CHTPC,Voice,Off Net
+CHTPC,Voice,Off Net
+CHVOD,IPTV,On Net
+CHGPRS,Data,On Net
+CH800,Voice,On Net
+CHBSMS,SMS,On Net
+CHCONF,Voice,On Net
+CHGPR,Data,On Net
+CHINCC,Voice,On Net
+CHINT,Voice,On Net
+CHLVD,IPTV,On Net
+CHMINT,Voice,On Net
+CHMLOC,Voice,On Net
+CHNAT,Voice,On Net
+CHRGBM,Data,Roaming
+CHRGCA,Data,Roaming
+CHRGCB,Data,Roaming
+CHRGCW,Data,Roaming
+CHRGPA,Data,Roaming
+CHRGPR,Data,Roaming
+CHRGUK,Data,Roaming
+CHRGUS,Data,Roaming
+CHROAM,Data,Roaming
+CHROBM,Voice,Roaming
+CHROCA,Voice,Roaming
+CHROCB,Voice,Roaming
+CHROCW,Voice,Roaming
+CHROPA,Voice,Roaming
+CHROUK,Voice,Roaming
+CHROUS,Voice,Roaming
+CHRSBM,SMS,Roaming
+CHRSCA,SMS,Roaming
+CHRSCB,SMS,Roaming
+CHRSCW,SMS,Roaming
+CHRSMS,SMS,Roaming
+CHRSPA,SMS,Roaming
+CHRSUK,SMS,Roaming
+CHRSUS,SMS,Roaming
+CHSMS,SMS,On Net
+CHSVD,IPTV,On Net
+CHVOD,IPTV,On Net
+CHVOD,IPTV,On Net
+CHVOD,IPTV,On Net
+CHZERI,Voice,On Net
+CHZERO,Voice,On Net
+CHINT,Voice,On Net
+CHNAT,Voice,On Net
+CHUSCK,Voice,Off Net
+CHVOD,IPTV,On Net
